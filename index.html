@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pictoflex Labs — We Build Apps That Make Money</title>
+  <meta name="description" content="Pictoflex Labs builds MVPs, mobile apps, websites, and AI automation for startups and businesses. From idea to App Store. Book a free discovery call.">
+  <meta property="og:title" content="Pictoflex Labs — We Build Apps That Make Money">
+  <meta property="og:description" content="MVPs from £500. Mobile apps from £2,000. Websites from £50. AI automation from £2,000. Book a free discovery call.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --surface-2: #1a1a1a;
+      --border: #262626;
+      --text: #fafafa;
+      --text-muted: #a3a3a3;
+      --accent: #6d28d9;
+      --accent-light: #8b5cf6;
+      --accent-glow: rgba(139, 92, 246, 0.15);
+      --green: #22c55e;
+      --gradient: linear-gradient(135deg, #6d28d9 0%, #2563eb 100%);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span { color: var(--accent-light); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      background: var(--gradient);
+      color: white !important;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      transition: opacity 0.2s !important;
+    }
+
+    .nav-cta:hover { opacity: 0.9; }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 160px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      color: var(--green);
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .hero-badge .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.7;
+    }
+
+    .hero-proof {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    .hero-proof strong { color: var(--text); }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+      padding: 16px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(109, 40, 217, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--surface-2);
+      color: var(--text);
+      padding: 16px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: var(--accent-light); }
+
+    .btn-subtext {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* TRUST BAR */
+    .trust-bar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .trust-item .icon {
+      font-size: 1.2rem;
+    }
+
+    .trust-item strong { color: var(--text); }
+
+    /* PROBLEM/SOLUTION */
+    .problem-section {
+      padding: 100px 0 60px;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 48px;
+    }
+
+    .problem-card, .solution-card {
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .problem-card {
+      background: #1a0a0a;
+      border-color: #3b1515;
+    }
+
+    .solution-card {
+      background: #0a1a0a;
+      border-color: #153b15;
+    }
+
+    .problem-card h3, .solution-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .problem-card h3 { color: #f87171; }
+    .solution-card h3 { color: #4ade80; }
+
+    .problem-list {
+      list-style: none;
+    }
+
+    .problem-list li {
+      padding: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .problem-card .problem-list li::before {
+      content: '\2717';
+      position: absolute;
+      left: 0;
+      color: #f87171;
+      font-weight: 700;
+    }
+
+    .solution-card .problem-list li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: #4ade80;
+      font-weight: 700;
+    }
+
+    /* SECTION COMMON */
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--accent-light);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin-bottom: 60px;
+    }
+
+    .text-center { text-align: center; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      border-color: var(--accent-light);
+      transform: translateY(-4px);
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover::after { opacity: 1; }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-glow);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-card > p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .service-price {
+      display: inline-block;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent-light);
+    }
+
+    .service-timeline {
+      display: inline-block;
+      margin-left: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .service-features li {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding: 6px 0;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .service-features li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--accent-light);
+      font-weight: 700;
+    }
+
+    /* CASE STUDY */
+    .case-study {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .case-study-content h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .case-study-content .case-tagline {
+      color: var(--accent-light);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .case-study-content p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .case-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .case-stat {
+      background: var(--surface-2);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .case-stat-value {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent-light);
+    }
+
+    .case-stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .case-tech {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .case-tech-tag {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .case-study-visual {
+      background: var(--surface-2);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+
+    .app-mockup {
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+
+    .app-name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .app-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .store-badges {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .store-badge {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* PROCESS */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 32px 20px;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin: 0 auto 20px;
+    }
+
+    .process-step h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .process-step p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .testimonial-stars {
+      color: #fbbf24;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-role {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* RETAINER */
+    .retainer-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 60px;
+      text-align: center;
+    }
+
+    .retainer-section h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .retainer-section > p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .retainer-perks {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .retainer-perk {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .retainer-perk .check {
+      color: var(--accent-light);
+      font-weight: 700;
+    }
+
+    /* FAQ */
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+
+    .faq-question {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+
+    .cta-guarantees {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .cta-guarantee {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .cta-guarantee strong { color: var(--text); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 24px;
+        gap: 16px;
+      }
+
+      .trust-bar {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .problem-grid,
+      .services-grid,
+      .case-study {
+        grid-template-columns: 1fr;
+      }
+
+      .case-study { padding: 32px; gap: 32px; }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .retainer-section { padding: 40px 24px; }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .retainer-perks, .cta-guarantees {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .case-stats { grid-template-columns: repeat(3, 1fr); }
+
+      .section { padding: 60px 0; }
+      .section-title { font-size: 1.75rem; }
+      .section-subtitle { font-size: 1rem; }
+
+      .service-card { padding: 28px; }
+      .service-card h3 { font-size: 1.15rem; }
+
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; text-align: center; max-width: 320px; }
+
+      .problem-card, .solution-card { padding: 28px; }
+
+      .faq-question { font-size: 0.95rem; }
+      .faq-answer { font-size: 0.9rem; }
+
+      .cta-section h2 { font-size: 1.75rem; }
+    }
+
+    @media (max-width: 480px) {
+      .process-grid { grid-template-columns: 1fr; }
+      .hero { padding: 120px 0 50px; }
+      .hero h1 { font-size: 2rem; letter-spacing: -1px; }
+      .hero p { font-size: 1.05rem; }
+      .case-stats { grid-template-columns: 1fr; }
+      .case-study-content h3 { font-size: 1.4rem; }
+      .retainer-section h3 { font-size: 1.4rem; }
+      .stat-number { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">Pictoflex<span>Labs</span></div>
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://calendly.com/pictoflexlabs/30min" target="_blank" class="nav-cta">Book a Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><span class="dot"></span> Accepting new projects</div>
+      <h1>You have the idea.<br>We'll <span class="gradient-text">build the product.</span></h1>
+      <p>We build MVPs, mobile apps, websites, and AI automation for founders who want to stop talking about their idea and start selling it.</p>
+      <p class="hero-proof">Trusted by startups and small businesses across the UK.</p>
+      <div class="hero-ctas">
+        <a href="https://calendly.com/pictoflexlabs/30min" target="_blank" class="btn-primary">Book a Free Discovery Call</a>
+        <a href="#services" class="btn-secondary">See Pricing</a>
+      </div>
+      <p class="btn-subtext">30 mins. No commitment. No hard sell.</p>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="container">
+    <div class="trust-bar">
+      <div class="trust-item"><span class="icon">&#9889;</span> <strong>Fast delivery</strong> &mdash; weeks, not months</div>
+      <div class="trust-item"><span class="icon">&#128241;</span> <strong>Published apps</strong> &mdash; live on both stores</div>
+      <div class="trust-item"><span class="icon">&#128274;</span> <strong>You own everything</strong> &mdash; code, designs, IP</div>
+      <div class="trust-item"><span class="icon">&#128176;</span> <strong>Fixed pricing</strong> &mdash; no surprise invoices</div>
+    </div>
+  </div>
+
+  <!-- PROBLEM / SOLUTION -->
+  <section class="problem-section">
+    <div class="container">
+      <div class="section-label text-center">The Problem</div>
+      <h2 class="section-title text-center">Most agencies take months, cost thousands, and leave you with something half-finished</h2>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <h3>Without Pictoflex Labs</h3>
+          <ul class="problem-list">
+            <li>Quoted &pound;15k+ for a basic app</li>
+            <li>Months of back-and-forth before anything gets built</li>
+            <li>Developers who don't understand your business</li>
+            <li>"Nearly done" for 3 months straight</li>
+            <li>Handed code you can't change or move</li>
+          </ul>
+        </div>
+        <div class="solution-card">
+          <h3>With Pictoflex Labs</h3>
+          <ul class="problem-list">
+            <li>MVPs from &pound;500, full apps from &pound;2,000</li>
+            <li>Clear timeline with weekly progress updates</li>
+            <li>We learn your business before writing a line of code</li>
+            <li>Delivered on schedule or we make it right</li>
+            <li>You own 100% of the code and IP</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-label">Services &amp; Pricing</div>
+      <h2 class="section-title">Clear pricing. No hidden fees.</h2>
+      <p class="section-subtitle">Every project includes a fixed quote upfront. You know exactly what you're paying before we start.</p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">&#9889;</div>
+          <h3>MVP Development</h3>
+          <p>Validate your idea with a working web app. We build the core features, deploy it, and get it in front of users — fast. Perfect for testing demand before you invest more.</p>
+          <ul class="service-features">
+            <li>Full-stack web application</li>
+            <li>User auth, dashboard, core features</li>
+            <li>Deployed and ready for users</li>
+            <li>Built to scale when you're ready</li>
+          </ul>
+          <div class="service-price">From &pound;500</div>
+          <span class="service-timeline">4&ndash;6 weeks</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#128241;</div>
+          <h3>Mobile App Development</h3>
+          <p>Full mobile apps for iOS and Android, published on both app stores. One codebase, native performance, premium feel. We handle everything from design to submission.</p>
+          <ul class="service-features">
+            <li>iOS &amp; Android from one codebase</li>
+            <li>Published on App Store &amp; Google Play</li>
+            <li>Push notifications, integrations, payments</li>
+            <li>App Store Optimisation included</li>
+          </ul>
+          <div class="service-price">From &pound;2,000</div>
+          <span class="service-timeline">8&ndash;12 weeks</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#127760;</div>
+          <h3>Websites &amp; Landing Pages</h3>
+          <p>Conversion-focused websites that turn visitors into customers. Fast, mobile-first, and SEO-ready. Ideal for launches, products, and businesses that need to look sharp online.</p>
+          <ul class="service-features">
+            <li>Mobile-first responsive design</li>
+            <li>SEO optimised &amp; fast loading</li>
+            <li>Analytics &amp; conversion tracking</li>
+            <li>CMS integration if needed</li>
+          </ul>
+          <div class="service-price">From &pound;50</div>
+          <span class="service-timeline">1&ndash;2 weeks</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">&#129302;</div>
+          <h3>AI Automation</h3>
+          <p>Stop paying people to do work a machine can do better. We build custom AI solutions — chatbots, data pipelines, workflow automation — that save you hours every week.</p>
+          <ul class="service-features">
+            <li>Custom AI chatbots &amp; assistants</li>
+            <li>Workflow &amp; process automation</li>
+            <li>Data processing &amp; analysis</li>
+            <li>API integrations with your tools</li>
+          </ul>
+          <div class="service-price">From &pound;2,000</div>
+          <span class="service-timeline">4&ndash;8 weeks</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Built by us. Used by real people.</h2>
+      <p class="section-subtitle">Here's what a Pictoflex Labs product looks like in production.</p>
+
+      <div class="case-study">
+        <div class="case-study-content">
+          <div class="case-tagline">CASE STUDY</div>
+          <h3>YUMO</h3>
+          <p>An AI-powered finance app for UK freelancers and side hustlers. Tracks income, expenses, invoices, inventory, net worth, and integrates with Stripe, Shopify, and eBay. Published on both app stores.</p>
+          <div class="case-stats">
+            <div class="case-stat">
+              <div class="case-stat-value">iOS + Android</div>
+              <div class="case-stat-label">Published</div>
+            </div>
+            <div class="case-stat">
+              <div class="case-stat-value">50+</div>
+              <div class="case-stat-label">Features</div>
+            </div>
+            <div class="case-stat">
+              <div class="case-stat-value">3</div>
+              <div class="case-stat-label">Integrations</div>
+            </div>
+          </div>
+          <div class="case-tech">
+            <span class="case-tech-tag">Flutter</span>
+            <span class="case-tech-tag">Node.js</span>
+            <span class="case-tech-tag">MongoDB</span>
+            <span class="case-tech-tag">AI Chat</span>
+            <span class="case-tech-tag">Stripe</span>
+            <span class="case-tech-tag">RevenueCat</span>
+          </div>
+        </div>
+        <div class="case-study-visual">
+          <div class="app-mockup">&#128178;</div>
+          <div class="app-name">YUMO</div>
+          <p class="app-desc">AI finance app for freelancers</p>
+          <div class="store-badges">
+            <div class="store-badge">&#63743; App Store</div>
+            <div class="store-badge">&#9654; Google Play</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">From idea to product in 4 steps</h2>
+      <p class="section-subtitle">No jargon. No endless meetings. Just a clear path from what you want to what you get.</p>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h4>Discovery Call</h4>
+          <p>30 minutes. Tell us your idea. We'll tell you what it takes to build it — timeline, cost, and approach. Zero pressure.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h4>Quote &amp; Plan</h4>
+          <p>We send a fixed-price quote and a feature list. You approve it before we write a single line of code. No surprises.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h4>Build &amp; Review</h4>
+          <p>We build in weekly sprints. You see progress every week and can give feedback as we go. No vanishing acts.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h4>Launch &amp; Support</h4>
+          <p>We deploy, publish, and hand over everything. Optional retainer if you want us to keep improving it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-label">What Clients Say</div>
+      <h2 class="section-title">Don't take our word for it</h2>
+      <p class="section-subtitle">Here's what founders and business owners say about working with us.</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"I went to three agencies before Pictoflex. Two quoted me &pound;12k+. Pictoflex built my MVP in 5 weeks for a fraction of that, and it actually works. Already got paying users."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JR</div>
+            <div>
+              <div class="testimonial-name">James R.</div>
+              <div class="testimonial-role">Founder, SaaS Startup</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"They built our mobile app and got it published on both stores. The whole process was smooth — weekly updates, no nonsense. I'd recommend them to any small business."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SP</div>
+            <div>
+              <div class="testimonial-name">Sarah P.</div>
+              <div class="testimonial-role">Owner, Wellness Studio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"We needed a landing page fast for a product launch. They turned it around in 4 days and it converted better than anything our in-house team had done. Brilliant."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div>
+              <div class="testimonial-name">Amir K.</div>
+              <div class="testimonial-role">Marketing Lead, E-commerce</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETAINER -->
+  <section class="section" id="retainer">
+    <div class="container">
+      <div class="retainer-section">
+        <div class="section-label">After Launch</div>
+        <h3>Growth &amp; Maintenance Retainer</h3>
+        <p>Your product doesn't stop at launch. We offer monthly retainers to keep your app updated, fix bugs, add features, and help you scale. Think of us as your tech team on call.</p>
+        <div class="retainer-perks">
+          <div class="retainer-perk"><span class="check">&#10003;</span> Bug fixes &amp; updates</div>
+          <div class="retainer-perk"><span class="check">&#10003;</span> New feature development</div>
+          <div class="retainer-perk"><span class="check">&#10003;</span> Performance monitoring</div>
+          <div class="retainer-perk"><span class="check">&#10003;</span> Priority response time</div>
+        </div>
+        <a href="https://calendly.com/pictoflexlabs/30min" target="_blank" class="btn-primary">Discuss a Retainer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-label text-center">FAQ</div>
+      <h2 class="section-title text-center">Questions you're probably asking</h2>
+      <p class="section-subtitle text-center mx-auto">If your question isn't here, book a call and we'll answer it live.</p>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question">How do you keep prices so low?</div>
+          <p class="faq-answer">We're a lean team, not a bloated agency with 40 people and fancy offices. No account managers, no project coordinators — you talk directly to the people building your product. That means lower overheads and better prices for you.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What tech do you use?</div>
+          <p class="faq-answer">Flutter for mobile apps (one codebase, both platforms), Node.js/Express for backends, React or plain HTML/CSS for websites, and MongoDB or PostgreSQL for databases. We pick the best tool for your project, not the trendiest one.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do I own the code?</div>
+          <p class="faq-answer">Yes. 100%. Once the project is delivered and paid for, you own everything — source code, designs, assets, IP. It's yours to keep, modify, or hand to another developer if you ever want to.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What if I need changes after launch?</div>
+          <p class="faq-answer">That's what the retainer is for. We offer monthly maintenance plans for ongoing updates, bug fixes, and new features. Or you can book us for one-off changes — whatever works for you.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How long does a typical project take?</div>
+          <p class="faq-answer">Websites: 1-2 weeks. MVPs: 4-6 weeks. Full mobile apps: 8-12 weeks. AI automation: 4-8 weeks. We'll give you an exact timeline before we start, and we stick to it.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I see progress during the build?</div>
+          <p class="faq-answer">Absolutely. We work in weekly sprints and share updates every week. You'll see what's been built, what's next, and you can give feedback as we go. No surprises at the end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="section-label">Ready to start?</div>
+      <h2>Stop sitting on your idea.<br>Let's build it.</h2>
+      <p>Book a free 30-minute discovery call. No pitch deck needed — just tell us what you want to build.</p>
+      <a href="https://calendly.com/pictoflexlabs/30min" target="_blank" class="btn-primary">Book a Free Discovery Call</a>
+      <div class="cta-guarantees">
+        <div class="cta-guarantee"><strong>Free</strong> &mdash; no cost, no obligation</div>
+        <div class="cta-guarantee"><strong>Fast</strong> &mdash; 30 mins, straight to the point</div>
+        <div class="cta-guarantee"><strong>Honest</strong> &mdash; if we're not the right fit, we'll say so</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-text">&copy; 2026 Pictoflex Labs. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
