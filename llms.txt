@@ -1,0 +1,36 @@
+# Pictoflex Labs
+
+> Pictoflex Labs is a lean UK-based app development agency that builds MVPs, mobile apps, websites, and AI automation for startups and small businesses, from idea to App Store launch.
+
+Pictoflex Labs is a small, direct-to-founder studio (no account managers, no bloated overhead). Every project ships with a fixed price quoted upfront, weekly progress updates, and the client owns 100% of the resulting code, designs, and IP.
+
+## Services & Pricing
+
+- **MVP Development** — from £500, 4–6 weeks. Full-stack web application with user auth, dashboard, and core features, deployed and built to scale.
+- **Mobile App Development** — from £2,000, 8–12 weeks. iOS & Android from one Flutter codebase, published on the App Store and Google Play, with push notifications, integrations, payments, and App Store Optimisation.
+- **Websites & Landing Pages** — from £50, 1–2 weeks. Mobile-first, SEO-optimised, fast-loading, with analytics/conversion tracking and optional CMS integration.
+- **AI Automation** — from £2,000, 4–8 weeks. Custom AI chatbots and assistants, workflow/process automation, data processing and analysis, API integrations.
+- **Growth & Maintenance Retainer** — ongoing monthly plan after launch: bug fixes, new feature development, performance monitoring, priority response time.
+
+## Tech Stack
+
+Flutter (mobile, single codebase for iOS & Android), Node.js/Express (backends), React or plain HTML/CSS (websites), MongoDB or PostgreSQL (databases).
+
+## Process
+
+1. **Discovery Call** — 30-minute free call to scope the idea, timeline, cost, and approach.
+2. **Quote & Plan** — fixed-price quote and feature list, approved before development starts.
+3. **Build & Review** — weekly sprints with visible progress and client feedback.
+4. **Launch & Support** — deployment, app store publishing, handover, and an optional maintenance retainer.
+
+## Case Study: YUMO
+
+Pictoflex Labs built YUMO, an AI-powered finance app for UK freelancers and side hustlers. It tracks income, expenses, invoices, inventory, and net worth, and integrates with Stripe, Shopify, and eBay. Published on both the App Store and Google Play. Built with Flutter, Node.js, MongoDB, Stripe, and RevenueCat.
+
+## Contact
+
+Book a free 30-minute discovery call: https://calendly.com/pictoflexlabs/30min
+
+## Pages
+
+- [Homepage](https://pictoflexlabs.co.uk/): full service list, pricing, process, case study, testimonials, and FAQ.
