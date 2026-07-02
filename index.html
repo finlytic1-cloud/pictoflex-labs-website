@@ -180,6 +180,72 @@
       padding: 0 24px;
     }
 
+    /* PRELOADER */
+    body.preloading { overflow: hidden; }
+    body.preloading .hero .container > * { animation-play-state: paused; }
+
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+    }
+
+    .curtain {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      background: var(--bg);
+      background-image: radial-gradient(circle at center, rgba(139, 92, 246, 0.12) 0%, transparent 65%);
+      transition: transform 0.9s cubic-bezier(.76, 0, .24, 1);
+    }
+    .curtain-left { left: 0; }
+    .curtain-right { right: 0; }
+    #preloader.hide .curtain-left { transform: translateX(-100%); }
+    #preloader.hide .curtain-right { transform: translateX(100%); }
+
+    .preloader-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #preloader.hide .preloader-content { opacity: 0; transform: scale(0.92); }
+
+    .preloader-logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      clip-path: inset(0 100% 0 0);
+      animation: revealText 0.9s cubic-bezier(.76, 0, .24, 1) forwards;
+      animation-delay: 0.2s;
+      white-space: nowrap;
+    }
+    .preloader-logo span { color: var(--accent-light); }
+    @keyframes revealText { to { clip-path: inset(0 0% 0 0); } }
+
+    .preloader-bar {
+      width: 160px;
+      height: 2px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .preloader-bar span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: var(--gradient);
+      animation: loadbar 1.1s cubic-bezier(.65, 0, .35, 1) forwards;
+      animation-delay: 0.1s;
+    }
+    @keyframes loadbar { to { width: 100%; } }
+
     /* NAV */
     nav {
       position: fixed;
@@ -1067,7 +1133,8 @@
       transition: opacity 0.3s ease;
       pointer-events: none;
     }
-    .service-card:hover::before, .testimonial-card:hover::before, .case-study:hover::before { opacity: 1; }
+    .service-card:hover::before, .testimonial-card:hover::before, .case-study:hover::before,
+    .service-card.spot-active::before, .testimonial-card.spot-active::before, .case-study.spot-active::before { opacity: 1; }
 
     /* MAGNETIC / SHINE BUTTONS */
     .btn-primary {
@@ -1105,10 +1172,18 @@
       .aurora-blob, .hero .container > *, .gradient-text { animation: none !important; opacity: 1 !important; transform: none !important; }
       .reveal { transition: none !important; opacity: 1 !important; transform: none !important; }
       .cursor-glow { display: none !important; }
+      #preloader { display: none !important; }
+      body.preloading { overflow: visible !important; }
+      .curtain, .preloader-content, .preloader-logo, .preloader-bar span { animation: none !important; transition: none !important; }
     }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
+      .cursor-glow { width: 280px; height: 280px; }
+      .aurora-blob { filter: blur(60px); }
+      .blob-1, .blob-2, .blob-3 { width: 240px; height: 240px; }
+      .preloader-logo { font-size: 1.4rem; }
+
       .nav-links { display: none; }
       .mobile-menu-btn { display: block; }
 
@@ -1185,7 +1260,7 @@
     @media (max-width: 480px) {
       .process-grid { grid-template-columns: 1fr; }
       .hero { padding: 120px 0 50px; }
-      .hero h1 { font-size: 2rem; letter-spacing: -1px; }
+      .hero h1 { font-size: 1.7rem; letter-spacing: -0.5px; }
       .hero p { font-size: 1.05rem; }
       .case-stats { grid-template-columns: 1fr; }
       .case-study-content h3 { font-size: 1.4rem; }
@@ -1194,7 +1269,24 @@
     }
   </style>
 </head>
-<body>
+<body class="preloading">
+
+  <!-- PRELOADER -->
+  <div id="preloader" aria-hidden="true">
+    <div class="curtain curtain-left"></div>
+    <div class="curtain curtain-right"></div>
+    <div class="preloader-content">
+      <div class="preloader-logo">Pictoflex<span>Labs</span></div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+  <noscript>
+    <style>
+      #preloader { display: none !important; }
+      body.preloading { overflow: visible !important; }
+      body.preloading .hero .container > * { animation-play-state: running !important; }
+    </style>
+  </noscript>
 
   <!-- NAV -->
   <nav>
@@ -1548,6 +1640,23 @@
   (function () {
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Preloader — curtain-open intro
+    var preloader = document.getElementById('preloader');
+    function endPreload() {
+      document.body.classList.remove('preloading');
+      if (!preloader) return;
+      preloader.classList.add('hide');
+      preloader.setAttribute('aria-hidden', 'true');
+      setTimeout(function () {
+        if (preloader && preloader.parentNode) preloader.parentNode.removeChild(preloader);
+      }, 950);
+    }
+    if (reduceMotion) {
+      endPreload();
+    } else {
+      setTimeout(endPreload, 1500);
+    }
+
     // Scroll progress bar
     var progress = document.createElement('div');
     progress.className = 'progress-bar';
@@ -1567,45 +1676,83 @@
     document.addEventListener('scroll', onNavScroll, { passive: true });
     onNavScroll();
 
-    if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      // Cursor glow trail
+    if (!reduceMotion) {
+      var hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      // Cursor / touch glow trail
       var glow = document.createElement('div');
       glow.className = 'cursor-glow';
       document.body.appendChild(glow);
-      var tx = 0, ty = 0, gx = 0, gy = 0;
-      window.addEventListener('mousemove', function (e) {
-        tx = e.clientX; ty = e.clientY;
-        glow.style.opacity = '1';
-      });
+      var tx = 0, ty = 0, gx = 0, gy = 0, glowActive = false;
+      function moveGlowTo(x, y) { tx = x; ty = y; glowActive = true; glow.style.opacity = '1'; }
+      function hideGlow() { glowActive = false; glow.style.opacity = '0'; }
       (function raf() {
-        gx += (tx - gx) * 0.15;
-        gy += (ty - gy) * 0.15;
-        glow.style.transform = 'translate(' + gx + 'px,' + gy + 'px) translate(-50%,-50%)';
+        if (glowActive) {
+          gx += (tx - gx) * 0.15;
+          gy += (ty - gy) * 0.15;
+          glow.style.transform = 'translate(' + gx + 'px,' + gy + 'px) translate(-50%,-50%)';
+        }
         requestAnimationFrame(raf);
       })();
 
-      // 3D tilt + spotlight on cards
+      if (hasFinePointer) {
+        window.addEventListener('mousemove', function (e) { moveGlowTo(e.clientX, e.clientY); });
+      } else {
+        window.addEventListener('touchstart', function (e) {
+          var t = e.touches[0];
+          gx = t.clientX; gy = t.clientY;
+          moveGlowTo(t.clientX, t.clientY);
+        }, { passive: true });
+        window.addEventListener('touchmove', function (e) {
+          var t = e.touches[0];
+          moveGlowTo(t.clientX, t.clientY);
+        }, { passive: true });
+        window.addEventListener('touchend', hideGlow, { passive: true });
+        window.addEventListener('touchcancel', hideGlow, { passive: true });
+      }
+
+      // 3D tilt + spotlight on cards (mouse on desktop, finger drag on touch)
       document.querySelectorAll('.service-card, .testimonial-card, .case-study').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
+        function tiltFromPoint(clientX, clientY) {
           var r = card.getBoundingClientRect();
-          var px = (e.clientX - r.left) / r.width - 0.5;
-          var py = (e.clientY - r.top) / r.height - 0.5;
+          var px = (clientX - r.left) / r.width - 0.5;
+          var py = (clientY - r.top) / r.height - 0.5;
           card.style.transform = 'perspective(800px) rotateX(' + (-py * 6).toFixed(2) + 'deg) rotateY(' + (px * 6).toFixed(2) + 'deg) translateY(-4px)';
           card.style.setProperty('--spot-x', ((px + 0.5) * 100) + '%');
           card.style.setProperty('--spot-y', ((py + 0.5) * 100) + '%');
-        });
-        card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+        }
+        function resetTilt() { card.style.transform = ''; card.classList.remove('spot-active'); }
+        if (hasFinePointer) {
+          card.addEventListener('mousemove', function (e) { tiltFromPoint(e.clientX, e.clientY); });
+          card.addEventListener('mouseleave', resetTilt);
+        } else {
+          card.addEventListener('touchstart', function (e) {
+            card.classList.add('spot-active');
+            tiltFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+          }, { passive: true });
+          card.addEventListener('touchmove', function (e) {
+            tiltFromPoint(e.touches[0].clientX, e.touches[0].clientY);
+          }, { passive: true });
+          card.addEventListener('touchend', resetTilt, { passive: true });
+          card.addEventListener('touchcancel', resetTilt, { passive: true });
+        }
       });
 
-      // Magnetic buttons
+      // Buttons: magnetic pull on desktop, tactile press on touch
       document.querySelectorAll('.btn-primary').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          var r = btn.getBoundingClientRect();
-          var mx = e.clientX - r.left - r.width / 2;
-          var my = e.clientY - r.top - r.height / 2;
-          btn.style.transform = 'translate(' + (mx * 0.25) + 'px,' + (my * 0.25) + 'px)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
+        if (hasFinePointer) {
+          btn.addEventListener('mousemove', function (e) {
+            var r = btn.getBoundingClientRect();
+            var mx = e.clientX - r.left - r.width / 2;
+            var my = e.clientY - r.top - r.height / 2;
+            btn.style.transform = 'translate(' + (mx * 0.25) + 'px,' + (my * 0.25) + 'px)';
+          });
+          btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
+        } else {
+          btn.addEventListener('touchstart', function () { btn.style.transform = 'scale(0.96)'; }, { passive: true });
+          btn.addEventListener('touchend', function () { btn.style.transform = ''; }, { passive: true });
+          btn.addEventListener('touchcancel', function () { btn.style.transform = ''; }, { passive: true });
+        }
       });
     }
 
