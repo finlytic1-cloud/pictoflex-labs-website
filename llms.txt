@@ -1,6 +1,6 @@
 # Pictoflex Labs
 
-> Pictoflex Labs is a lean UK-based app development agency that builds MVPs, mobile apps, websites, and AI automation for startups and small businesses, from idea to App Store launch.
+> Pictoflex Labs is a lean UK-based app development agency that builds websites, automations, AI receptionists, custom software and mobile apps for local businesses and founders. Based in Croydon, South London.
 
 Pictoflex Labs is a small, direct-to-founder studio (no account managers, no bloated overhead). Every project ships with a fixed price quoted upfront, weekly progress updates, and the client owns 100% of the resulting code, designs, and IP.
 
@@ -9,8 +9,15 @@ Pictoflex Labs is a small, direct-to-founder studio (no account managers, no blo
 - **MVP Development** — from £500, 4–6 weeks. Full-stack web application with user auth, dashboard, and core features, deployed and built to scale.
 - **Mobile App Development** — from £2,000, 8–12 weeks. iOS & Android from one Flutter codebase, published on the App Store and Google Play, with push notifications, integrations, payments, and App Store Optimisation.
 - **Websites & Landing Pages** — from £50, 1–2 weeks. Mobile-first, SEO-optimised, fast-loading, with analytics/conversion tracking and optional CMS integration.
-- **AI Automation** — from £2,000, 4–8 weeks. Custom AI chatbots and assistants, workflow/process automation, data processing and analysis, API integrations.
+- **AI Automation & AI Receptionists** — from £149/month, live in days. Custom AI chatbots and assistants, workflow/process automation, data processing and analysis, API integrations.
 - **Growth & Maintenance Retainer** — ongoing monthly plan after launch: bug fixes, new feature development, performance monitoring, priority response time.
+
+## For Local Businesses
+
+- **Websites & online booking** — quick fixes from £150 (3 days), new sites, booking with deposits and reminders, Google Business Profile.
+- **Automations** — from £79/month: instant enquiry replies, quote follow-ups, missed-call texts, appointment reminders, review requests.
+- **AI receptionist & assistants** — from £149/month (30-day trial): answers calls when busy or closed, books appointments, sends call summaries.
+- **Custom software** — client portals, job tracking, dashboards; priced after a scoping call.
 
 ## Tech Stack
 
@@ -29,7 +36,7 @@ Pictoflex Labs built YUMO, an AI-powered finance app for UK freelancers and side
 
 ## Contact
 
-Book a free 30-minute discovery call: https://calendly.com/pictoflexlabs/30min
+Book a free 30-minute discovery call: https://calendly.com/pictoflexlabs/30min (or https://calendly.com/pictoflexlabs)
 
 ## Pages
 
