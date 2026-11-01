@@ -1268,6 +1268,7 @@
       .stat-number { font-size: 2rem; }
     }
   </style>
+  <link rel="stylesheet" href="/assets/pages.css">
 </head>
 <body class="preloading">
 
@@ -1291,15 +1292,17 @@
   <!-- NAV -->
   <nav>
     <div class="container nav-inner">
-      <div class="logo">Pictoflex<span>Labs</span></div>
-      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+      <div class="logo"><a href="/">Pictoflex<span>Labs</span></a></div>
+      <button class="mobile-menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
       <ul class="nav-links">
-        <li><a href="#local">Local Businesses</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work">Our Work</a></li>
-        <li><a href="#process">How We Work</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="https://calendly.com/pictoflexlabs/30min" target="_blank" class="nav-cta">Book a Call</a></li>
+        <li class="has-drop"><a href="/solutions/">Solutions</a>
+          <div class="dropdown"><div class="dropdown-inner cols-3"><div class="drop-group"><h5>Websites &amp; Growth</h5><a href="/solutions/websites/">Websites</a><a href="/solutions/landing-pages/">Landing Pages &amp; Funnels</a><a href="/solutions/seo/">SEO &amp; Google Business Profile</a><a href="/solutions/online-booking/">Online Booking Systems</a></div><div class="drop-group"><h5>Automation &amp; Software</h5><a href="/solutions/workflow-automation/">Workflow Automation</a><a href="/solutions/follow-ups/">Follow-ups, Reminders &amp; Reviews</a><a href="/solutions/crm-setup/">CRM Setup &amp; Migration</a><a href="/solutions/dashboards/">Dashboards &amp; Reporting</a><a href="/solutions/client-portals/">Client Portals</a><a href="/solutions/internal-tools/">Internal Tools</a><a href="/solutions/web-apps/">Web Apps, Mobile Apps &amp; MVPs</a></div><div class="drop-group"><h5>AI Solutions</h5><a href="/solutions/ai-receptionist/">AI Receptionist &amp; Voice Agents</a><a href="/solutions/ai-chat/">AI Chat Assistants</a><a href="/solutions/ai-knowledge/">AI Knowledge Assistants</a></div><div class="drop-all"><a href="/solutions/">All solutions &rarr;</a></div></div></div></li>
+        <li class="has-drop"><a href="/industries/">Industries</a>
+          <div class="dropdown"><div class="dropdown-inner cols-2"><div class="drop-group"><h5>Local businesses</h5><a href="/industries/healthcare/">Clinics &amp; Healthcare</a><a href="/industries/pharmacy/">Pharmacies</a><a href="/industries/beauty/">Beauty, Hair &amp; Wellness</a><a href="/industries/trades/">Trades &amp; Home Services</a><a href="/industries/construction/">Builders &amp; Construction</a><a href="/industries/property/">Property &amp; Estate Agents</a></div><div class="drop-group"><h5>More sectors</h5><a href="/industries/professional/">Accountants, Solicitors &amp; Professional Services</a><a href="/industries/hospitality/">Restaurants, Cafés &amp; Hospitality</a><a href="/industries/retail/">Retail &amp; E-commerce</a><a href="/industries/education/">Tutors, Driving Schools &amp; Education</a><a href="/industries/startups/">Startups &amp; Founders</a></div><div class="drop-all"><a href="/industries/">All industries &rarr;</a></div></div></div></li>
+        <li><a href="/#process">How We Work</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="https://calendly.com/pictoflexlabs/30min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a></li>
       </ul>
     </div>
   </nav>
@@ -1676,9 +1679,19 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-text">&copy; 2026 Pictoflex Labs &middot; Croydon, South London &middot; <a href="https://calendly.com/pictoflexlabs" target="_blank" style="color:inherit">Book a call</a></div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <div class="logo"><a href="/">Pictoflex<span>Labs</span></a></div>
+          <p>Websites, automations, AI and custom software for local businesses and founders. Based in Croydon, South London.</p>
+          <a href="https://calendly.com/pictoflexlabs/30min" target="_blank" rel="noopener" class="btn-primary small">Book a free call</a>
+        </div>
+        <div><h5>Solutions</h5><a href="/solutions/websites/">Websites</a><a href="/solutions/landing-pages/">Landing Pages &amp; Funnels</a><a href="/solutions/seo/">SEO &amp; Google Business Profile</a><a href="/solutions/online-booking/">Online Booking Systems</a><a href="/solutions/workflow-automation/">Workflow Automation</a><a href="/solutions/follow-ups/">Follow-ups, Reminders &amp; Reviews</a><a href="/solutions/crm-setup/">CRM Setup &amp; Migration</a><a href="/solutions/dashboards/">Dashboards &amp; Reporting</a><a href="/solutions/client-portals/">Client Portals</a><a href="/solutions/internal-tools/">Internal Tools</a><a href="/solutions/web-apps/">Web Apps, Mobile Apps &amp; MVPs</a><a href="/solutions/ai-receptionist/">AI Receptionist &amp; Voice Agents</a><a href="/solutions/ai-chat/">AI Chat Assistants</a><a href="/solutions/ai-knowledge/">AI Knowledge Assistants</a></div>
+        <div><h5>Industries</h5><a href="/industries/healthcare/">Clinics &amp; Healthcare</a><a href="/industries/pharmacy/">Pharmacies</a><a href="/industries/beauty/">Beauty, Hair &amp; Wellness</a><a href="/industries/trades/">Trades &amp; Home Services</a><a href="/industries/construction/">Builders &amp; Construction</a><a href="/industries/property/">Property &amp; Estate Agents</a><a href="/industries/professional/">Accountants, Solicitors &amp; Professional Services</a><a href="/industries/hospitality/">Restaurants, Cafés &amp; Hospitality</a><a href="/industries/retail/">Retail &amp; E-commerce</a><a href="/industries/education/">Tutors, Driving Schools &amp; Education</a><a href="/industries/startups/">Startups &amp; Founders</a></div>
+        <div><h5>Company</h5><a href="/about/">About</a><a href="/#process">How we work</a><a href="/#work">Our work</a><a href="/#faq">FAQ</a><a href="/solutions/">All solutions</a><a href="/industries/">All industries</a><a href="https://calendly.com/pictoflexlabs/30min" target="_blank" rel="noopener">Book a free call</a></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Pictoflex Labs &middot; Croydon, South London</span><span>Free mini-audit &middot; Fixed prices &middot; You own everything we build</span></div>
     </div>
   </footer>
 

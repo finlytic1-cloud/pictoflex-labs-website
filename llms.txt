@@ -41,3 +41,35 @@ Book a free 30-minute discovery call: https://calendly.com/pictoflexlabs/30min (
 ## Pages
 
 - [Homepage](https://pictoflexlabs.co.uk/): full service list, pricing, process, case study, testimonials, and FAQ.
+
+
+## Solutions
+- [Websites](https://pictoflexlabs.co.uk/solutions/websites/): Fast, mobile-first sites that turn visitors into bookings.
+- [Landing Pages & Funnels](https://pictoflexlabs.co.uk/solutions/landing-pages/): Single-goal pages that turn ad clicks into enquiries.
+- [SEO & Google Business Profile](https://pictoflexlabs.co.uk/solutions/seo/): Get found when people nearby search for what you do.
+- [Online Booking Systems](https://pictoflexlabs.co.uk/solutions/online-booking/): Let customers book 24/7, with reminders that cut no-shows.
+- [Workflow Automation](https://pictoflexlabs.co.uk/solutions/workflow-automation/): Connect your apps and stop doing the same admin daily.
+- [Follow-ups, Reminders & Reviews](https://pictoflexlabs.co.uk/solutions/follow-ups/): Quote chasers, review requests and rebooking on autopilot.
+- [CRM Setup & Migration](https://pictoflexlabs.co.uk/solutions/crm-setup/): Every lead and customer in one place, nothing forgotten.
+- [Dashboards & Reporting](https://pictoflexlabs.co.uk/solutions/dashboards/): Your key numbers, live, in one place.
+- [Client Portals](https://pictoflexlabs.co.uk/solutions/client-portals/): A secure space for clients to see updates and documents.
+- [Internal Tools](https://pictoflexlabs.co.uk/solutions/internal-tools/): Custom software built around how your team works.
+- [Web Apps, Mobile Apps & MVPs](https://pictoflexlabs.co.uk/solutions/web-apps/): From idea to a working product, on web and app stores.
+- [AI Receptionist & Voice Agents](https://pictoflexlabs.co.uk/solutions/ai-receptionist/): Answer every call 24/7, book appointments, text you a summary.
+- [AI Chat Assistants](https://pictoflexlabs.co.uk/solutions/ai-chat/): Instant answers on your website, WhatsApp and Instagram.
+- [AI Knowledge Assistants](https://pictoflexlabs.co.uk/solutions/ai-knowledge/): Your team's procedures and documents, answered in seconds.
+
+## Industries
+- [Clinics & Healthcare](https://pictoflexlabs.co.uk/industries/healthcare/): Dental practices, physios, osteopaths, aesthetics and private clinics
+- [Pharmacies](https://pictoflexlabs.co.uk/industries/pharmacy/): Independent pharmacies and small pharmacy groups
+- [Beauty, Hair & Wellness](https://pictoflexlabs.co.uk/industries/beauty/): Salons, barbers, beauty clinics, spas and massage therapists
+- [Trades & Home Services](https://pictoflexlabs.co.uk/industries/trades/): Plumbers, electricians, heating engineers, cleaners and handymen
+- [Builders & Construction](https://pictoflexlabs.co.uk/industries/construction/): Builders, renovation firms, roofers and contractors
+- [Property & Estate Agents](https://pictoflexlabs.co.uk/industries/property/): Estate agents, lettings agents and property managers
+- [Accountants, Solicitors & Professional Services](https://pictoflexlabs.co.uk/industries/professional/): Accountants, bookkeepers, solicitors, consultants and agencies
+- [Restaurants, Cafés & Hospitality](https://pictoflexlabs.co.uk/industries/hospitality/): Restaurants, cafés, bars and takeaways
+- [Retail & E-commerce](https://pictoflexlabs.co.uk/industries/retail/): Shops, online stores and resellers
+- [Tutors, Driving Schools & Education](https://pictoflexlabs.co.uk/industries/education/): Tutors, driving instructors, training providers and small schools
+- [Startups & Founders](https://pictoflexlabs.co.uk/industries/startups/): First-time founders, early-stage startups and side projects
+
+- [About](https://pictoflexlabs.co.uk/about/)
