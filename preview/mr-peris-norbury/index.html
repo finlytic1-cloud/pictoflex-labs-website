@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mr Peri's Norbury | Flame-Grilled Peri Peri Chicken | HMC Halal</title>
+<meta name="description" content="Flame-grilled peri peri chicken, burgers, wraps, wings and platters on London Road, Norbury. HMC halal certified. Open late, 7 days a week.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141110">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Mr Peri's","servesCuisine":["Peri Peri","Chicken","Halal"],"telephone":"+442034097748","address":{"@type":"PostalAddress","streetAddress":"1336 London Road","addressLocality":"Norbury, London","postalCode":"SW16 4DG","addressCountry":"GB"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Sunday"],"opens":"12:00","closes":"23:59"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"12:00","closes":"01:00"}],"hasMenu":"#menu","priceRange":"££"}</script>
+<style>
+:root{--ink:#141110;--ink2:#1D1917;--ink3:#27211E;--line:#3A312C;--red:#E3311D;--red2:#FF4A2E;--fire:#FF8A1F;--gold:#FFC23D;--cream:#F7EEE2;--mut:#BFB3A6;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.display{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.95}
+.prev{background:#7c3aed;color:#fff;text-align:center;font-size:.78rem;font-weight:700;padding:6px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(20,17,16,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:70px;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{font-family:'Anton';font-weight:400;font-size:1.5rem;letter-spacing:.02em;line-height:1}
+.logo b span{color:var(--red2)}
+.logo small{display:block;font-size:.62rem;letter-spacing:.22em;font-weight:800;color:var(--gold);text-transform:uppercase;margin-top:3px}
+nav.main{display:flex;gap:26px;font-weight:700;font-size:.92rem}
+nav.main a{text-decoration:none;color:var(--mut)}nav.main a:hover{color:var(--cream)}
+.hd-cta{display:flex;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;text-decoration:none;border-radius:999px;padding:14px 24px;font-size:1rem;transition:transform .15s,filter .15s;border:0;cursor:pointer;font-family:inherit;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 12px 30px rgba(227,49,29,.35)}
+.btn-ghost{background:transparent;border:2px solid var(--line);color:var(--cream)}
+.btn-cream{background:var(--cream);color:var(--ink)}
+.btn svg{width:18px;height:18px}
+.btn.sm{padding:10px 18px;font-size:.9rem}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:70px 0 80px}
+.hero:before{content:'';position:absolute;right:-200px;top:-200px;width:900px;height:900px;background:radial-gradient(circle,rgba(255,74,46,.28),transparent 62%);pointer-events:none}
+.hero:after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;mask-image:linear-gradient(to bottom,#000,transparent)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;position:relative;z-index:1}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--ink2);border-radius:999px;padding:7px 14px;font-size:.8rem;font-weight:800}
+.badge.halal{border-color:rgba(60,190,110,.5);color:#7CE3A4}
+.status-dot{width:9px;height:9px;border-radius:50%;background:#888}
+.status-dot.open{background:#2ecc71;box-shadow:0 0 0 0 rgba(46,204,113,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(46,204,113,0)}100%{box-shadow:0 0 0 0 rgba(46,204,113,0)}}
+.hero h1{font-size:clamp(3.4rem,9vw,7.4rem);margin-bottom:22px}
+.hero h1 .flame{color:var(--red2);display:block}
+.hero p.lead{font-size:1.2rem;color:var(--mut);max-width:520px;margin-bottom:30px}
+.hero p.lead b{color:var(--cream)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art{position:relative;justify-self:center;width:100%;max-width:470px;aspect-ratio:1}
+.hero-art svg{width:100%;height:100%}
+.sticker{position:absolute;background:var(--gold);color:var(--ink);font-family:'Anton';text-transform:uppercase;text-align:center;border-radius:50%;width:124px;height:124px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;transform:rotate(-12deg);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.sticker b{font-size:2.1rem;font-weight:400}.sticker span{font-size:.8rem;letter-spacing:.06em}
+.st1{left:-2%;bottom:6%}
+.st2{right:0;top:4%;background:var(--red);color:#fff;transform:rotate(10deg);width:110px;height:110px}
+.st2 b{font-size:1.5rem}
+/* ticker */
+.ticker{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.ticker-track{display:inline-flex;gap:40px;padding:14px 0;animation:tick 28s linear infinite;font-family:'Anton';text-transform:uppercase;font-size:1.25rem;letter-spacing:.04em}
+.ticker-track span:nth-child(even){color:var(--gold)}
+@keyframes tick{to{transform:translateX(-50%)}}
+/* sections */
+section.s{padding:90px 0}
+.eyebrow{color:var(--fire);font-weight:800;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
+h2.display{font-size:clamp(2.4rem,5.5vw,4.2rem);margin-bottom:14px}
+.sub{color:var(--mut);font-size:1.08rem;max-width:620px}
+/* heat */
+.heat{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:36px}
+.heat-lvl{border-radius:var(--r);padding:22px 16px;text-align:center;border:1px solid var(--line);background:var(--ink2)}
+.heat-lvl .chilis{font-size:1.2rem;letter-spacing:2px;height:28px}
+.heat-lvl b{display:block;font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.3rem;margin-top:6px}
+.heat-lvl small{color:var(--mut);font-size:.82rem}
+.heat-lvl:nth-child(1){border-top:4px solid #C9D46A}.heat-lvl:nth-child(2){border-top:4px solid var(--gold)}.heat-lvl:nth-child(3){border-top:4px solid var(--fire)}.heat-lvl:nth-child(4){border-top:4px solid var(--red2)}.heat-lvl:nth-child(5){border-top:4px solid #9B1B0E}
+/* menu */
+.menu-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.tabs{position:sticky;top:70px;z-index:20;background:var(--ink);padding:14px 0;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin-bottom:10px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid var(--line);background:var(--ink2);color:var(--cream);border-radius:999px;padding:10px 18px;font-weight:800;font-size:.9rem;cursor:pointer;font-family:inherit;text-decoration:none}
+.tab.on,.tab:hover{background:var(--red);border-color:var(--red);color:#fff}
+.cat{scroll-margin-top:150px;margin-top:40px}
+.cat h3{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:2rem;display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.cat h3:after{content:'';flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 14px)}
+.items{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.item{background:var(--ink2);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;display:grid;grid-template-columns:62px 1fr auto;gap:16px;align-items:center;transition:border-color .2s,transform .2s}
+.item:hover{border-color:rgba(255,74,46,.6);transform:translateY(-2px)}
+.item .ico{width:62px;height:62px;border-radius:16px;background:linear-gradient(135deg,rgba(255,74,46,.22),rgba(255,138,31,.12));display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.item h4{font-size:1.08rem;font-weight:800;line-height:1.25}
+.item p{color:var(--mut);font-size:.88rem;line-height:1.45;margin-top:4px}
+.item .tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:var(--ink);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:2px}
+.price{font-family:'Anton';font-size:1.45rem;color:var(--gold);text-align:right;white-space:nowrap;line-height:1.1}
+.price small{display:block;font-family:'DM Sans';font-size:.72rem;color:var(--mut);font-weight:700}
+.order-soon{margin-top:44px;border:2px dashed var(--line);border-radius:22px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--ink2)}
+.order-soon h4{font-family:'Anton';font-weight:400;font-size:1.6rem;text-transform:uppercase}
+.order-soon p{color:var(--mut)}
+/* platters band */
+.band{background:linear-gradient(120deg,var(--red),#B5200F);border-radius:28px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+.band:after{content:'';position:absolute;right:-80px;bottom:-120px;width:380px;height:380px;border-radius:50%;background:rgba(255,194,61,.18)}
+.band h2{color:#fff}
+.band p{color:#FFE3DA;font-size:1.08rem;margin-bottom:22px}
+.plist{display:grid;gap:12px;position:relative;z-index:1}
+.pl{display:flex;justify-content:space-between;align-items:center;background:rgba(20,17,16,.35);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:18px 22px}
+.pl b{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.35rem;letter-spacing:.02em}
+.pl span{font-family:'Anton';font-size:1.5rem;color:var(--gold)}
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.why div{background:var(--ink2);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.why i{font-style:normal;font-size:1.8rem;display:block;margin-bottom:12px}
+.why b{display:block;font-size:1.08rem;margin-bottom:6px}
+.why p{color:var(--mut);font-size:.92rem}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:stretch}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:24px;padding:34px}
+.hours{width:100%;border-collapse:collapse;margin:18px 0 26px}
+.hours td{padding:11px 0;border-bottom:1px solid var(--line);font-weight:600}
+.hours td:last-child{text-align:right;color:var(--mut)}
+.hours tr.today td{color:var(--gold)}
+.addr{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:var(--ink3)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(.3) contrast(1.05)}
+/* footer */
+footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mut);font-size:.9rem}
+.ft{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.credit{margin-top:24px;font-size:.8rem}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,17,16,.96);border-top:1px solid var(--line)}
+.sticky .btn{border-radius:14px;padding:15px 10px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){
+ .hero-grid,.band,.visit{grid-template-columns:1fr}
+ .hero-art{max-width:340px}
+ .heat{grid-template-columns:repeat(3,1fr)}
+ .why{grid-template-columns:1fr 1fr}
+ .items{grid-template-columns:1fr}
+ nav.main{display:none}
+}
+@media(max-width:600px){
+ .wrap{padding:0 16px}
+ .hero{padding:40px 0 50px}
+ .hero-art{max-width:260px;order:-1;margin-bottom:-10px}
+ .sticker{width:96px;height:96px}.sticker b{font-size:1.6rem}.st2{width:86px;height:86px}.st2 b{font-size:1.15rem}
+ .cta-row .btn{width:100%}
+ .hd-cta .btn-ghost{display:none}
+ section.s{padding:64px 0}
+ .heat{grid-template-columns:1fr 1fr}
+ .heat-lvl:last-child{grid-column:1/-1}
+ .why{grid-template-columns:1fr}
+ .item{grid-template-columns:50px 1fr auto;padding:16px;gap:12px}
+ .item .ico{width:50px;height:50px;font-size:1.5rem;border-radius:12px}
+ .band{padding:30px 20px}
+ .card{padding:24px}
+ .sticky{display:grid}
+ .tabs{top:70px}
+ .hide-sm{display:none}
+ .logo small{white-space:nowrap}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="prev">Website demo for Mr Peri's Norbury &middot; designed by Pictoflex Labs</div>
+
+<header><div class="wrap hd">
+  <a class="logo" href="#top" aria-label="Mr Peri's home">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E3311D"/><path d="M20 7c4 5 7 8.5 7 13.5A7 7 0 0 1 13 20.5c0-3 1.6-5 3.4-6.6.3 2.4 1.4 3.6 2.8 4.1C18.4 14.6 18.6 10.6 20 7z" fill="#FFC23D"/><path d="M20 17c2 2.6 3.4 4.2 3.4 6.4a3.4 3.4 0 0 1-6.8 0c0-1.7 1.2-3 2.2-3.8.1 1 .6 1.6 1.2 1.8-.2-1.8-.2-3 0-4.4z" fill="#fff"/></svg>
+    <div><b>MR <span>PERI'S</span></b><small>Norbury<span class="hide-sm"> &middot; Flame grilled</span></small></div>
+  </a>
+  <nav class="main"><a href="#menu">Menu</a><a href="#heat">Heat</a><a href="#platters">Platters</a><a href="#visit">Find us</a></nav>
+  <div class="hd-cta">
+    <a class="btn btn-ghost sm" href="https://www.google.com/maps/dir/?api=1&destination=Mr+Peri%27s+1336+London+Road+Norbury+SW16+4DG" target="_blank" rel="noopener">Directions</a>
+    <a class="btn btn-red sm" href="tel:+442034097748"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>Call to order</a>
+  </div>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="badges">
+      <span class="badge"><span class="status-dot" id="dot"></span><span id="status">Open late, 7 days</span></span>
+      <span class="badge halal">&#10004; HMC Halal Certified</span>
+    </div>
+    <h1 class="display">Flame grilled.<span class="flame">Peri peri.</span>Proper.</h1>
+    <p class="lead">Juicy chicken, burgers, wraps and wings, grilled to order on <b>London Road, Norbury</b>. Choose your heat, grab a platter for the family, and come hungry.</p>
+    <div class="cta-row">
+      <a class="btn btn-red" href="#menu">View the menu</a>
+      <a class="btn btn-ghost" href="tel:+442034097748"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>020 3409 7748</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 400 400">
+      <defs>
+        <radialGradient id="plate" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#2E2724"/><stop offset="1" stop-color="#1A1614"/></radialGradient>
+        <linearGradient id="fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#E3311D"/><stop offset=".6" stop-color="#FF8A1F"/><stop offset="1" stop-color="#FFC23D"/></linearGradient>
+        <linearGradient id="ck" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F0A04B"/><stop offset=".55" stop-color="#C9531F"/><stop offset="1" stop-color="#8E2E12"/></linearGradient>
+      </defs>
+      <g opacity=".9">
+        <path d="M70 330 C40 250 110 220 95 150 C140 190 150 120 140 70 C200 120 215 60 205 20 C265 80 300 110 270 180 C310 160 330 120 325 90 C380 170 370 260 330 330 Z" fill="url(#fl)" opacity=".35">
+          <animate attributeName="opacity" values=".25;.45;.25" dur="2.4s" repeatCount="indefinite"/>
+        </path>
+      </g>
+      <ellipse cx="200" cy="270" rx="170" ry="70" fill="url(#plate)" stroke="#3A312C" stroke-width="3"/>
+      <ellipse cx="200" cy="262" rx="140" ry="52" fill="#221C19"/>
+      <!-- chicken -->
+      <path d="M118 250 C110 205 150 170 205 172 C262 174 296 205 290 245 C284 282 236 296 196 292 C150 288 124 280 118 250Z" fill="url(#ck)"/>
+      <g stroke="#3B1608" stroke-width="7" stroke-linecap="round" opacity=".75">
+        <path d="M150 215 L250 205"/><path d="M140 240 L270 228"/><path d="M152 266 L262 254"/>
+      </g>
+      <path d="M150 190 C170 182 190 180 214 182" stroke="#FFD08A" stroke-width="6" stroke-linecap="round" fill="none" opacity=".6"/>
+      <!-- chillies -->
+      <path d="M300 250 C330 236 350 250 352 272 C340 262 322 262 304 270Z" fill="#E3311D"/><path d="M300 250 C294 244 296 236 304 234" stroke="#4E8A2E" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M86 262 C70 286 76 306 94 314 C92 298 98 284 110 272Z" fill="#FF4A2E"/><path d="M110 272 C114 264 112 258 104 256" stroke="#4E8A2E" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- lemon -->
+      <circle cx="268" cy="300" r="22" fill="#FFC23D"/><circle cx="268" cy="300" r="15" fill="#FFE08A"/><g stroke="#FFC23D" stroke-width="2"><path d="M268 285v30M253 300h30M257 289l22 22M279 289l-22 22"/></g>
+      <!-- steam -->
+      <g stroke="#F7EEE2" stroke-width="4" fill="none" stroke-linecap="round" opacity=".35">
+        <path d="M170 150 c-10 -16 10 -24 0 -40"><animate attributeName="opacity" values=".1;.5;.1" dur="3s" repeatCount="indefinite"/></path>
+        <path d="M205 140 c-10 -16 10 -24 0 -40"><animate attributeName="opacity" values=".5;.1;.5" dur="3s" repeatCount="indefinite"/></path>
+        <path d="M240 150 c-10 -16 10 -24 0 -40"><animate attributeName="opacity" values=".2;.45;.2" dur="3s" repeatCount="indefinite"/></path>
+      </g>
+    </svg>
+    <div class="sticker st1"><b>£8.99</b><span>Half chicken</span></div>
+    <div class="sticker st2"><b>100%</b><span>Halal</span></div>
+  </div>
+</div></section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  <span>Flame-grilled chicken</span><span>&#9733;</span><span>HMC Halal</span><span>&#9733;</span><span>Burgers &amp; wraps</span><span>&#9733;</span><span>Wings</span><span>&#9733;</span><span>Family platters</span><span>&#9733;</span><span>Open late</span><span>&#9733;</span>
+  <span>Flame-grilled chicken</span><span>&#9733;</span><span>HMC Halal</span><span>&#9733;</span><span>Burgers &amp; wraps</span><span>&#9733;</span><span>Wings</span><span>&#9733;</span><span>Family platters</span><span>&#9733;</span><span>Open late</span><span>&#9733;</span>
+</div></div>
+
+<section class="s" id="heat"><div class="wrap">
+  <div class="eyebrow reveal">Choose your heat</div>
+  <h2 class="display reveal">How brave are you?</h2>
+  <p class="sub reveal">Every piece is marinated and flame-grilled, then basted in your choice of sauce. Not sure? Start in the middle and work your way up.</p>
+  <div class="heat">
+    <div class="heat-lvl reveal"><div class="chilis">&#127819;</div><b>Lemon &amp; Herb</b><small>No heat, all flavour</small></div>
+    <div class="heat-lvl reveal"><div class="chilis">&#127798;&#65039;</div><b>Mild</b><small>A gentle warm-up</small></div>
+    <div class="heat-lvl reveal"><div class="chilis">&#127798;&#65039;&#127798;&#65039;</div><b>Medium</b><small>The crowd favourite</small></div>
+    <div class="heat-lvl reveal"><div class="chilis">&#127798;&#65039;&#127798;&#65039;&#127798;&#65039;</div><b>Hot</b><small>Proper kick</small></div>
+    <div class="heat-lvl reveal"><div class="chilis">&#128293;&#128293;&#128293;</div><b>Extra Hot</b><small>You've been warned</small></div>
+  </div>
+</div></section>
+
+<section class="s" id="menu" style="padding-top:20px"><div class="wrap">
+  <div class="menu-top">
+    <div><div class="eyebrow">The menu</div><h2 class="display">Grilled to order</h2></div>
+    <p class="sub" style="max-width:380px">Call ahead to order and collect. Online ordering is coming soon.</p>
+  </div>
+  <div class="tabs" id="tabs">
+    <a class="tab on" href="#c-chicken">Chicken</a>
+    <a class="tab" href="#c-burgers">Burgers, Wraps &amp; Pittas</a>
+    <a class="tab" href="#c-platters">Platters</a>
+    <a class="tab" href="#c-sides">Sides</a>
+    <a class="tab" href="#c-drinks">Drinks &amp; Shakes</a>
+  </div>
+
+  <div class="cat" id="c-chicken"><h3>Peri Peri Chicken</h3><div class="items">
+    <div class="item reveal"><div class="ico">&#127831;</div><div><h4>Half Chicken <span class="tag">Popular</span></h4><p>Flame-grilled half chicken, basted in your choice of heat.</p></div><div class="price">£8.99</div></div>
+    <div class="item reveal"><div class="ico">&#127831;</div><div><h4>Whole Chicken</h4><p>A whole flame-grilled chicken. Perfect for sharing.</p></div><div class="price">£13.49</div></div>
+    <div class="item reveal"><div class="ico">&#128293;</div><div><h4>Peri Peri Wings</h4><p>Flame-grilled wings in your choice of heat.</p></div><div class="price">£6.95<small>5 wings</small>£11.95<small>10 wings</small></div></div>
+    <div class="item reveal"><div class="ico">&#127858;</div><div><h4>Chicken Livers</h4><p>Peri peri chicken livers, a true classic.</p></div><div class="price">£7.99</div></div>
+  </div></div>
+
+  <div class="cat" id="c-burgers"><h3>Burgers, Wraps &amp; Pittas</h3><div class="items">
+    <div class="item reveal"><div class="ico">&#129369;</div><div><h4>Halloumi Chicken Pitta <span class="tag">Signature</span></h4><p>Toasted pitta with chicken thighs, grilled halloumi, red onion chutney, mayo and lettuce.</p></div><div class="price">£9.49</div></div>
+    <div class="item reveal"><div class="ico">&#127828;</div><div><h4>Cheesy Chicken Burger</h4><p>Flame-grilled chicken with melted cheese.</p></div><div class="price">£8.49</div></div>
+    <div class="item reveal"><div class="ico">&#127828;</div><div><h4>Classic Burger</h4><p>Flame-grilled chicken burger, done the classic way.</p></div><div class="price">£7.99</div></div>
+    <div class="item reveal"><div class="ico">&#127791;</div><div><h4>Classic Wrap</h4><p>Flame-grilled chicken wrapped up with your choice of heat.</p></div><div class="price">£7.99</div></div>
+  </div></div>
+
+  <div class="cat" id="c-platters"><h3>Family Platters</h3><div class="items">
+    <div class="item reveal"><div class="ico">&#127869;&#65039;</div><div><h4>Single Platter</h4><p>A hearty platter of flame-grilled favourites.</p></div><div class="price">£18.99</div></div>
+    <div class="item reveal"><div class="ico">&#127869;&#65039;</div><div><h4>Mixed Platter <span class="tag">Best value</span></h4><p>A mix of our best bits, made for sharing.</p></div><div class="price">£28.99</div></div>
+    <div class="item reveal"><div class="ico">&#127881;</div><div><h4>Mega Platter</h4><p>Feeding the whole crew? This is the one.</p></div><div class="price">£45.99</div></div>
+  </div></div>
+
+  <div class="cat" id="c-sides"><h3>Sides</h3><div class="items">
+    <div class="item reveal"><div class="ico">&#127839;</div><div><h4>Fries</h4><p>Golden and crispy.</p></div><div class="price">£1.99</div></div>
+    <div class="item reveal"><div class="ico">&#127839;</div><div><h4>Peri-Salted Fries</h4><p>Fries dusted with our peri peri salt.</p></div><div class="price">£2.49</div></div>
+    <div class="item reveal"><div class="ico">&#127834;</div><div><h4>Spicy Rice</h4><p>Fragrant rice with a peri peri kick.</p></div><div class="price">£3.99</div></div>
+  </div></div>
+
+  <div class="cat" id="c-drinks"><h3>Drinks &amp; Shakes</h3><div class="items">
+    <div class="item reveal"><div class="ico">&#127820;</div><div><h4>Banana Milkshake</h4><p>Thick, creamy and properly cold.</p></div><div class="price">£3.50</div></div>
+    <div class="item reveal"><div class="ico">&#129380;</div><div><h4>Canned Drinks</h4><p>Ask for today's selection.</p></div><div class="price">£1.99</div></div>
+  </div></div>
+
+  <div class="order-soon reveal">
+    <div><h4>&#128757; Delivery &amp; online ordering coming soon</h4><p>Order and pay online, then collect or get it delivered to your door. For now, call us to order.</p></div>
+    <a class="btn btn-red" href="tel:+442034097748">Call to order</a>
+  </div>
+</div></section>
+
+<section class="s" id="platters" style="padding-top:0"><div class="wrap"><div class="band reveal">
+  <div>
+    <div class="eyebrow" style="color:var(--gold)">Feeding the family?</div>
+    <h2 class="display">Platters for every size of hungry</h2>
+    <p>Movie night, match day or a big family dinner, our platters are made to share. Call ahead and we'll have it ready when you arrive.</p>
+    <a class="btn btn-cream" href="tel:+442034097748">Order a platter</a>
+  </div>
+  <div class="plist">
+    <div class="pl"><b>Single Platter</b><span>£18.99</span></div>
+    <div class="pl"><b>Mixed Platter</b><span>£28.99</span></div>
+    <div class="pl"><b>Mega Platter</b><span>£45.99</span></div>
+  </div>
+</div></div></section>
+
+<section class="s" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow reveal">Why Mr Peri's</div>
+  <h2 class="display reveal">Norbury's peri peri spot</h2>
+  <div class="why">
+    <div class="reveal"><i>&#128293;</i><b>Flame grilled to order</b><p>Cooked fresh when you order, never sitting under a lamp.</p></div>
+    <div class="reveal"><i>&#9989;</i><b>HMC halal certified</b><p>Certified by the Halal Monitoring Committee, so you can eat with confidence.</p></div>
+    <div class="reveal"><i>&#127769;</i><b>Open late</b><p>Midnight in the week, 1am on Fridays and Saturdays.</p></div>
+    <div class="reveal"><i>&#128205;</i><b>On London Road</b><p>Right in the heart of Norbury, easy to grab on your way home.</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="visit" style="padding-top:0"><div class="wrap visit">
+  <div class="card reveal">
+    <div class="eyebrow">Find us</div>
+    <h2 class="display" style="font-size:clamp(2rem,4vw,3rem)">Come hungry</h2>
+    <p class="addr">1336 London Road, Norbury,<br>London SW16 4DG</p>
+    <table class="hours" id="hours">
+      <tr data-d="1"><td>Monday</td><td>12pm – 12am</td></tr>
+      <tr data-d="2"><td>Tuesday</td><td>12pm – 12am</td></tr>
+      <tr data-d="3"><td>Wednesday</td><td>12pm – 12am</td></tr>
+      <tr data-d="4"><td>Thursday</td><td>12pm – 12am</td></tr>
+      <tr data-d="5"><td>Friday</td><td>12pm – 1am</td></tr>
+      <tr data-d="6"><td>Saturday</td><td>12pm – 1am</td></tr>
+      <tr data-d="0"><td>Sunday</td><td>12pm – 12am</td></tr>
+    </table>
+    <div class="cta-row">
+      <a class="btn btn-red" href="tel:+442034097748">Call 020 3409 7748</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Mr+Peri%27s+1336+London+Road+Norbury+SW16+4DG" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+  <div class="map reveal"><iframe title="Map showing Mr Peri's, 1336 London Road, Norbury" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1336+London+Road,+Norbury,+London+SW16+4DG&output=embed"></iframe></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="ft">
+    <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#E3311D"/><path d="M20 7c4 5 7 8.5 7 13.5A7 7 0 0 1 13 20.5c0-3 1.6-5 3.4-6.6.3 2.4 1.4 3.6 2.8 4.1C18.4 14.6 18.6 10.6 20 7z" fill="#FFC23D"/></svg><div><b>MR <span>PERI'S</span></b><small>Norbury</small></div></a>
+    <div>1336 London Road, Norbury, London SW16 4DG &middot; <a href="tel:+442034097748">020 3409 7748</a></div>
+  </div>
+  <div class="credit">&copy; 2026 Mr Peri's Norbury &middot; HMC halal certified &middot; Website by <a href="https://pictoflexlabs.co.uk">Pictoflex Labs</a></div>
+</div></footer>
+
+<div class="sticky">
+  <a class="btn btn-red" href="tel:+442034097748">Call to order</a>
+  <a class="btn btn-ghost" href="#menu">View menu</a>
+</div>
+
+<script>
+(function(){
+  // open-now status (London time). Hours: Mon-Thu & Sun 12:00-24:00, Fri-Sat 12:00-01:00
+  try{
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[p.find(function(x){return x.type==='weekday'}).value];
+    var h=+p.find(function(x){return x.type==='hour'}).value%24,m=+p.find(function(x){return x.type==='minute'}).value,t=h*60+m;
+    var prev=(wd+6)%7,open=false;
+    if(t>=720) open=true;                       // from noon until midnight every day
+    else if(t<60 && (prev===5||prev===6)) open=true; // after midnight Fri/Sat nights until 1am
+    var dot=document.getElementById('dot'),st=document.getElementById('status');
+    if(open){dot.classList.add('open');st.textContent='Open now · until '+((wd===5||wd===6)&&t>=720?'1am':(t<60?'1am':'midnight'));}
+    else{st.textContent='Closed now · opens 12pm';}
+    var row=document.querySelector('#hours tr[data-d="'+(t<60&&(prev===5||prev===6)?prev:wd)+'"]');if(row)row.classList.add('today');
+  }catch(e){}
+  // reveal
+  var r=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});r.forEach(function(el){io.observe(el)})}else r.forEach(function(el){el.classList.add('in')});
+  // menu tabs highlight
+  var tabs=[].slice.call(document.querySelectorAll('.tab')),cats=tabs.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function hl(){var y=window.scrollY+170,i=0;cats.forEach(function(c,k){if(c.offsetTop<=y)i=k});tabs.forEach(function(a,k){a.classList.toggle('on',k===i)})}
+  window.addEventListener('scroll',hl,{passive:true});
+})();
+</script>
+</body>
+</html>
