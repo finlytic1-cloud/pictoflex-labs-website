@@ -10,7 +10,7 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:title" content="Sabores de Portugal | Portuguese Café &amp; Deli, Thornton Heath">
 <meta property="og:description" content="A little taste of Portugal on London Road: coffee, pastries, deli and Portuguese groceries.">
-<meta name="theme-color" content="#123E7A">
+<meta name="theme-color" content="#F5B800">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -24,8 +24,8 @@
 {"@type":"Question","name":"What are your opening hours?","acceptedAnswer":{"@type":"Answer","text":"Monday to Friday 7am to 6pm, Saturday 8am to 6pm, and Sunday 8am to 2pm."}}]}
 </script>
 <style>
-:root{--blue:#123E7A;--blue2:#1F5AA6;--sky:#DCE8F6;--cream:#FBF5EA;--paper:#FFFDF8;--terra:#C2502E;--terra2:#A63F21;--gold:#E2A63B;--green:#1E6B45;--ink:#1B2333;--mut:#5E6676;--line:#EADFCB;--r:20px;
---tile:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23123E7A' stroke-width='2'%3E%3Crect x='1' y='1' width='62' height='62'/%3E%3Ccircle cx='32' cy='32' r='12'/%3E%3Cpath d='M32 4c6 8 6 12 0 16-6-4-6-8 0-16zM32 60c-6-8-6-12 0-16 6 4 6 8 0 16zM4 32c8-6 12-6 16 0-4 6-8 6-16 0zM60 32c-8 6-12 6-16 0 4-6 8-6 16 0z'/%3E%3Cpath d='M1 1l10 10M63 1L53 11M1 63l10-10M63 63L53 53'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%23123E7A'/%3E%3C/g%3E%3C/svg%3E")}
+:root{--blue:#2B2118;--yellow:#F5B800;--yellow2:#FFD54A;--blue2:#4A3B2A;--sky:#FFF1C2;--cream:#FBF5EA;--paper:#FFFDF8;--terra:#C2502E;--terra2:#A63F21;--gold:#E2A63B;--green:#1E6B45;--ink:#1B2333;--mut:#5E6676;--line:#EADFCB;--r:20px;
+--tile:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23D99A00' stroke-width='2'%3E%3Crect x='1' y='1' width='62' height='62'/%3E%3Ccircle cx='32' cy='32' r='12'/%3E%3Cpath d='M32 4c6 8 6 12 0 16-6-4-6-8 0-16zM32 60c-6-8-6-12 0-16 6 4 6 8 0 16zM4 32c8-6 12-6 16 0-4 6-8 6-16 0zM60 32c-8 6-12 6-16 0 4-6 8-6 16 0z'/%3E%3Cpath d='M1 1l10 10M63 1L53 11M1 63l10-10M63 63L53 53'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%23D99A00'/%3E%3C/g%3E%3C/svg%3E")}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:clip}
 body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
@@ -34,7 +34,7 @@ a{color:inherit}
 h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.05;letter-spacing:-.015em}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
 .prev{background:#7c3aed;color:#fff;text-align:center;font-size:.78rem;font-weight:700;padding:6px}
-.flag{height:5px;background:linear-gradient(90deg,var(--green) 0 40%,var(--terra) 40% 100%)}
+.flag{height:5px;background:linear-gradient(90deg,var(--yellow) 0 50%,var(--terra) 50% 100%)}
 header{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
@@ -47,7 +47,7 @@ nav.main a{text-decoration:none;color:var(--mut)}nav.main a:hover{color:var(--bl
 .btn:hover{transform:translateY(-2px)}
 .btn svg{width:18px;height:18px;flex:none}
 .btn-terra{background:var(--terra);color:#fff;box-shadow:0 10px 24px rgba(194,80,46,.3)}.btn-terra:hover{background:var(--terra2)}
-.btn-blue{background:var(--blue);color:#fff}
+.btn-blue{background:var(--yellow);color:var(--blue)}.btn-blue:hover{background:var(--yellow2)}
 .btn-line{background:transparent;border-color:var(--blue);color:var(--blue)}
 .btn.sm{padding:11px 18px;font-size:.92rem}
 /* hero */
@@ -70,11 +70,11 @@ nav.main a{text-decoration:none;color:var(--mut)}nav.main a:hover{color:var(--bl
 .badge{position:absolute;background:var(--terra);color:#fff;border-radius:50%;width:130px;height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-10deg);box-shadow:0 16px 34px rgba(0,0,0,.18);font-weight:800;line-height:1.1;font-size:.82rem;padding:10px}
 .badge b{font-family:Fraunces,serif;font-size:1.45rem;display:block}
 .b1{left:-8px;bottom:6%}
-.b2{right:-4px;top:4%;background:var(--blue);transform:rotate(9deg);width:118px;height:118px}
+.b2{right:-4px;top:4%;background:var(--yellow);color:var(--blue);transform:rotate(9deg);width:118px;height:118px}
 /* strip */
-.strip{background:var(--blue);color:#fff;overflow:hidden;white-space:nowrap}
+.strip{background:var(--yellow);color:var(--blue);overflow:hidden;white-space:nowrap}
 .strip-track{display:inline-flex;gap:38px;padding:15px 0;animation:tick 30s linear infinite;font-family:Fraunces,serif;font-style:italic;font-size:1.2rem}
-.strip-track span:nth-child(even){color:var(--gold);font-style:normal}
+.strip-track span:nth-child(even){color:var(--terra);font-style:normal}
 @keyframes tick{to{transform:translateX(-50%)}}
 /* trust */
 .trust{border-bottom:1px solid var(--line);background:#fff}
@@ -103,16 +103,16 @@ h2 em{color:var(--terra);font-weight:500}
 .oc .pt{font-family:Fraunces,serif;font-style:italic;color:var(--terra);font-size:.98rem;margin-bottom:10px}
 .oc p{color:var(--mut);font-size:.93rem}
 /* nata feature */
-.feature{background:var(--blue);color:#fff;border-radius:32px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative;overflow:hidden}
-.feature:before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2'%3E%3Crect x='1' y='1' width='62' height='62'/%3E%3Ccircle cx='32' cy='32' r='12'/%3E%3Cpath d='M32 4c6 8 6 12 0 16-6-4-6-8 0-16zM32 60c-6-8-6-12 0-16 6 4 6 8 0 16zM4 32c8-6 12-6 16 0-4 6-8 6-16 0zM60 32c-8 6-12 6-16 0 4-6 8-6 16 0z'/%3E%3C/g%3E%3C/svg%3E");background-size:64px;opacity:.06}
+.feature{background:var(--yellow);color:var(--blue);border-radius:32px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative;overflow:hidden}
+.feature:before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%232B2118' stroke-width='2'%3E%3Crect x='1' y='1' width='62' height='62'/%3E%3Ccircle cx='32' cy='32' r='12'/%3E%3Cpath d='M32 4c6 8 6 12 0 16-6-4-6-8 0-16zM32 60c-6-8-6-12 0-16 6 4 6 8 0 16zM4 32c8-6 12-6 16 0-4 6-8 6-16 0zM60 32c-8 6-12 6-16 0 4-6 8-6 16 0z'/%3E%3C/g%3E%3C/svg%3E");background-size:64px;opacity:.06}
 .feature>*{position:relative}
-.feature h2{color:#fff}.feature h2 em{color:var(--gold)}
-.feature p{color:#D5E1F2;font-size:1.08rem;margin-bottom:24px}
+.feature h2{color:var(--blue)}.feature h2 em{color:var(--terra)}
+.feature p{color:#4A3B2A;font-size:1.08rem;margin-bottom:24px}
 .pairs{display:grid;gap:12px}
-.pair{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px 18px}
+.pair{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.45);border:1px solid rgba(43,33,24,.12);border-radius:16px;padding:16px 18px}
 .pair i{font-style:normal;font-size:1.9rem}
 .pair b{display:block;font-family:Fraunces,serif;font-size:1.15rem}
-.pair small{color:#C2D3EB}
+.pair small{color:#5A4A36}
 /* visit */
 .visit{display:grid;grid-template-columns:1fr 1.1fr;gap:24px}
 .card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:36px}
@@ -135,7 +135,7 @@ details p{color:var(--mut);padding-bottom:20px}
 .final{text-align:center;padding:90px 0;background:var(--cream);position:relative;overflow:hidden}
 .final:before{content:'';position:absolute;inset:0;background:var(--tile);background-size:64px;opacity:.06}
 .final>*{position:relative}
-footer{background:#0E2F5C;color:#C9D6EA;padding:50px 0 120px;font-size:.92rem}
+footer{background:var(--blue);color:#E9DFCC;padding:50px 0 120px;font-size:.92rem}
 .ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
 footer h4{color:#fff;margin-bottom:12px}
 footer a{text-decoration:none}footer a:hover{color:#fff}
@@ -177,7 +177,7 @@ footer .brand b{color:#fff}
 <div class="flag" aria-hidden="true"></div>
 <header><div class="wrap hd">
   <a class="brand" href="#top" aria-label="Sabores de Portugal home">
-    <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#123E7A"/><g fill="none" stroke="#fff" stroke-width="1.6"><circle cx="22" cy="22" r="9"/><path d="M22 6c4 5 4 8 0 10-4-2-4-5 0-10zM22 38c-4-5-4-8 0-10 4 2 4 5 0 10zM6 22c5-4 8-4 10 0-2 4-5 4-10 0zM38 22c-5 4-8 4-10 0 2-4 5-4 10 0z"/></g><circle cx="22" cy="22" r="3.4" fill="#E2A63B"/></svg>
+    <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F5B800"/><g fill="none" stroke="#2B2118" stroke-width="1.6"><circle cx="22" cy="22" r="9"/><path d="M22 6c4 5 4 8 0 10-4-2-4-5 0-10zM22 38c-4-5-4-8 0-10 4 2 4 5 0 10zM6 22c5-4 8-4 10 0-2 4-5 4-10 0zM38 22c-5 4-8 4-10 0 2-4 5-4 10 0z"/></g><circle cx="22" cy="22" r="3.4" fill="#C2502E"/></svg>
     <span><b>Sabores de Portugal</b><small>Café &middot; Deli &middot; Mercearia</small></span>
   </a>
   <nav class="main" aria-label="Main"><a href="#menu">What we serve</a><a href="#nata">Pastelaria</a><a href="#visit">Visit us</a><a href="#faq">FAQ</a></nav>
@@ -242,7 +242,7 @@ footer .brand b{color:#fff}
 
 <section class="s" id="nata" style="padding-top:0"><div class="wrap"><div class="feature reveal">
   <div>
-    <div class="eyebrow" style="color:var(--gold)">A pastelaria</div>
+    <div class="eyebrow" style="color:var(--terra)">A pastelaria</div>
     <h2>Coffee, cake &amp; <em>conversa</em></h2>
     <p>There's nothing like a warm pastel de nata with a bica. Pull up a seat, catch up with friends, or grab a box of pastries to share with the family.</p>
     <a class="btn btn-terra" href="#visit">Plan your visit</a>
@@ -296,7 +296,7 @@ footer .brand b{color:#fff}
 
 <footer><div class="wrap">
   <div class="ft">
-    <div><a class="brand" href="#top"><svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#fff"/><g fill="none" stroke="#123E7A" stroke-width="1.6"><circle cx="22" cy="22" r="9"/><path d="M22 6c4 5 4 8 0 10-4-2-4-5 0-10zM22 38c-4-5-4-8 0-10 4 2 4 5 0 10zM6 22c5-4 8-4 10 0-2 4-5 4-10 0zM38 22c-5 4-8 4-10 0 2-4 5-4 10 0z"/></g><circle cx="22" cy="22" r="3.4" fill="#E2A63B"/></svg><span><b>Sabores de Portugal</b></span></a>
+    <div><a class="brand" href="#top"><svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F5B800"/><g fill="none" stroke="#2B2118" stroke-width="1.6"><circle cx="22" cy="22" r="9"/><path d="M22 6c4 5 4 8 0 10-4-2-4-5 0-10zM22 38c-4-5-4-8 0-10 4 2 4 5 0 10zM6 22c5-4 8-4 10 0-2 4-5 4-10 0zM38 22c-5 4-8 4-10 0 2-4 5-4 10 0z"/></g><circle cx="22" cy="22" r="3.4" fill="#E2A63B"/></svg><span><b>Sabores de Portugal</b></span></a>
       <p style="margin-top:14px;max-width:300px">Portuguese café, delicatessen and mini-market in Thornton Heath.</p></div>
     <div><h4>Visit</h4><p>755 London Road<br>Thornton Heath<br>CR7 6AW</p></div>
     <div><h4>Opening hours</h4><p>Mon–Fri 7am–6pm<br>Sat 8am–6pm<br>Sun 8am–2pm</p></div>
