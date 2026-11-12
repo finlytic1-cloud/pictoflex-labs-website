@@ -161,6 +161,61 @@ footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mut);fo
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
+
+<style>
+/* ===== Online ordering demo ===== */
+.item{grid-template-columns:62px 1fr auto}
+.addbtn{margin-top:10px;display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;border:0;border-radius:999px;padding:8px 14px;font:800 .85rem 'DM Sans',sans-serif;cursor:pointer}
+.addbtn:hover{filter:brightness(1.1)}
+.addbtn.alt{background:transparent;border:2px solid var(--line);color:var(--cream)}
+.addrow{display:flex;gap:8px;flex-wrap:wrap}
+.cartfab{position:fixed;right:20px;bottom:24px;z-index:70;display:none;align-items:center;gap:12px;background:var(--gold);color:var(--ink);border:0;border-radius:999px;padding:14px 22px;font:800 1rem 'DM Sans',sans-serif;box-shadow:0 16px 40px rgba(0,0,0,.45);cursor:pointer}
+.cartfab .n{background:var(--ink);color:var(--gold);border-radius:999px;min-width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem}
+.cartfab.show{display:flex}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:80;display:none}
+.scrim.show{display:block}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--ink2);border-left:1px solid var(--line);z-index:90;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column}
+.drawer.show{transform:none}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.dhead h3{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.6rem}
+.x{background:var(--ink3);border:1px solid var(--line);color:var(--cream);width:40px;height:40px;border-radius:12px;font-size:1.2rem;cursor:pointer}
+.dbody{flex:1;overflow:auto;padding:18px 20px}
+.dfoot{padding:16px 20px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--ink)}
+.toggle{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);border:1px solid var(--line);border-radius:14px;padding:4px;margin-bottom:16px}
+.toggle button{background:none;border:0;color:var(--mut);font:800 .95rem 'DM Sans',sans-serif;padding:11px;border-radius:10px;cursor:pointer}
+.toggle button.on{background:var(--red);color:#fff}
+.line{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.line b{font-size:.98rem}.line small{color:var(--mut);display:block}
+.qty{display:flex;align-items:center;gap:10px;margin-top:8px}
+.qty button{width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:var(--ink3);color:var(--cream);font-weight:800;cursor:pointer}
+.lp{font-family:'Anton';color:var(--gold);font-size:1.2rem;text-align:right}
+.sum{display:grid;gap:6px;font-size:.95rem;margin-bottom:12px}
+.sum div{display:flex;justify-content:space-between}
+.sum .tot{font-weight:800;font-size:1.15rem;padding-top:8px;border-top:1px dashed var(--line)}
+.note{font-size:.84rem;border-radius:12px;padding:10px 12px;margin-bottom:12px}
+.note.warn{background:rgba(255,194,61,.12);color:var(--gold)}
+.note.ok{background:rgba(46,204,113,.12);color:#7CE3A4}
+.note.err{background:rgba(255,74,46,.14);color:#FF8A75}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:.8rem;font-weight:800;color:var(--mut);margin-bottom:5px}
+.field input,.field textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 13px;color:var(--cream);font:inherit}
+.field input:focus,.field textarea:focus{outline:2px solid var(--red);border-color:transparent}
+.btn.full{width:100%}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.96);width:min(420px,calc(100% - 32px));background:var(--ink2);border:1px solid var(--line);border-radius:22px;z-index:95;padding:24px;display:none}
+.modal.show{display:block;transform:translate(-50%,-50%)}
+.modal h3{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.6rem;margin-bottom:4px}
+.heats{display:grid;gap:8px;margin:16px 0 20px}
+.heats label{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;font-weight:700}
+.heats label:has(input:checked){border-color:var(--red);background:rgba(227,49,29,.12)}
+.heats input{accent-color:var(--red)}
+.done{text-align:center;padding:20px 0}
+.done .big{font-size:3rem}
+.done h4{font-family:'Anton';font-weight:400;font-size:2rem;text-transform:uppercase;margin:8px 0}
+.demo-tag{display:inline-block;background:#7c3aed;color:#fff;font-size:.7rem;font-weight:800;border-radius:6px;padding:2px 8px;letter-spacing:.06em}
+.sumup{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.78rem;color:var(--mut);margin-top:10px}
+@media(max-width:600px){.cartfab{left:12px;right:12px;bottom:84px;justify-content:space-between}}
+</style>
 </head>
 <body>
 <div class="prev">Website demo for Mr Peri's Norbury &middot; designed by Pictoflex Labs</div>
@@ -173,7 +228,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mut);fo
   <nav class="main"><a href="#menu">Menu</a><a href="#heat">Heat</a><a href="#platters">Platters</a><a href="#visit">Find us</a></nav>
   <div class="hd-cta">
     <a class="btn btn-ghost sm" href="https://www.google.com/maps/dir/?api=1&destination=Mr+Peri%27s+1336+London+Road+Norbury+SW16+4DG" target="_blank" rel="noopener">Directions</a>
-    <a class="btn btn-red sm" href="tel:+442034097748"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>Call to order</a>
+    <a class="btn btn-red sm" href="#menu">Order online</a>
   </div>
 </div></header>
 
@@ -187,7 +242,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mut);fo
     <h1 class="display">Flame grilled.<span class="flame">Peri peri.</span>Proper.</h1>
     <p class="lead">Juicy chicken, burgers, wraps and wings, grilled to order on <b>London Road, Norbury</b>. Choose your heat, grab a platter for the family, and come hungry.</p>
     <div class="cta-row">
-      <a class="btn btn-red" href="#menu">View the menu</a>
+      <a class="btn btn-red" href="#menu">Order online</a>
       <a class="btn btn-ghost" href="tel:+442034097748"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>020 3409 7748</a>
     </div>
   </div>
@@ -249,7 +304,7 @@ footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mut);fo
 <section class="s" id="menu" style="padding-top:20px"><div class="wrap">
   <div class="menu-top">
     <div><div class="eyebrow">The menu</div><h2 class="display">Grilled to order</h2></div>
-    <p class="sub" style="max-width:380px">Call ahead to order and collect. Online ordering is coming soon.</p>
+    <p class="sub" style="max-width:380px">Order online for collection or delivery. Tap <b>Add</b> on anything you fancy.</p>
   </div>
   <div class="tabs" id="tabs">
     <a class="tab on" href="#c-chicken">Chicken</a>
@@ -291,8 +346,8 @@ footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mut);fo
   </div></div>
 
   <div class="order-soon reveal">
-    <div><h4>&#128757; Delivery &amp; online ordering coming soon</h4><p>Order and pay online, then collect or get it delivered to your door. For now, call us to order.</p></div>
-    <a class="btn btn-red" href="tel:+442034097748">Call to order</a>
+    <div><h4>&#128757; Collection or delivery</h4><p>Delivery within 3 miles &middot; Minimum order £15 &middot; Delivery £2.50, <b style="color:var(--gold)">free over £25</b> &middot; Collection ready in about 15–20 mins</p></div>
+    <a class="btn btn-red" href="#c-chicken">Start your order</a>
   </div>
 </div></section>
 
@@ -353,8 +408,8 @@ footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mut);fo
 </div></footer>
 
 <div class="sticky">
-  <a class="btn btn-red" href="tel:+442034097748">Call to order</a>
-  <a class="btn btn-ghost" href="#menu">View menu</a>
+  <a class="btn btn-ghost" href="tel:+442034097748">Call</a>
+  <a class="btn btn-red" href="#menu" id="stickyOrder">Order online</a>
 </div>
 
 <script>
@@ -379,6 +434,110 @@ footer{border-top:1px solid var(--line);padding:46px 0 120px;color:var(--mut);fo
   var tabs=[].slice.call(document.querySelectorAll('.tab')),cats=tabs.map(function(a){return document.querySelector(a.getAttribute('href'))});
   function hl(){var y=window.scrollY+170,i=0;cats.forEach(function(c,k){if(c.offsetTop<=y)i=k});tabs.forEach(function(a,k){a.classList.toggle('on',k===i)})}
   window.addEventListener('scroll',hl,{passive:true});
+})();
+</script>
+
+<button class="cartfab" id="cartfab" aria-label="View basket"><span>&#128722; View basket</span><span class="n" id="cartn">0</span><span id="cartt">£0.00</span></button>
+<div class="scrim" id="scrim"></div>
+
+<div class="modal" id="heatModal" role="dialog" aria-modal="true" aria-labelledby="hmTitle">
+  <h3 id="hmTitle">Choose your heat</h3>
+  <p style="color:var(--mut)" id="hmItem"></p>
+  <div class="heats" id="heats">
+    <label><input type="radio" name="heat" value="Lemon &amp; Herb"> &#127819; Lemon &amp; Herb</label>
+    <label><input type="radio" name="heat" value="Mild"> &#127798;&#65039; Mild</label>
+    <label><input type="radio" name="heat" value="Medium" checked> &#127798;&#65039;&#127798;&#65039; Medium</label>
+    <label><input type="radio" name="heat" value="Hot"> &#127798;&#65039;&#127798;&#65039;&#127798;&#65039; Hot</label>
+    <label><input type="radio" name="heat" value="Extra Hot"> &#128293;&#128293;&#128293; Extra Hot</label>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 2fr;gap:10px"><button class="btn btn-ghost" id="hmCancel">Cancel</button><button class="btn btn-red" id="hmAdd">Add to basket</button></div>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="Your order">
+  <div class="dhead"><h3 id="dTitle">Your order</h3><button class="x" id="dClose" aria-label="Close">&#10005;</button></div>
+  <div class="dbody" id="dBody"></div>
+  <div class="dfoot" id="dFoot"></div>
+</aside>
+
+<script>
+(function(){
+  var DELIVERY_AREAS=['SW16','SW17','CR7','CR4','SE19','SE25'],MIN=15,FEE=2.5,FREE=25;
+  var HEAT_CATS=['c-chicken','c-burgers','c-platters'];
+  var cart=[],mode='collection',step='cart',pending=null,orderNo=null;
+  var $=function(id){return document.getElementById(id)};
+  var money=function(n){return '£'+n.toFixed(2)};
+  // inject Add buttons
+  document.querySelectorAll('.cat').forEach(function(cat){
+    cat.querySelectorAll('.item').forEach(function(it){
+      var name=it.querySelector('h4').childNodes[0].textContent.trim();
+      var pr=it.querySelector('.price'),opts=[];
+      var nodes=[].slice.call(pr.childNodes),cur=null;
+      nodes.forEach(function(n){if(n.nodeType===3&&n.textContent.trim()){cur={price:parseFloat(n.textContent.replace(/[^0-9.]/g,'')),label:''};opts.push(cur)}else if(n.nodeName==='SMALL'&&cur){cur.label=n.textContent.trim()}});
+      var row=document.createElement('div');row.className='addrow';
+      opts.forEach(function(o,i){var b=document.createElement('button');b.type='button';b.className='addbtn'+(i?' alt':'');b.textContent='+ Add'+(o.label?' '+o.label:'');
+        b.addEventListener('click',function(){var item={name:name+(o.label?' ('+o.label+')':''),price:o.price,heat:null};
+          if(HEAT_CATS.indexOf(cat.id)>-1||/wing/i.test(name)){pending=item;$('hmItem').textContent=item.name+' · '+money(item.price);open('heat')}else add(item)});row.appendChild(b)});
+      it.querySelector('div:nth-child(2)').appendChild(row);
+    });
+  });
+  function add(item){var k=item.name+'|'+(item.heat||'');var f=cart.find(function(c){return c.k===k});if(f)f.q++;else cart.push({k:k,name:item.name,heat:item.heat,price:item.price,q:1});update();toast()}
+  function sub(){return cart.reduce(function(a,c){return a+c.price*c.q},0)}
+  function fee(){return mode==='delivery'&&sub()<FREE?FEE:0}
+  function count(){return cart.reduce(function(a,c){return a+c.q},0)}
+  function update(){var n=count();$('cartn').textContent=n;$('cartt').textContent=money(sub());$('cartfab').classList.toggle('show',n>0&&!$('drawer').classList.contains('show'));
+    var so=$('stickyOrder');if(so){so.textContent=n?'Basket · '+money(sub()):'Order online'}; if($('drawer').classList.contains('show'))render()}
+  function toast(){var f=$('cartfab');f.animate&&f.animate([{transform:'scale(1)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:300})}
+  function open(which){$('scrim').classList.add('show');if(which==='heat'){$('heatModal').classList.add('show')}else{$('drawer').classList.add('show');$('cartfab').classList.remove('show');render()}}
+  function closeAll(){$('scrim').classList.remove('show');$('heatModal').classList.remove('show');$('drawer').classList.remove('show');if(step==='done'){cart=[];step='cart'}update()}
+  $('scrim').onclick=closeAll;$('dClose').onclick=closeAll;$('hmCancel').onclick=closeAll;
+  $('hmAdd').onclick=function(){var h=document.querySelector('#heats input:checked');pending.heat=h?h.value:null;$('heatModal').classList.remove('show');$('scrim').classList.remove('show');add(pending);pending=null};
+  $('cartfab').onclick=function(){step='cart';open('drawer')};
+  var so=$('stickyOrder');if(so)so.addEventListener('click',function(e){if(count()){e.preventDefault();step='cart';open('drawer')}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll()});
+  function pcOK(pc){var o=(pc||'').toUpperCase().replace(/\s+/g,'');var m=o.match(/^([A-Z]{1,2}\d{1,2}[A-Z]?)(\d[A-Z]{2})?$/);var out=m?m[1]:o;return DELIVERY_AREAS.indexOf(out)>-1||DELIVERY_AREAS.some(function(a){return o.indexOf(a)===0&&/\d[A-Z]{2}$/.test(o.slice(a.length))})}
+  function render(){
+    var B=$('dBody'),F=$('dFoot');
+    if(step==='cart'){
+      $('dTitle').textContent='Your order';
+      if(!cart.length){B.innerHTML='<p style="color:var(--mut);text-align:center;padding:40px 0">Your basket is empty.<br>Tap <b>+ Add</b> on the menu.</p>';F.innerHTML='';return}
+      var h='<div class="toggle"><button data-m="collection" class="'+(mode==='collection'?'on':'')+'">&#127939; Collection</button><button data-m="delivery" class="'+(mode==='delivery'?'on':'')+'">&#128757; Delivery</button></div>';
+      h+=mode==='collection'?'<div class="note ok">Ready in about 15–20 mins at 1336 London Road</div>':'<div class="note warn">Delivery within 3 miles · £2.50, free over £25 · about 35–45 mins</div>';
+      cart.forEach(function(c,i){h+='<div class="line"><div><b>'+c.name+'</b>'+(c.heat?'<small>'+c.heat+'</small>':'')+'<div class="qty"><button data-d="'+i+'" aria-label="Remove one">&minus;</button><span>'+c.q+'</span><button data-i="'+i+'" aria-label="Add one">+</button></div></div><div class="lp">'+money(c.price*c.q)+'</div></div>'});
+      B.innerHTML=h;
+      var s=sub(),f=fee(),t=s+f,short=MIN-s;
+      var fh='<div class="sum"><div><span>Subtotal</span><span>'+money(s)+'</span></div>'+(mode==='delivery'?'<div><span>Delivery</span><span>'+(f?money(f):'FREE')+'</span></div>':'')+'<div class="tot"><span>Total</span><span>'+money(t)+'</span></div></div>';
+      if(mode==='delivery'&&s<FREE&&s>=MIN)fh='<div class="note warn">Add '+money(FREE-s)+' more for free delivery</div>'+fh;
+      if(mode==='delivery'&&short>0)fh='<div class="note err">Minimum order for delivery is £15. Add '+money(short)+' more.</div>'+fh;
+      fh+='<button class="btn btn-red full" id="toCheckout" '+(mode==='delivery'&&short>0?'disabled':'')+'>Checkout · '+money(t)+'</button>';
+      F.innerHTML=fh;
+      B.querySelectorAll('[data-m]').forEach(function(b){b.onclick=function(){mode=b.dataset.m;render()}});
+      B.querySelectorAll('[data-i]').forEach(function(b){b.onclick=function(){cart[b.dataset.i].q++;update()}});
+      B.querySelectorAll('[data-d]').forEach(function(b){b.onclick=function(){var c=cart[b.dataset.d];c.q--;if(!c.q)cart.splice(b.dataset.d,1);update()}});
+      $('toCheckout').onclick=function(){step='details';render()};
+    } else if(step==='details'){
+      $('dTitle').textContent=mode==='delivery'?'Delivery details':'Collection details';
+      var h='<div class="field"><label for="o-name">Name</label><input id="o-name" autocomplete="name"></div><div class="field"><label for="o-phone">Mobile number</label><input id="o-phone" type="tel" autocomplete="tel"></div>';
+      if(mode==='delivery')h+='<div class="field"><label for="o-addr">Address</label><input id="o-addr" autocomplete="street-address" placeholder="House number and street"></div><div class="field"><label for="o-pc">Postcode</label><input id="o-pc" autocomplete="postal-code" placeholder="e.g. SW16 4DG"></div><div id="pcmsg"></div>';
+      h+='<div class="field"><label for="o-notes">Notes for the kitchen (optional)</label><textarea id="o-notes" rows="2" placeholder="e.g. no onions, extra sauce"></textarea></div>';
+      B.innerHTML=h;
+      var t=sub()+fee();
+      F.innerHTML='<button class="btn btn-ghost full" id="back" style="margin-bottom:10px">&larr; Back to basket</button><button class="btn btn-red full" id="pay">Pay '+money(t)+' by card</button><div class="sumup">&#128274; Secure card payment via SumUp <span class="demo-tag">DEMO</span></div>';
+      if(mode==='delivery'){$('o-pc').addEventListener('input',function(){var v=this.value,m=$('pcmsg');if(v.replace(/\s/g,'').length<5){m.innerHTML='';return}m.innerHTML=pcOK(v)?'<div class="note ok">&#10003; Great, we deliver to you</div>':'<div class="note err">Sorry, that\'s outside our delivery area. Switch to collection?</div>'})}
+      $('back').onclick=function(){step='cart';render()};
+      $('pay').onclick=function(){var ok=true;['o-name','o-phone'].concat(mode==='delivery'?['o-addr','o-pc']:[]).forEach(function(id){var el=$(id);if(!el.value.trim()){el.style.borderColor='#FF4A2E';ok=false}else el.style.borderColor=''});
+        if(mode==='delivery'&&$('o-pc').value&&!pcOK($('o-pc').value)){ok=false}
+        if(!ok)return;
+        orderNo=Math.floor(1000+Math.random()*9000);
+        var order={no:orderNo,time:new Date().toISOString(),mode:mode,name:$('o-name').value,phone:$('o-phone').value,addr:mode==='delivery'?$('o-addr').value+', '+$('o-pc').value.toUpperCase():'',notes:$('o-notes').value,items:cart.map(function(c){return {q:c.q,name:c.name,heat:c.heat,price:c.price}}),total:sub()+fee()};
+        try{var all=JSON.parse(localStorage.getItem('mrp_orders')||'[]');all.unshift(order);localStorage.setItem('mrp_orders',JSON.stringify(all.slice(0,20)))}catch(e){}
+        step='done';render()};
+    } else {
+      $('dTitle').textContent='Order placed';
+      B.innerHTML='<div class="done"><div class="big">&#128293;</div><h4>Thanks! Order #'+orderNo+'</h4><p style="color:var(--mut)">'+(mode==='delivery'?'Your food is being grilled and will be with you in about <b style="color:var(--cream)">35–45 minutes</b>.':'Your order will be ready to collect in about <b style="color:var(--cream)">15–20 minutes</b> at 1336 London Road.')+'</p><p style="color:var(--mut);margin-top:12px">We\'ve sent a confirmation text to your phone.</p><p style="margin-top:18px"><span class="demo-tag">DEMO</span> <span style="color:var(--mut);font-size:.85rem">No real order or payment was made.</span></p></div>';
+      F.innerHTML='<a class="btn btn-ghost full" href="orders/" target="_blank" rel="noopener" style="margin-bottom:10px">See how this order arrives in the shop &rarr;</a><button class="btn btn-red full" id="again">Done</button>';
+      $('again').onclick=closeAll;
+    }
+  }
 })();
 </script>
 </body>

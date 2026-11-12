@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incoming Orders | Mr Peri's (Demo)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#141110;--ink2:#1D1917;--line:#3A312C;--red:#E3311D;--gold:#FFC23D;--cream:#F7EEE2;--mut:#BFB3A6;--green:#2ecc71}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(--cream);min-height:100vh}
+.prev{background:#7c3aed;color:#fff;text-align:center;font-size:.78rem;font-weight:700;padding:6px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line);gap:14px;flex-wrap:wrap}
+.top h1{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.8rem;letter-spacing:.02em}
+.top h1 span{color:var(--red)}
+.live{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.85rem;color:var(--green)}
+.live i{width:10px;height:10px;border-radius:50%;background:var(--green);animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.3}}
+button{font:800 .9rem 'DM Sans',sans-serif;border-radius:999px;padding:10px 16px;border:1px solid var(--line);background:var(--ink2);color:var(--cream);cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;padding:22px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:20px;position:relative}
+.card.new{border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,194,61,.25);animation:flash 1s ease 3}
+@keyframes flash{50%{background:#2B2318}}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:3px 8px;margin-right:6px}
+.t-new{background:var(--gold);color:var(--ink)}.t-del{background:var(--red);color:#fff}.t-col{background:#2563eb;color:#fff}.t-paid{background:rgba(46,204,113,.15);color:var(--green)}
+.no{font-family:'Anton';font-size:2rem;margin:10px 0 2px}
+.meta{color:var(--mut);font-size:.88rem}
+ul{list-style:none;margin:14px 0;border-top:1px dashed var(--line)}
+li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-weight:600}
+li small{display:block;color:var(--gold);font-weight:700}
+.notes{background:rgba(255,194,61,.1);color:var(--gold);border-radius:10px;padding:8px 10px;font-size:.88rem;margin-bottom:12px}
+.tot{display:flex;justify-content:space-between;font-family:'Anton';font-size:1.4rem;margin-bottom:14px}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.acts button.go{background:var(--green);border-color:var(--green);color:#06210f}
+.empty{text-align:center;color:var(--mut);padding:80px 20px}
+.empty a{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="prev">Demo &middot; Example of how website orders arrive in the shop &middot; by Pictoflex Labs</div>
+<div class="top">
+  <h1>MR <span>PERI'S</span> &middot; Incoming orders</h1>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span class="live"><i></i> Live</span><button id="snd">&#128276; Turn on order alert sound</button><button id="clr">Clear demo orders</button></div>
+</div>
+<div class="grid" id="grid"></div>
+<script>
+(function(){
+  var seen={},soundOn=false,ctx=null;
+  function beep(){if(!soundOn)return;try{ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();[0,.25,.5].forEach(function(t){var o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=880;o.connect(g);g.connect(ctx.destination);g.gain.setValueAtTime(.2,ctx.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+t+.2);o.start(ctx.currentTime+t);o.stop(ctx.currentTime+t+.2)})}catch(e){}}
+  document.getElementById('snd').onclick=function(){soundOn=true;this.textContent='\u{1F514} Alert sound on';beep()};
+  document.getElementById('clr').onclick=function(){try{localStorage.removeItem('mrp_orders')}catch(e){}seen={};load()};
+  function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function load(){
+    var orders=[];try{orders=JSON.parse(localStorage.getItem('mrp_orders')||'[]')}catch(e){}
+    var g=document.getElementById('grid');
+    if(!orders.length){g.innerHTML='<div class="empty" style="grid-column:1/-1"><p style="font-size:2.4rem">&#128293;</p><p>No orders yet.</p><p style="margin-top:8px">Place a test order on the <a href="../#menu" target="_blank" rel="noopener">website</a> and watch it appear here.</p></div>';return}
+    var fresh=false;
+    g.innerHTML=orders.map(function(o){var isNew=!seen[o.no];if(isNew){seen[o.no]=1;fresh=true}
+      var t=new Date(o.time);var tm=t.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+      return '<article class="card'+(isNew?' new':'')+'"><span class="tag t-new">New</span><span class="tag '+(o.mode==='delivery'?'t-del">Delivery':'t-col">Collection')+'</span><span class="tag t-paid">Paid by card</span>'+
+      '<div class="no">#'+o.no+'</div><div class="meta">'+tm+' &middot; '+esc(o.name)+' &middot; '+esc(o.phone)+'</div>'+(o.addr?'<div class="meta">&#128205; '+esc(o.addr)+'</div>':'')+
+      '<ul>'+o.items.map(function(i){return '<li><span>'+i.q+' &times; '+esc(i.name)+(i.heat?'<small>'+esc(i.heat)+'</small>':'')+'</span><span>£'+(i.price*i.q).toFixed(2)+'</span></li>'}).join('')+'</ul>'+
+      (o.notes?'<div class="notes">&#128221; '+esc(o.notes)+'</div>':'')+
+      '<div class="tot"><span>Total</span><span>£'+Number(o.total).toFixed(2)+'</span></div><div class="acts"><button class="go">Accept</button><button>Print ticket</button></div></article>'}).join('');
+    if(fresh)beep();
+  }
+  load();setInterval(load,2000);window.addEventListener('storage',load);
+})();
+</script>
+</body>
+</html>
