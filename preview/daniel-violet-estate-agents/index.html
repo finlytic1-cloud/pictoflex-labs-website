@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Violet Estate Agents | Rose Hill, Sutton</title>
+<meta name="description" content="Independent estate and letting agents on The Market, Rose Hill, Sutton. Sales, lettings and property management across Sutton, Carshalton and Morden.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#24152B;--plum2:#33203D;--violet:#6E4F8C;--lilac:#C9B8D9;--mist:#F2F0F4;--white:#FFFFFF;--brass:#B8955A;--brass2:#D8BC86;--ink:#1F1A22;--mut:#6B6470;--line:#E2DDE6;
+  --serif:'Bodoni Moda',Didot,'Times New Roman',serif;--sans:'Albert Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.prev{background:#7c3aed;color:#fff;text-align:center;font:600 .78rem/1.4 var(--sans);padding:7px 12px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:99}
+
+/* header */
+.hd{position:sticky;top:0;z-index:40;background:rgba(36,21,43,.96);backdrop-filter:blur(8px);color:var(--white)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.logo b{font:500 1.55rem/1 var(--serif);letter-spacing:.01em}
+.logo small{font:500 .7rem/1 var(--sans);letter-spacing:.24em;color:var(--brass2);margin-top:6px}
+.nav{display:flex;gap:30px;align-items:center;font-size:.92rem}
+.nav a{text-decoration:none;opacity:.85}.nav a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 .95rem/1 var(--sans);padding:15px 24px;border-radius:2px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-brass{background:var(--brass);color:var(--plum)}.btn-brass:hover{background:var(--brass2)}
+.btn-line{border-color:rgba(255,255,255,.35);color:var(--white)}.btn-line:hover{border-color:var(--white)}
+.btn-plum{background:var(--plum);color:var(--white)}.btn-plum:hover{background:var(--violet)}
+.hd .btn{padding:12px 18px}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+
+/* hero */
+.hero{background:var(--plum);color:var(--white);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:end;padding-top:84px}
+.hero h1{font:400 clamp(2.9rem,6.4vw,5.6rem)/1.02 var(--serif);letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--lilac)}
+.hero .lede{max-width:470px;margin:26px 0 34px;color:rgba(255,255,255,.78);font-size:1.08rem}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px}
+.facts{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);padding:22px 0 64px}
+.facts div{font-size:.9rem;color:rgba(255,255,255,.7)}
+.facts b{display:block;font:400 1.7rem/1.1 var(--serif);color:var(--white);margin-bottom:4px}
+.parade{align-self:end;margin-bottom:-2px}
+.parade path,.parade line,.parade rect,.parade circle,.parade polyline{fill:none;stroke:var(--brass2);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.parade .glow{fill:rgba(216,188,134,.18);stroke:none}
+.parade .ground{stroke:rgba(216,188,134,.5)}
+.parade text{fill:var(--brass2);stroke:none;font:500 9px var(--sans);letter-spacing:.2em}
+@media (prefers-reduced-motion:no-preference){
+  .parade .draw{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.6s .2s ease forwards}
+  .parade .glow{opacity:0;animation:on .8s 2.2s ease forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}@keyframes on{to{opacity:1}}
+}
+
+/* search bar */
+.search{background:var(--white);border-bottom:1px solid var(--line)}
+.search form{display:grid;grid-template-columns:auto 1fr 1fr 1fr auto;gap:0;align-items:stretch;margin-top:-38px;position:relative;z-index:5;background:var(--white);box-shadow:0 24px 50px -24px rgba(36,21,43,.45)}
+.tabs{display:flex;border-right:1px solid var(--line)}
+.tabs button{border:0;background:none;font:600 .92rem var(--sans);padding:0 22px;color:var(--mut);cursor:pointer;border-bottom:2px solid transparent}
+.tabs button[aria-pressed=true]{color:var(--plum);border-bottom-color:var(--brass)}
+.fld{display:flex;flex-direction:column;justify-content:center;padding:14px 20px;border-right:1px solid var(--line)}
+.fld label{font-size:.74rem;color:var(--mut);font-weight:600}
+.fld input,.fld select{border:0;font:500 1rem var(--sans);color:var(--ink);background:none;padding:2px 0;outline:0;width:100%}
+.search .btn{border-radius:0;padding:0 30px}
+.search-note{padding:16px 0 26px;font-size:.88rem;color:var(--mut)}
+
+/* sections */
+.s{padding:110px 0}
+.h2{font:400 clamp(2.1rem,4vw,3.3rem)/1.08 var(--serif);letter-spacing:-.005em;max-width:15ch}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.intro p{color:var(--mut);max-width:52ch}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--plum)}
+.svc article{padding:34px 34px 10px 0;border-right:1px solid var(--line)}
+.svc article+article{padding-left:34px}
+.svc article:last-child{border-right:0}
+.svc h3{font:400 1.75rem/1.15 var(--serif);margin-bottom:14px}
+.svc p{color:var(--mut);margin-bottom:18px}
+.svc ul{list-style:none;margin-bottom:24px}
+.svc li{padding:8px 0;border-top:1px solid var(--line);font-size:.93rem}
+.svc a{font-weight:600;color:var(--violet);text-decoration:none;border-bottom:1px solid var(--lilac)}
+
+/* listings */
+.listings{background:var(--mist)}
+.lgrid{display:grid;grid-template-columns:1.35fr 1fr;gap:24px}
+.lcol{display:grid;gap:24px}
+.prop{background:var(--white);display:flex;flex-direction:column;text-decoration:none}
+.prop .ph{aspect-ratio:16/10;position:relative;overflow:hidden}
+.prop.big .ph{aspect-ratio:auto;flex:1;min-height:340px}
+.ph svg{position:absolute;inset:0;width:100%;height:100%}
+.flag{position:absolute;left:16px;top:16px;background:var(--white);color:var(--plum);font:600 .78rem var(--sans);padding:6px 10px}
+.prop .body{padding:22px 24px 24px;display:flex;justify-content:space-between;gap:16px;align-items:end}
+.prop .price{font:400 1.75rem/1.1 var(--serif)}
+.prop .addr{color:var(--mut);font-size:.92rem;margin-top:4px}
+.prop .spec{font-size:.86rem;color:var(--mut);white-space:nowrap;text-align:right}
+.demo-note{margin-top:22px;font-size:.86rem;color:var(--mut)}
+
+/* proof */
+.proof .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+.score{font:400 6.5rem/1 var(--serif);color:var(--plum)}
+.score small{font-size:1.3rem;color:var(--mut)}
+.stars{color:var(--brass);letter-spacing:4px;font-size:1.15rem;margin:10px 0 6px}
+.proof aside p{color:var(--mut)}
+.quotes{display:grid;gap:0}
+blockquote{padding:30px 0;border-top:1px solid var(--line)}
+blockquote:last-child{border-bottom:1px solid var(--line)}
+blockquote p{font:400 1.32rem/1.5 var(--serif)}
+blockquote cite{display:block;margin-top:12px;font:600 .85rem var(--sans);font-style:normal;color:var(--mut)}
+
+/* about */
+.about{background:var(--plum);color:var(--white)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about .h2{color:var(--white)}
+.about p{color:rgba(255,255,255,.76);margin-top:20px;max-width:52ch}
+.timeline{border-left:1px solid rgba(216,188,134,.45);padding-left:30px;display:grid;gap:34px}
+.timeline div{position:relative}
+.timeline div::before{content:"";position:absolute;left:-35px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--brass)}
+.timeline b{font:400 1.45rem/1.2 var(--serif);display:block;color:var(--white)}
+.timeline span{color:rgba(255,255,255,.65);font-size:.94rem}
+
+/* valuation */
+.val .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:70px}
+.val p.lead{color:var(--mut);margin:20px 0 28px;max-width:46ch}
+.val ul{list-style:none}
+.val li{padding:12px 0;border-top:1px solid var(--line);display:flex;gap:12px}
+.val li::before{content:"";flex:0 0 6px;height:6px;margin-top:10px;background:var(--brass);transform:rotate(45deg)}
+form.vf{background:var(--mist);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.vf .full{grid-column:1/-1}
+.vf label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px}
+.vf input,.vf select,.vf textarea{width:100%;border:1px solid var(--line);background:var(--white);font:500 1rem var(--sans);padding:13px 14px;border-radius:2px;color:var(--ink)}
+.vf input:focus,.vf select:focus,.vf textarea:focus{outline:0;border-color:var(--violet)}
+.vf .seg{display:flex;border:1px solid var(--line);background:var(--white)}
+.vf .seg label{flex:1;margin:0;text-align:center;padding:12px;cursor:pointer;font-weight:600;font-size:.92rem}
+.vf .seg input{position:absolute;opacity:0;width:1px}
+.vf .seg input:checked+span{color:var(--plum);border-bottom:2px solid var(--brass);padding-bottom:2px}
+.vf .ok{display:none;grid-column:1/-1;text-align:center;padding:40px 10px}
+.vf.done>*:not(.ok){display:none}.vf.done .ok{display:block}
+.ok h3{font:400 2rem var(--serif);margin-bottom:10px}
+
+/* contact */
+.contact{background:var(--mist)}
+.contact .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.contact h3{font:400 1.4rem var(--serif);margin-bottom:14px}
+.contact p,.contact td{color:var(--mut);font-size:.95rem}
+.contact table{border-collapse:collapse;width:100%}
+.contact td{padding:5px 0;border-bottom:1px solid var(--line)}
+.contact td:last-child{text-align:right;color:var(--ink)}
+.contact tr.today td{color:var(--plum);font-weight:700}
+.contact .big{font:400 1.9rem/1.2 var(--serif);color:var(--plum);text-decoration:none;display:block;margin-bottom:6px}
+
+footer{background:var(--plum);color:rgba(255,255,255,.6);font-size:.86rem;padding:34px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--brass2)}
+
+@media (max-width:980px){
+  .nav{display:none}.burger{display:block}
+  .nav.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--plum);padding:20px;gap:18px;align-items:flex-start}
+  .hero .wrap,.intro,.proof .wrap,.about .wrap,.val .wrap,.lgrid{grid-template-columns:1fr}
+  .hero .wrap{padding-top:56px;gap:10px}
+  .parade{max-width:560px}
+  .search form{grid-template-columns:1fr 1fr;margin-top:0}
+  .tabs{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line)}.tabs button{flex:1;padding:16px}
+  .fld{border-bottom:1px solid var(--line)}
+  .search .btn{grid-column:1/-1;padding:18px}
+  .search .fld:nth-of-type(4){grid-column:1/-1}
+  .facts{padding-bottom:30px}
+  .svc{grid-template-columns:1fr}.svc article,.svc article+article{padding:30px 0 10px;border-right:0;border-bottom:1px solid var(--line)}
+  .contact .wrap{grid-template-columns:1fr}
+  .s{padding:80px 0}
+}
+@media (max-width:560px){
+  .hd .btn{display:none}
+  .facts{gap:22px}.facts b{font-size:1.4rem}
+  form.vf{padding:24px;grid-template-columns:1fr}
+  .prop .body{flex-direction:column;align-items:flex-start}.prop .spec{text-align:left}
+  .score{font-size:5rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="prev">Website preview for Daniel Violet Estate Agents, made by Pictoflex Labs</div>
+
+<header class="hd">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Daniel Violet Estate Agents, home"><b>Daniel Violet</b><small>ESTATE AGENTS</small></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#search">Buy</a><a href="#search">Rent</a><a href="#services">Landlords</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a class="btn btn-brass" href="#valuation">Book a valuation</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Rose Hill’s agent, <em>on first-name terms</em> with the street.</h1>
+      <p class="lede">Sales, lettings and property management from our office on The Market. Some of our landlords have trusted us with their homes for fifteen years.</p>
+      <div class="ctas">
+        <a class="btn btn-brass" href="#valuation">Book a free valuation</a>
+        <a class="btn btn-line" href="tel:+442086445000">Call 020 8644 5000</a>
+      </div>
+      <div class="facts">
+        <div><b>15 years</b>managing local lets</div>
+        <div><b>5.0 on Google</b>from client reviews</div>
+        <div><b>Sutton, Carshalton, Morden</b>where we work</div>
+      </div>
+    </div>
+    <svg class="parade" viewBox="0 0 560 330" role="img" aria-label="Line drawing of a parade of shops at Rose Hill">
+      <line class="ground draw" x1="0" y1="326" x2="560" y2="326"/>
+      <path class="draw" d="M20 326V120l50-38 50 38v206M70 82V52M120 326V110h120v216M240 326V96l60-46 60 46v230M360 326V118h170v208"/>
+      <path class="draw" d="M36 150h68v44H36zM36 214h68v44H36zM136 132h88v36h-88zM256 128h88v40h-88zM376 140h138v30H376z"/>
+      <path class="draw" d="M256 196h88M300 196v40M256 236h88v-40M136 196h40v60h-40zM188 196h36v60h-36zM376 196h64v62h-64zM452 196h62v62h-62z"/>
+      <rect class="glow" x="257" y="197" width="86" height="38"/>
+      <path class="draw" d="M120 280h120M240 268h120M360 278h170M36 290v36M104 290v36M70 290v36"/>
+      <path class="draw" d="M248 268l6-14h92l6 14"/>
+      <text x="271" y="186">NO. 44</text>
+      <circle class="draw" cx="70" cy="110" r="10"/>
+      <path class="draw" d="M300 50v-18M292 32h16"/>
+    </svg>
+  </div>
+</section>
+
+<section class="search" id="search" aria-label="Search properties">
+  <div class="wrap">
+    <form id="sf">
+      <div class="tabs" role="group" aria-label="Buy or rent"><button type="button" aria-pressed="true" data-m="buy">Buy</button><button type="button" aria-pressed="false" data-m="rent">Rent</button></div>
+      <div class="fld"><label for="s-loc">Area or postcode</label><input id="s-loc" placeholder="e.g. SM1, Rose Hill"></div>
+      <div class="fld"><label for="s-bed">Bedrooms</label><select id="s-bed"><option>Any</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option></select></div>
+      <div class="fld"><label for="s-max" id="s-max-l">Max price</label><select id="s-max"><option>No max</option><option>£300,000</option><option>£400,000</option><option>£500,000</option><option>£650,000</option></select></div>
+      <button class="btn btn-plum" type="submit">Search</button>
+    </form>
+    <p class="search-note" id="snote">On the finished site this searches your live listings and sends anything you don’t find to your inbox as a lead.</p>
+  </div>
+</section>
+
+<section class="s" id="services">
+  <div class="wrap">
+    <div class="intro">
+      <h2 class="h2">Three services, one team that answers the phone.</h2>
+      <p>Whether you’re selling the family home, letting your first flat or handing over a portfolio, you deal with the same local people from first visit to final key.</p>
+    </div>
+    <div class="svc">
+      <article>
+        <h3>Selling</h3>
+        <p>An honest price based on what has actually sold on your road, then a buyer who can proceed.</p>
+        <ul><li>Free, no-obligation valuation</li><li>Listed on Rightmove and Zoopla</li><li>We chase the chain to completion</li></ul>
+        <a href="#valuation">Value my home</a>
+      </article>
+      <article>
+        <h3>Letting</h3>
+        <p>Tenants found and properly referenced, with the paperwork done the way the law now expects.</p>
+        <ul><li>Tenant find and referencing</li><li>Deposit registration</li><li>Compliance checks and safety certificates</li></ul>
+        <a href="#valuation">Get a rental valuation</a>
+      </article>
+      <article>
+        <h3>Property management</h3>
+        <p>Rent collected, repairs sorted by trusted local trades, and one person who knows your property.</p>
+        <ul><li>Monthly rent collection and statements</li><li>Maintenance and inspections</li><li>Renewals and check-outs</li></ul>
+        <a href="#contact">Talk to Tommy</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s listings" aria-labelledby="lh">
+  <div class="wrap">
+    <div class="intro">
+      <h2 class="h2" id="lh">Currently on the market</h2>
+      <p>Homes we’re selling across SM1, SM4 and SM5. New instructions appear here the moment they go live.</p>
+    </div>
+    <div class="lgrid">
+      <a class="prop big" href="#contact">
+        <div class="ph"><svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="600" height="400" fill="#33203D"/><path d="M120 400V190l90-70 90 70v210M300 400V170l80-60 80 60v230" fill="none" stroke="#D8BC86" stroke-width="2"/><path d="M150 230h40v50h-40zM230 230h40v50h-40zM330 210h40v50h-40zM410 210h40v50h-40zM190 330h40v70h-40zM360 320h40v80h-40z" fill="none" stroke="#C9B8D9" stroke-width="1.5"/></svg><span class="flag">Offers over</span></div>
+        <div class="body"><div><div class="price">£500,000</div><div class="addr">Semi-detached house, Carshalton SM5</div></div><div class="spec">Example listing<br>3 bed · garden</div></div>
+      </a>
+      <div class="lcol">
+        <a class="prop" href="#contact">
+          <div class="ph"><svg viewBox="0 0 600 375" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="600" height="375" fill="#E6E0EB"/><path d="M80 375V160l70-50 70 50v215M220 375V160l70-50 70 50v215M360 375V160l70-50 70 50v215" fill="none" stroke="#6E4F8C" stroke-width="2"/><path d="M120 200h50v40h-50zM260 200h50v40h-50zM400 200h50v40h-50z" fill="none" stroke="#B8955A" stroke-width="1.5"/></svg><span class="flag">For sale</span></div>
+          <div class="body"><div><div class="price">£400,000</div><div class="addr">Terraced house, Sutton SM1</div></div><div class="spec">Example listing</div></div>
+        </a>
+        <a class="prop" href="#contact">
+          <div class="ph"><svg viewBox="0 0 600 375" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="600" height="375" fill="#F2F0F4"/><path d="M160 375V110h280v265" fill="none" stroke="#24152B" stroke-width="2"/><path d="M200 150h60v45h-60zM340 150h60v45h-60zM200 235h60v45h-60zM340 235h60v45h-60z" fill="none" stroke="#6E4F8C" stroke-width="1.5"/></svg><span class="flag">For sale</span></div>
+          <div class="body"><div><div class="price">£314,950</div><div class="addr">Apartment, Morden SM4</div></div><div class="spec">Example listing</div></div>
+        </a>
+      </div>
+    </div>
+    <p class="demo-note">These are example cards. On the finished site they pull in your live Rightmove and Zoopla listings with real photos.</p>
+  </div>
+</section>
+
+<section class="s proof" aria-labelledby="ph">
+  <div class="wrap">
+    <aside>
+      <div class="score">5.0<small> / 5</small></div>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p id="ph">Every Google review we’ve been given, from landlords, tenants and sellers.</p>
+    </aside>
+    <div class="quotes">
+      <blockquote><p>“Tommy has been managing my rental property for 14 years. He goes above and beyond to find the best possible tenants.”</p><cite>Landlord, Google review</cite></blockquote>
+      <blockquote><p>“Nothing was ever too much for him and he always did what he said he would. Even when the first buyer’s mortgage offer expired he went straight out and found new buyers.”</p><cite>Seller, Google review</cite></blockquote>
+      <blockquote><p>“Any queries or issues are dealt with in a quick manner, always happy to help.”</p><cite>Tenant, Google review</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="s about" id="about">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">The same faces on The Market, year after year.</h2>
+      <p>Many of our clients first knew us as Webb’s. The name has changed; the people they deal with haven’t. We still pick up the phone, still know the local market road by road, and still have a trusted tradesperson to recommend when a landlord needs one.</p>
+    </div>
+    <div class="timeline">
+      <div><b>Known locally as Webb’s</b><span>Where many of our longest-standing landlords first came to us.</span></div>
+      <div><b>Now Daniel Violet</b><span>Based at 44 The Market, Rose Hill, with the same familiar faces.</span></div>
+      <div><b>Your next move</b><span>Whether it’s a sale, a let or handing over management, start with a conversation.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s val" id="valuation">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">What is your home worth today?</h2>
+      <p class="lead">Tell us a little about the property and we’ll arrange a visit. It’s free, there’s no obligation, and you’ll get a figure based on local sales, not a national algorithm.</p>
+      <ul><li>Visit at a time that suits you, including Saturdays</li><li>A clear figure with the local sales behind it</li><li>Sales and rental figures, so you can compare</li></ul>
+    </div>
+    <form class="vf" id="vf" novalidate>
+      <div class="full"><label>I’d like to</label><div class="seg"><label><input type="radio" name="t" value="Sell" checked><span>Sell</span></label><label><input type="radio" name="t" value="Let"><span>Let</span></label><label><input type="radio" name="t" value="Both"><span>Not sure yet</span></label></div></div>
+      <div><label for="v-name">Full name</label><input id="v-name" autocomplete="name" required></div>
+      <div><label for="v-tel">Phone</label><input id="v-tel" type="tel" autocomplete="tel" required></div>
+      <div><label for="v-pc">Property postcode</label><input id="v-pc" autocomplete="postal-code" required></div>
+      <div><label for="v-beds">Bedrooms</label><select id="v-beds"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5+</option></select></div>
+      <div class="full"><label for="v-note">Anything we should know? (optional)</label><textarea id="v-note" rows="3"></textarea></div>
+      <div class="full"><button class="btn btn-plum" type="submit" style="width:100%">Request my valuation</button></div>
+      <div class="ok" role="status"><h3>Thank you</h3><p style="color:var(--mut)">Your request has reached the office. We’ll call you within one working day to arrange a time.</p></div>
+    </form>
+  </div>
+</section>
+
+<section class="s contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h3>Visit or call</h3>
+      <a class="big" href="tel:+442086445000">020 8644 5000</a>
+      <p>44 The Market, Rose Hill<br>Sutton SM1 3HE</p>
+      <p style="margin-top:14px"><a href="https://maps.google.com/?q=Daniel+Violet+Estate+Agents+44+The+Market+Sutton+SM1+3HE" target="_blank" rel="noopener" style="color:var(--violet);font-weight:600">Get directions</a></p>
+    </div>
+    <div>
+      <h3>Opening hours</h3>
+      <table id="hours">
+        <tr data-d="1"><td>Monday</td><td>9:30am – 6:30pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>9:30am – 6:30pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>9:30am – 6:30pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>9:30am – 6:30pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>9:30am – 6:30pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>9:00am – 5:00pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Landlords</h3>
+      <p>Already a landlord with another agent? We’ll explain exactly what switching involves and what it costs, with no pressure to move.</p>
+      <p style="margin-top:18px"><a class="btn btn-plum" href="#valuation">Arrange a call</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Daniel Violet Estate Agents · 44 The Market, Rose Hill, Sutton SM1 3HE</span><span>Website by <a href="https://pictoflexlabs.co.uk">Pictoflex Labs</a></span></div></footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+  var tabs=document.querySelectorAll('.tabs button'),maxL=document.getElementById('s-max-l'),max=document.getElementById('s-max');
+  var buy=max.innerHTML,rent='<option>No max</option><option>£1,200 pcm</option><option>£1,500 pcm</option><option>£1,800 pcm</option><option>£2,200 pcm</option>';
+  tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-pressed',x===t)});max.innerHTML=t.dataset.m==='rent'?rent:buy;maxL.textContent=t.dataset.m==='rent'?'Max rent':'Max price'})});
+  document.getElementById('sf').addEventListener('submit',function(e){e.preventDefault();var s=document.getElementById('snote');s.textContent='This is a preview, so there are no live listings to search yet. On the finished site you’d see matching homes here.';s.style.color='#6E4F8C'});
+  var f=document.getElementById('vf');
+  f.addEventListener('submit',function(e){e.preventDefault();var ok=true;['v-name','v-tel','v-pc'].forEach(function(id){var el=document.getElementById(id);var bad=!el.value.trim();el.style.borderColor=bad?'#B3261E':'';if(bad)ok=false});if(ok)f.classList.add('done')});
+  try{var r=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]');if(r)r.classList.add('today')}catch(e){}
+})();
+</script>
+</body>
+</html>

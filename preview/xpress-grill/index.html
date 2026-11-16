@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xpress Grill | Peri Peri, Lamb Chops &amp; Pizza, Thornton Heath</title>
+<meta name="description" content="Peri peri chicken, grilled lamb chops, burgers and pizza on London Road, Thornton Heath. Open every day until 1:30am.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#17120F;--ink:#F6EFE8;--mut:#B5A89C;--card:#211A16;--line:#3A2E27;--pri:#FF5A1F;--pri2:#FF7440;--acc:#FFB020;--hot:#FF5A1F;--onpri:#17120F;--hero:#17120F;--herotext:#F6EFE8;--disp:'Big Shoulders Display',Impact,sans-serif;--body:'Barlow',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+.prev{background:#7c3aed;color:#fff;text-align:center;font:700 .78rem/1.4 system-ui,sans-serif;padding:7px 12px}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;color:#000;padding:8px 12px;z-index:99}
+.hd{position:sticky;top:0;z-index:40;background:var(--hero);color:var(--herotext);border-bottom:1px solid rgba(255,255,255,.08)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.logo{font:400 1.5rem/1 var(--disp);text-decoration:none;letter-spacing:.01em}
+.motif-flame .logo{font-weight:900;font-size:1.9rem;text-transform:uppercase;letter-spacing:.02em}
+.logo i{font-style:normal;color:var(--acc)}
+.hd .r{display:flex;align-items:center;gap:14px}
+.status{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.88rem}
+.status i{width:9px;height:9px;border-radius:50%;background:#9a9a9a}
+.status.open i{background:#3DDC84;box-shadow:0 0 0 4px rgba(61,220,132,.2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:800 .98rem/1 var(--body);padding:14px 22px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-pri{background:var(--acc);color:#1B1A17}.btn-pri:hover{filter:brightness(1.07)}
+.btn-ghost{border-color:currentColor}
+.hd .btn{padding:10px 16px;font-size:.9rem}
+
+.hero{background:var(--hero);color:var(--herotext);position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:2;padding:74px 0 84px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.hero h1{font:400 clamp(2.5rem,6vw,4.6rem)/1.02 var(--disp);max-width:15ch}
+.motif-flame .hero h1{font-weight:900;text-transform:uppercase;font-size:clamp(3.2rem,8.5vw,6.6rem);line-height:.92;max-width:11ch}
+.hero p{max-width:46ch;margin:22px 0 30px;font-size:1.1rem;opacity:.85}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.badges{display:grid;gap:14px}
+.badges div{border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px 20px;background:rgba(255,255,255,.04)}
+.badges b{display:block;font:400 2rem/1 var(--disp);color:var(--acc)}
+.motif-flame .badges b{font-weight:900;font-size:2.4rem}
+.badges span{font-size:.92rem;opacity:.8}
+/* motifs */
+.motif-island .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:var(--acc);right:-140px;top:-180px;opacity:.95}
+.motif-island .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:repeating-linear-gradient(90deg,var(--hot) 0 33.33%,var(--acc) 33.33% 66.66%,#0B3A2B 66.66% 100%);opacity:.9}
+.motif-island .hero .wrap{padding-bottom:110px}
+.motif-island .badges div{background:rgba(15,74,55,.82);backdrop-filter:blur(4px)}
+.motif-flame .hero::before{content:"";position:absolute;left:50%;bottom:-260px;width:1100px;height:520px;transform:translateX(-50%);background:radial-gradient(ellipse at center,rgba(255,90,31,.55),rgba(255,176,32,.18) 45%,transparent 70%)}
+@media (prefers-reduced-motion:no-preference){.motif-flame .hero::before{animation:flick 3.2s ease-in-out infinite alternate}@keyframes flick{from{opacity:.75}to{opacity:1}}}
+
+.menu{padding:70px 0 90px}
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:10px}
+.h2{font:400 clamp(2rem,4vw,3rem)/1.05 var(--disp)}
+.motif-flame .h2{font-weight:900;text-transform:uppercase}
+.menu-head p{color:var(--mut);max-width:48ch}
+.cats{position:sticky;top:68px;z-index:20;background:var(--bg);display:flex;gap:8px;overflow-x:auto;padding:14px 0;margin-bottom:10px;scrollbar-width:none;border-bottom:1px solid var(--line)}
+.cats::-webkit-scrollbar{display:none}
+.cats a{flex:0 0 auto;text-decoration:none;font-weight:700;font-size:.92rem;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+.cats a:hover{border-color:var(--pri)}
+.layout{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start}
+.cat{padding-top:28px}
+.cat h3{font:400 1.6rem var(--disp);margin-bottom:10px;color:var(--pri)}
+.motif-flame .cat h3{font-weight:800;text-transform:uppercase;letter-spacing:.02em}
+.cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cat li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;justify-content:space-between;gap:12px}
+.cat li b{font-weight:800;display:block}
+.cat li p{color:var(--mut);font-size:.88rem;margin-top:2px}
+.cat .r{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:10px}
+.pr{font-weight:800;white-space:nowrap}
+.add{width:36px;height:36px;border-radius:50%;border:0;background:var(--pri);color:var(--onpri);font:800 1.3rem/1 var(--body);cursor:pointer}
+.add:hover{background:var(--pri2)}
+.add.pop{animation:pop .35s ease}@keyframes pop{50%{transform:scale(1.25)}}
+.note{background:var(--card);border-left:4px solid var(--acc);padding:12px 16px;border-radius:8px;color:var(--mut);margin-top:18px;font-size:.93rem}
+
+/* basket */
+.basket{position:sticky;top:140px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.basket h3{font:400 1.4rem var(--disp);margin-bottom:12px}
+.motif-flame .basket h3{font-weight:800;text-transform:uppercase}
+.mode{display:grid;grid-template-columns:1fr 1fr;background:var(--bg);border-radius:999px;padding:4px;margin-bottom:14px}
+.mode button{border:0;background:none;color:var(--ink);font:700 .9rem var(--body);padding:9px;border-radius:999px;cursor:pointer}
+.mode button[aria-pressed=true]{background:var(--pri);color:var(--onpri)}
+.lines{list-style:none;max-height:300px;overflow:auto}
+.lines li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.qty{display:inline-flex;align-items:center;gap:6px}
+.qty button{width:24px;height:24px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer;font-weight:800}
+.empty{color:var(--mut);font-size:.93rem;padding:6px 0 10px}
+.tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.1rem;margin:14px 0}
+.basket .btn{width:100%}
+.basket small{display:block;color:var(--mut);margin-top:10px;font-size:.8rem;text-align:center}
+.fab{display:none}
+
+/* checkout modal */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60;display:none;align-items:flex-end;justify-content:center}
+.ov.on{display:flex}
+.sheet{background:var(--card);color:var(--ink);width:min(520px,100%);max-height:92vh;overflow:auto;border-radius:22px 22px 0 0;padding:26px}
+@media(min-width:700px){.ov{align-items:center}.sheet{border-radius:22px}}
+.sheet h3{font:400 1.6rem var(--disp);margin-bottom:14px}
+.motif-flame .sheet h3{font-weight:800;text-transform:uppercase}
+.sheet label{display:block;font-weight:700;font-size:.85rem;margin:12px 0 6px}
+.sheet input,.sheet textarea{width:100%;font:500 1rem var(--body);padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.sheet .row{display:flex;gap:10px;margin-top:18px}
+.sheet .row .btn{flex:1}
+.done{text-align:center;padding:20px 0}
+.done b{font:400 2.4rem var(--disp);display:block;color:var(--pri)}
+
+.reviews{padding:80px 0;border-top:1px solid var(--line)}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+blockquote{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+blockquote p{font-size:1.06rem;font-weight:600}
+blockquote cite{display:block;margin-top:12px;color:var(--mut);font-style:normal;font-size:.86rem}
+.info{padding:80px 0;background:var(--hero);color:var(--herotext)}
+.info .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.info h3{font:400 1.4rem var(--disp);margin-bottom:12px;color:var(--acc)}
+.motif-flame .info h3{font-weight:800;text-transform:uppercase}
+.info table{border-collapse:collapse;width:100%}
+.info td{padding:5px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.95rem}
+.info td:last-child{text-align:right}
+.info tr.today td{color:var(--acc);font-weight:800}
+.info .big{font:400 1.8rem var(--disp);text-decoration:none;display:block;margin-bottom:6px}
+.info p{opacity:.85}
+footer{padding:26px 0;font-size:.85rem;color:var(--mut);background:var(--bg)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media(max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;padding:54px 0 70px}
+  .badges{grid-template-columns:repeat(3,1fr)}
+  .layout{grid-template-columns:1fr}
+  .basket{display:none}
+  .basket.sheetmode{display:block;position:static;border:0;padding:0;background:none}
+  .fab{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:50;justify-content:space-between;align-items:center;background:var(--pri);color:var(--onpri);border:0;border-radius:999px;padding:16px 22px;font:800 1rem var(--body);box-shadow:0 12px 30px rgba(0,0,0,.3);cursor:pointer}
+  .rv,.info .wrap{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .cat ul{grid-template-columns:1fr}
+  .badges{grid-template-columns:1fr 1fr 1fr;gap:8px}.badges div{padding:12px}.badges b{font-size:1.4rem!important}.badges span{font-size:.78rem}
+  .hd .btn{display:none}
+  .motif-island .hero::before{width:200px;height:200px;right:-100px;top:-110px}
+}
+</style>
+</head>
+<body class="motif-flame">
+<a class="skip" href="#menu">Skip to menu</a>
+<div class="prev">Website preview for Xpress Grill, made by Pictoflex Labs</div>
+<header class="hd"><div class="wrap">
+  <a class="logo" href="#top">Xpress Grill</a>
+  <div class="r"><span class="status" id="st"><i></i><span>Checking hours…</span></span><a class="btn btn-pri" href="#menu">Order now</a></div>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <h1>Grilled fresh till 1:30am. Every night.</h1>
+    <p>Peri peri chicken, grilled lamb chops, tower burgers and pizza on London Road, Thornton Heath. Order for collection or delivery.</p>
+    <div class="ctas"><a class="btn btn-pri" href="#menu">Order for collection</a><a class="btn btn-ghost" href="tel:+442086841528">Call 020 8684 1528</a></div>
+  </div>
+  <div class="badges"><div><b>5.0</b><span>718 Just Eat ratings</span></div><div><b>1:30am</b><span>open late, 7 days</span></div><div><b>Pizza</b><span>burgers &amp; wraps too</span></div></div>
+</div></section>
+
+<main class="menu" id="menu"><div class="wrap">
+  <div class="menu-head"><h2 class="h2">Menu</h2><p>Order here and pay online. No app needed, and it goes straight to the kitchen.</p></div>
+  <nav class="cats" aria-label="Menu sections"><a href="#c0">Grill specials</a><a href="#c1">Peri chicken &amp; kebabs</a><a href="#c2">Burgers</a><a href="#c3">Pizzas</a><a href="#c4">Sides &amp; starters</a><a href="#c5">Kids &amp; drinks</a></nav>
+  <div class="layout">
+    <div>
+      <p class="note">Order ahead and it’ll be ready when you arrive.</p>
+      <section class="cat" id="c0"><h3>Grill specials</h3><ul><li><div><b>Peri Peri 3 Grilled Lamb Chop Meal</b><p>Three peri peri lamb chops</p></div><div class="r"><span class="pr">£11.99</span><button class="add" data-id="0-0" aria-label="Add Peri Peri 3 Grilled Lamb Chop Meal to order">+</button></div></li><li><div><b>Peri Peri 5 Grilled Chops Meal</b><p>Five peri peri lamb chops</p></div><div class="r"><span class="pr">£16.99</span><button class="add" data-id="0-1" aria-label="Add Peri Peri 5 Grilled Chops Meal to order">+</button></div></li><li><div><b>2 Chops Platter</b></div><div class="r"><span class="pr">£14.99</span><button class="add" data-id="0-2" aria-label="Add 2 Chops Platter to order">+</button></div></li><li><div><b>The Ultimate Platter</b></div><div class="r"><span class="pr">£12.99</span><button class="add" data-id="0-3" aria-label="Add The Ultimate Platter to order">+</button></div></li><li><div><b>Chops Combo Meal</b></div><div class="r"><span class="pr">£14.99</span><button class="add" data-id="0-4" aria-label="Add Chops Combo Meal to order">+</button></div></li><li><div><b>Mega Chops Meal</b><p>For sharing</p></div><div class="r"><span class="pr">£29.99</span><button class="add" data-id="0-5" aria-label="Add Mega Chops Meal to order">+</button></div></li><li><div><b>Peri Boneless Chicken with Chips</b></div><div class="r"><span class="pr">£9.99</span><button class="add" data-id="0-6" aria-label="Add Peri Boneless Chicken with Chips to order">+</button></div></li><li><div><b>Boneless Chicken Pilao Rice</b></div><div class="r"><span class="pr">£9.99</span><button class="add" data-id="0-7" aria-label="Add Boneless Chicken Pilao Rice to order">+</button></div></li></ul></section><section class="cat" id="c1"><h3>Peri chicken &amp; kebabs</h3><ul><li><div><b>10 Piece Chicken</b><p>Peri peri, cooked to perfection</p></div><div class="r"><span class="pr">£21.99</span><button class="add" data-id="1-0" aria-label="Add 10 Piece Chicken to order">+</button></div></li><li><div><b>Chicken Kebab</b></div><div class="r"><span class="pr">£8.99</span><button class="add" data-id="1-1" aria-label="Add Chicken Kebab to order">+</button></div></li><li><div><b>Lamb Doner</b><p>With pitta, salad and garlic sauce</p></div><div class="r"><span class="pr">£8.49</span><button class="add" data-id="1-2" aria-label="Add Lamb Doner to order">+</button></div></li><li><div><b>Tawa Doner Kebab</b></div><div class="r"><span class="pr">£9.49</span><button class="add" data-id="1-3" aria-label="Add Tawa Doner Kebab to order">+</button></div></li><li><div><b>Peri Peri Fish</b></div><div class="r"><span class="pr">£7.99</span><button class="add" data-id="1-4" aria-label="Add Peri Peri Fish to order">+</button></div></li></ul></section><section class="cat" id="c2"><h3>Burgers</h3><ul><li><div><b>Single Chicken Burger Combo</b><p>Grilled peri chicken burger with 3 peri wings</p></div><div class="r"><span class="pr">£11.99</span><button class="add" data-id="2-0" aria-label="Add Single Chicken Burger Combo to order">+</button></div></li><li><div><b>Chicken Tower Burger Meal</b></div><div class="r"><span class="pr">£13.99</span><button class="add" data-id="2-1" aria-label="Add Chicken Tower Burger Meal to order">+</button></div></li><li><div><b>Beef Tower Burger Meal</b></div><div class="r"><span class="pr">£13.99</span><button class="add" data-id="2-2" aria-label="Add Beef Tower Burger Meal to order">+</button></div></li><li><div><b>Grilled Halloumi Burger</b></div><div class="r"><span class="pr">£9.49</span><button class="add" data-id="2-3" aria-label="Add Grilled Halloumi Burger to order">+</button></div></li><li><div><b>Grill Fish Burger Meal</b></div><div class="r"><span class="pr">£8.99</span><button class="add" data-id="2-4" aria-label="Add Grill Fish Burger Meal to order">+</button></div></li><li><div><b>Cheese Burger</b></div><div class="r"><span class="pr">£6.49</span><button class="add" data-id="2-5" aria-label="Add Cheese Burger to order">+</button></div></li></ul></section><section class="cat" id="c3"><h3>Pizzas</h3><ul><li><div><b>Grilled Sizzler (Chicken)</b><p>Green chillies, jalapeño, onion, grilled chicken</p></div><div class="r"><span class="pr">£8.99</span><button class="add" data-id="3-0" aria-label="Add Grilled Sizzler (Chicken) to order">+</button></div></li><li><div><b>Grilled Sizzler (Spicy Beef)</b><p>Green chillies, jalapeño, onion, spicy beef</p></div><div class="r"><span class="pr">£8.99</span><button class="add" data-id="3-1" aria-label="Add Grilled Sizzler (Spicy Beef) to order">+</button></div></li><li><div><b>Sea Special</b><p>Prawns, tuna, anchovies, olives, fresh tomatoes</p></div><div class="r"><span class="pr">£8.99</span><button class="add" data-id="3-2" aria-label="Add Sea Special to order">+</button></div></li></ul></section><section class="cat" id="c4"><h3>Sides &amp; starters</h3><ul><li><div><b>6 Peri Wings</b></div><div class="r"><span class="pr">£5.99</span><button class="add" data-id="4-0" aria-label="Add 6 Peri Wings to order">+</button></div></li><li><div><b>6 BBQ Wings</b></div><div class="r"><span class="pr">£5.99</span><button class="add" data-id="4-1" aria-label="Add 6 BBQ Wings to order">+</button></div></li><li><div><b>Peri Loaded Fries</b><p>Peri chips, three sauces, melted cheese, jalapeño, onion</p></div><div class="r"><span class="pr">£6.49</span><button class="add" data-id="4-2" aria-label="Add Peri Loaded Fries to order">+</button></div></li><li><div><b>Cheesy Chips</b></div><div class="r"><span class="pr">£5.49</span><button class="add" data-id="4-3" aria-label="Add Cheesy Chips to order">+</button></div></li><li><div><b>Large Chips</b></div><div class="r"><span class="pr">£4.49</span><button class="add" data-id="4-4" aria-label="Add Large Chips to order">+</button></div></li><li><div><b>Mozzarella Sticks</b><p>6 pieces</p></div><div class="r"><span class="pr">£3.99</span><button class="add" data-id="4-5" aria-label="Add Mozzarella Sticks to order">+</button></div></li><li><div><b>Grilled Halloumi</b></div><div class="r"><span class="pr">£3.99</span><button class="add" data-id="4-6" aria-label="Add Grilled Halloumi to order">+</button></div></li><li><div><b>Onion Rings</b></div><div class="r"><span class="pr">£3.99</span><button class="add" data-id="4-7" aria-label="Add Onion Rings to order">+</button></div></li><li><div><b>Corn on the Cob</b></div><div class="r"><span class="pr">£1.99</span><button class="add" data-id="4-8" aria-label="Add Corn on the Cob to order">+</button></div></li><li><div><b>Garlic Bread</b></div><div class="r"><span class="pr">£1.99</span><button class="add" data-id="4-9" aria-label="Add Garlic Bread to order">+</button></div></li></ul></section><section class="cat" id="c5"><h3>Kids &amp; drinks</h3><ul><li><div><b>Kid’s Meal</b><p>6 nuggets, side and drink</p></div><div class="r"><span class="pr">£5.99</span><button class="add" data-id="5-0" aria-label="Add Kid’s Meal to order">+</button></div></li><li><div><b>Pepsi 330ml</b></div><div class="r"><span class="pr">£1.29</span><button class="add" data-id="5-1" aria-label="Add Pepsi 330ml to order">+</button></div></li><li><div><b>Coca-Cola 1.5L</b></div><div class="r"><span class="pr">£3.49</span><button class="add" data-id="5-2" aria-label="Add Coca-Cola 1.5L to order">+</button></div></li></ul></section>
+    </div>
+    <aside class="basket" id="basket" aria-label="Your order">
+      <h3>Your order</h3>
+      <div class="mode" role="group" aria-label="Collection or delivery"><button type="button" aria-pressed="true" data-m="Collection">Collection</button><button type="button" aria-pressed="false" data-m="Delivery">Delivery</button></div>
+      <ul class="lines" id="lines"></ul>
+      <div class="tot"><span>Total</span><span id="tot">£0.00</span></div>
+      <button class="btn btn-pri" id="go" type="button">Checkout</button>
+      <small>Preview: no real order will be placed.</small>
+    </aside>
+  </div>
+</div></main>
+<button class="fab" id="fab" type="button"><span id="fabn">View order</span><span id="fabt">£0.00</span></button>
+
+<section class="reviews"><div class="wrap">
+  <h2 class="h2">What customers say</h2>
+  <div class="rv"><blockquote><p>“Wings excellent, wrap excellent… Every single time I order the food is sweet.”</p><cite>Google review</cite></blockquote><blockquote><p>“My sons and I get food all the time. Food and service is excellent. You will not be disappointed.”</p><cite>Google review</cite></blockquote><blockquote><p>“Very delicious pizza, I loved it. You will order again and again.”</p><cite>Google review</cite></blockquote></div>
+</div></section>
+
+<section class="info" id="find"><div class="wrap">
+  <div><h3>Find us</h3><a class="big" href="tel:+442086841528">020 8684 1528</a><p>844 London Road, Thornton Heath CR7 7PA</p><p style="margin-top:12px"><a href="https://maps.google.com/?q=Xpress+Grill+844+London+Road+Thornton+Heath+CR7+7PA" target="_blank" rel="noopener" style="color:var(--acc);font-weight:800">Get directions</a></p></div>
+  <div><h3>Opening hours</h3><table id="hours"><tr data-d="1"><td>Monday</td><td>3pm – 1:30am</td></tr><tr data-d="2"><td>Tuesday</td><td>3pm – 1:30am</td></tr><tr data-d="3"><td>Wednesday</td><td>3pm – 1:30am</td></tr><tr data-d="4"><td>Thursday</td><td>3pm – 1:30am</td></tr><tr data-d="5"><td>Friday</td><td>3pm – 1:30am</td></tr><tr data-d="6"><td>Saturday</td><td>3pm – 1:30am</td></tr><tr data-d="0"><td>Sunday</td><td>3pm – 1:30am</td></tr></table></div>
+  <div><h3>Order direct</h3><p>Ordering here instead of through the apps means more of your money goes to the shop, not the platform. Same food, same kitchen.</p></div>
+</div></section>
+<footer><div class="wrap"><span>© 2026 Xpress Grill, 844 London Road, Thornton Heath CR7 7PA</span><span>Website by <a href="https://pictoflexlabs.co.uk">Pictoflex Labs</a></span></div></footer>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="ovh"><div class="sheet" id="sheet"></div></div>
+
+<script>
+(function(){
+  var ITEMS={"0-0": ["Peri Peri 3 Grilled Lamb Chop Meal", 11.99], "0-1": ["Peri Peri 5 Grilled Chops Meal", 16.99], "0-2": ["2 Chops Platter", 14.99], "0-3": ["The Ultimate Platter", 12.99], "0-4": ["Chops Combo Meal", 14.99], "0-5": ["Mega Chops Meal", 29.99], "0-6": ["Peri Boneless Chicken with Chips", 9.99], "0-7": ["Boneless Chicken Pilao Rice", 9.99], "1-0": ["10 Piece Chicken", 21.99], "1-1": ["Chicken Kebab", 8.99], "1-2": ["Lamb Doner", 8.49], "1-3": ["Tawa Doner Kebab", 9.49], "1-4": ["Peri Peri Fish", 7.99], "2-0": ["Single Chicken Burger Combo", 11.99], "2-1": ["Chicken Tower Burger Meal", 13.99], "2-2": ["Beef Tower Burger Meal", 13.99], "2-3": ["Grilled Halloumi Burger", 9.49], "2-4": ["Grill Fish Burger Meal", 8.99], "2-5": ["Cheese Burger", 6.49], "3-0": ["Grilled Sizzler (Chicken)", 8.99], "3-1": ["Grilled Sizzler (Spicy Beef)", 8.99], "3-2": ["Sea Special", 8.99], "4-0": ["6 Peri Wings", 5.99], "4-1": ["6 BBQ Wings", 5.99], "4-2": ["Peri Loaded Fries", 6.49], "4-3": ["Cheesy Chips", 5.49], "4-4": ["Large Chips", 4.49], "4-5": ["Mozzarella Sticks", 3.99], "4-6": ["Grilled Halloumi", 3.99], "4-7": ["Onion Rings", 3.99], "4-8": ["Corn on the Cob", 1.99], "4-9": ["Garlic Bread", 1.99], "5-0": ["Kid\u2019s Meal", 5.99], "5-1": ["Pepsi 330ml", 1.29], "5-2": ["Coca-Cola 1.5L", 3.49]},H=[[900, 1530], [900, 1530], [900, 1530], [900, 1530], [900, 1530], [900, 1530], [900, 1530]],cart={},mode='Collection';
+  function gbp(v){return '£'+v.toFixed(2)}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  /* open status, including hours that run past midnight */
+  try{var now=new Date(),d=now.getDay(),m=now.getHours()*60+now.getMinutes(),st=document.getElementById('st'),open=false,until='';
+    var t=H[d];if(t&&m>=t[0]&&m<t[1]){open=true;until=t[1]}
+    var y=H[(d+6)%7];if(!open&&y&&y[1]>1440&&m<y[1]-1440){open=true;until=y[1]}
+    function f(x){x%=1440;var h=Math.floor(x/60),mi=x%60,ap=h<12?'am':'pm';h=h%12||12;return h+(mi?':'+String(mi).padStart(2,'0'):'')+ap}
+    if(open){st.classList.add('open');st.lastChild.textContent='Open until '+f(until)}else{var nx=null;for(var k=0;k<8;k++){var dd=(d+k)%7;if(H[dd]&&(k>0||m<H[dd][0])){nx=[k,H[dd][0]];break}}st.lastChild.textContent=nx?('Closed · opens '+(nx[0]===0?'today ':nx[0]===1?'tomorrow ':'')+f(nx[1])):'Closed'}
+    var r=document.querySelector('#hours tr[data-d="'+d+'"]');if(r)r.classList.add('today');
+  }catch(e){}
+  var lines=document.getElementById('lines'),tot=document.getElementById('tot'),fabt=document.getElementById('fabt'),fabn=document.getElementById('fabn');
+  function total(){var t=0;for(var k in cart)t+=ITEMS[k][1]*cart[k];return t}
+  function count(){var n=0;for(var k in cart)n+=cart[k];return n}
+  function render(){var ks=Object.keys(cart);
+    lines.innerHTML=ks.length?ks.map(function(k){return '<li><span>'+esc(ITEMS[k][0])+'</span><span class="qty"><button data-k="'+k+'" data-d="-1" aria-label="Remove one">−</button>'+cart[k]+'<button data-k="'+k+'" data-d="1" aria-label="Add one">+</button></span></li>'}).join(''):'<li class="empty">Your basket is empty. Tap + on any dish to add it.</li>';
+    tot.textContent=gbp(total());fabt.textContent=gbp(total());fabn.textContent=count()?('View order ('+count()+')'):'View order'}
+  document.querySelectorAll('.add').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.id;cart[k]=(cart[k]||0)+1;b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop');render()})});
+  lines.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var k=b.dataset.k;cart[k]+=+b.dataset.d;if(cart[k]<=0)delete cart[k];render()});
+  document.querySelectorAll('.mode button').forEach(function(b){b.addEventListener('click',function(){mode=b.dataset.m;document.querySelectorAll('.mode button').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.m===mode)})})});
+  var ov=document.getElementById('ov'),sheet=document.getElementById('sheet'),basket=document.getElementById('basket'),home=basket.parentNode;
+  function close(){ov.classList.remove('on');if(basket.classList.contains('sheetmode')){basket.classList.remove('sheetmode');home.appendChild(basket)}}
+  ov.addEventListener('click',function(e){if(e.target===ov)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  document.getElementById('fab').addEventListener('click',function(){sheet.innerHTML='';basket.classList.add('sheetmode');sheet.appendChild(basket);ov.classList.add('on')});
+  document.getElementById('go').addEventListener('click',function(){
+    if(!count()){lines.innerHTML='<li class="empty">Add something first, then check out.</li>';return}
+    if(basket.classList.contains('sheetmode')){basket.classList.remove('sheetmode');home.appendChild(basket)}
+    sheet.innerHTML='<h3 id="ovh">'+mode+' details</h3><label for="cn">Name</label><input id="cn" autocomplete="name"><label for="cp">Mobile</label><input id="cp" type="tel" autocomplete="tel">'+(mode==='Delivery'?'<label for="ca">Delivery address</label><textarea id="ca" rows="2" autocomplete="street-address"></textarea>':'')+'<label for="cnote">Notes for the kitchen (optional)</label><input id="cnote"><div class="tot"><span>To pay</span><span>'+gbp(total())+'</span></div><div class="row"><button class="btn btn-ghost" type="button" id="back">Back</button><button class="btn btn-pri" type="button" id="pay">Pay '+gbp(total())+'</button></div>';
+    ov.classList.add('on');document.getElementById('cn').focus();
+    document.getElementById('back').onclick=close;
+    document.getElementById('pay').onclick=function(){var nm=document.getElementById('cn'),ph=document.getElementById('cp');if(!nm.value.trim()||!ph.value.trim()){(nm.value.trim()?ph:nm).focus();(nm.value.trim()?ph:nm).style.borderColor='var(--hot)';return}
+      var no=Math.floor(100+Math.random()*900);sheet.innerHTML='<div class="done" role="status"><b>Order #'+no+'</b><p style="margin:10px 0 18px">Thanks '+esc(nm.value.trim().split(' ')[0])+'! In the live version this pings the kitchen instantly and texts you when it’s ready.</p><button class="btn btn-pri" type="button" id="ok">Done</button></div>';
+      cart={};render();document.getElementById('ok').onclick=close}
+  });
+  render();
+})();
+</script>
+</body>
+</html>
