@@ -1,6 +1,7 @@
 # Pictoflex Labs — robots.txt
 # General crawlers
 User-agent: *
+Disallow: /clients/
 Allow: /
 
 # AI assistants / answer engines — explicitly welcomed
