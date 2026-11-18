@@ -3,219 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nam Nam | Vietnamese Street Food, Surrey Quays</title>
-<meta name="description" content="Vietnamese street food on Lower Road, Surrey Quays. Surf & turf rice boxes, garlic prawn noodles, banh mi and loaded fries. Order online for collection.">
+<title>Nam Nam | Vietnamese Streetfood with a Modern Twist, Surrey Quays</title>
+<meta name="description" content="Nam Nam: Vietnamese streetfood with a modern twist on Lower Road, Surrey Quays. Surf & Turf, garlic noodles, loaded fries and banh mi. Order online for collection.">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="https://api-thegoodtill-com-public.s3.eu-west-1.amazonaws.com/goodeats_assets/5b739572-778a-4fa4-b6c9-4878b57ef068/8855f01a-3b35-4f80-9e80-f86d7b37da22/logo">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Permanent+Marker&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--jade:#0F3D33;--jade2:#16503F;--lotus:#F7A8B8;--chili:#E5482B;--rice:#FBF8F2;--ink:#121A17;--mut:#5C6661;--line:#E6E1D8;--card:#FFFFFF;
---disp:'Syne',system-ui,sans-serif;--body:'Inter Tight',system-ui,sans-serif}
+:root{--char:#2B2829;--ink:#1C1A1B;--char2:#363233;--white:#FFFFFF;--off:#F4F2F0;--red:#E2302B;--red2:#C9241F;--kraft:#C9A27E;--mut:#8F8A87;--mutd:#5F5A58;--line:#E4E0DC;
+--head:'Montserrat',system-ui,sans-serif;--brush:'Permanent Marker',cursive;--body:'Inter Tight',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:120px}
-body{font-family:var(--body);background:var(--rice);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{font-family:var(--body);background:var(--off);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{display:block;max-width:100%}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--lotus);outline-offset:2px}
-.wrap{width:min(1200px,100% - 36px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.wrap{width:min(1220px,100% - 36px);margin-inline:auto}
 .prev{background:#7c3aed;color:#fff;text-align:center;font:600 .78rem/1.4 var(--body);padding:7px 12px}
 .skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:99}
+.cap{font-family:var(--head);text-transform:uppercase;letter-spacing:.08em}
 
-.hd{position:sticky;top:0;z-index:40;background:rgba(15,61,51,.97);color:var(--rice);backdrop-filter:blur(8px)}
-.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
-.logo{font:800 1.45rem/1 var(--disp);letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
-.logo i{width:12px;height:12px;border-radius:50%;background:var(--lotus);display:inline-block}
-.hd nav{display:flex;align-items:center;gap:26px;font-size:.93rem}
-.hd nav a{text-decoration:none;opacity:.85}.hd nav a:hover{opacity:1}
-.status{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.86rem}
-.status i{width:8px;height:8px;border-radius:50%;background:#9aa}
+/* logo, recreated from the Nam Nam mark */
+.mark{display:inline-grid;place-items:center;border:2px solid currentColor;border-radius:6px;padding:7px 9px 5px;line-height:1;text-decoration:none}
+.mark b{font:700 .95rem/1.15 var(--head);letter-spacing:.42em;margin-right:-.42em;display:block;text-align:center}
+.mark .a{display:inline-block;text-transform:lowercase;font-size:.8em;border-bottom:2px solid currentColor;line-height:.9;letter-spacing:0;margin:0 .42em 0 0}
+.mark small{font:700 .38rem/1 var(--head);letter-spacing:.32em;margin-top:5px;margin-right:-.32em}
+
+.hd{position:sticky;top:0;z-index:40;background:var(--char);color:var(--white);border-bottom:1px solid rgba(255,255,255,.08)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.hd nav{display:flex;align-items:center;gap:26px;font:600 .82rem var(--head);text-transform:uppercase;letter-spacing:.08em}
+.hd nav a{text-decoration:none;opacity:.8}.hd nav a:hover{opacity:1}
+.status{display:flex;align-items:center;gap:8px;font:600 .8rem var(--body);text-transform:none;letter-spacing:0}
+.status i{width:8px;height:8px;border-radius:50%;background:#888}
 .status.open i{background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.22)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 .98rem/1 var(--body);padding:15px 24px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .2s}
-.btn:active{transform:scale(.97)}
-.btn-lotus{background:var(--lotus);color:var(--jade)}.btn-lotus:hover{background:#FBC1CD}
-.btn-jade{background:var(--jade);color:var(--rice)}.btn-jade:hover{background:var(--jade2)}
-.btn-ghost{border-color:rgba(251,248,242,.5);color:var(--rice)}.btn-ghost:hover{border-color:var(--rice)}
-.hd .btn{padding:10px 16px;font-size:.9rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:800 .82rem/1 var(--head);text-transform:uppercase;letter-spacing:.08em;padding:16px 24px;border-radius:4px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,transform .15s}
+.btn:active{transform:scale(.98)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red2)}
+.btn-white{background:#fff;color:var(--ink)}.btn-white:hover{background:var(--off)}
+.btn-line{border-color:rgba(255,255,255,.45);color:#fff}.btn-line:hover{border-color:#fff}
+.btn-dark{background:var(--char);color:#fff}.btn-dark:hover{background:var(--ink)}
+.hd .btn{padding:12px 16px;opacity:1}
 
-/* hero: full-bleed photo, giant wordmark */
-.hero{position:relative;min-height:min(86vh,820px);display:flex;align-items:flex-end;color:var(--rice);overflow:hidden;background:var(--jade)}
-.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,61,51,.15) 0%,rgba(15,61,51,.35) 45%,rgba(10,30,25,.92) 100%)}
-.hero .wrap{position:relative;z-index:2;padding:0 0 46px}
-.word{font:800 clamp(5rem,19vw,17rem)/.8 var(--disp);letter-spacing:-.05em;color:var(--rice);margin-left:-.04em}
-.word span{color:var(--lotus)}
-.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-top:26px;flex-wrap:wrap}
-.hero-row p{max-width:44ch;font-size:1.12rem;color:rgba(251,248,242,.88)}
-.hero-row .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.ticker{background:var(--lotus);color:var(--jade);overflow:hidden;white-space:nowrap;border-block:2px solid var(--jade)}
-.ticker div{display:inline-block;padding:14px 0;font:700 1.05rem var(--disp);letter-spacing:-.01em}
-.ticker span{margin:0 22px}
-.ticker b{color:var(--chili)}
-@media (prefers-reduced-motion:no-preference){.ticker div{animation:tick 38s linear infinite}@keyframes tick{to{transform:translateX(-50%)}}}
+/* hero */
+.hero{background:var(--char);color:var(--white);padding:64px 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.hero h1{font:900 clamp(2.6rem,5.6vw,5rem)/.95 var(--head);text-transform:uppercase;letter-spacing:.01em}
+.hero .twist{display:block;font:400 clamp(1.8rem,3.6vw,3.1rem)/1.1 var(--brush);color:var(--red);text-transform:none;letter-spacing:0;margin-top:14px;transform:rotate(-2deg);transform-origin:left}
+.hero p{max-width:44ch;color:rgba(255,255,255,.78);font-size:1.08rem;margin:26px 0 30px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.proof{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+.proof div{font-size:.86rem;color:rgba(255,255,255,.66)}
+.proof b{display:block;font:800 1.6rem/1.1 var(--head);color:#fff}
+.frame{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:1000/523;background:#1d1b1c;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.frame img{position:absolute;width:109%;max-width:none;left:-4.3%;top:-10%}
+.sticker{position:absolute;right:-6px;bottom:-14px;z-index:2;background:var(--red);color:#fff;font:400 1.15rem/1.15 var(--brush);padding:14px 18px;transform:rotate(-4deg);border-radius:4px;box-shadow:0 10px 24px rgba(0,0,0,.35);text-decoration:none}
+.photo{position:relative}
+.strip{margin-top:64px;background:var(--red);color:#fff;overflow:hidden;white-space:nowrap}
+.strip div{display:inline-block;padding:15px 0;font:800 .95rem var(--head);text-transform:uppercase;letter-spacing:.1em}
+.strip span{margin:0 26px}
+@media (prefers-reduced-motion:no-preference){.strip div{animation:tick 40s linear infinite}@keyframes tick{to{transform:translateX(-50%)}}}
 
-/* signature dishes: asymmetric photo grid */
+/* sections */
 .s{padding:100px 0}
-.h2{font:800 clamp(2.2rem,5vw,4rem)/.98 var(--disp);letter-spacing:-.035em}
-.lead{color:var(--mut);max-width:50ch;margin-top:14px;font-size:1.06rem}
+.h2{font:900 clamp(2rem,4.4vw,3.6rem)/.98 var(--head);text-transform:uppercase;letter-spacing:.005em}
+.h2 + .brush{font:400 clamp(1.3rem,2.4vw,1.9rem) var(--brush);color:var(--red);margin-top:8px;display:block}
+.lead{color:var(--mutd);max-width:52ch;margin-top:14px;font-size:1.05rem}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-.sig{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:300px 300px;gap:16px}
-.dish{position:relative;border-radius:22px;overflow:hidden;background:var(--jade);color:var(--rice);display:flex;align-items:flex-end;text-decoration:none}
-.dish:first-child{grid-row:span 2}
-.dish img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.dish:hover img{transform:scale(1.04)}
-.dish::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,30,25,.85))}
-.dish>div{position:relative;z-index:2;padding:22px;width:100%;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
-.dish h3{font:800 1.5rem/1.05 var(--disp);letter-spacing:-.02em}
-.dish:first-child h3{font-size:2.3rem}
-.dish p{font-size:.9rem;opacity:.85;margin-top:4px}
-.dish .tag{flex:0 0 auto;background:var(--lotus);color:var(--jade);font-weight:700;font-size:.8rem;padding:6px 10px;border-radius:999px}
+
+.sig{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dish{background:#fff;border-radius:8px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.dish:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(0,0,0,.35)}
+.dish .im{aspect-ratio:550/496;overflow:hidden;background:var(--kraft)}
+.dish .im img{width:100%;height:100%;object-fit:cover}
+.dish div.t{padding:16px 18px 18px;display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.dish h3{font:800 1rem/1.2 var(--head);text-transform:uppercase;letter-spacing:.03em}
+.dish p{color:var(--mutd);font-size:.86rem;margin-top:4px}
+.dish .pr{font:800 1rem var(--head);white-space:nowrap}
+.dish.feature{grid-column:span 2;grid-row:span 2}
+.dish.feature .im{aspect-ratio:auto;flex:1;min-height:320px}
+.dish.feature h3{font-size:1.5rem}
+.dish .flag{display:inline-block;background:var(--red);color:#fff;font:700 .68rem var(--head);text-transform:uppercase;letter-spacing:.08em;padding:4px 8px;border-radius:3px;margin-bottom:8px}
 
 /* menu + order */
-.menu{background:var(--card);border-top:1px solid var(--line)}
-.cats{position:sticky;top:66px;z-index:20;background:var(--card);display:flex;gap:8px;overflow-x:auto;padding:14px 0;border-bottom:1px solid var(--line);scrollbar-width:none}
+.menu{background:#fff;border-top:1px solid var(--line)}
+.cats{position:sticky;top:70px;z-index:20;background:#fff;display:flex;gap:8px;overflow-x:auto;padding:14px 0;border-bottom:1px solid var(--line);scrollbar-width:none}
 .cats::-webkit-scrollbar{display:none}
-.cats a{flex:0 0 auto;text-decoration:none;font-weight:600;font-size:.92rem;padding:9px 16px;border-radius:999px;background:var(--rice);border:1px solid var(--line)}
-.cats a:hover{border-color:var(--jade)}
-.layout{display:grid;grid-template-columns:1fr 360px;gap:44px;align-items:start}
-.cat{padding-top:34px}
-.cat h3{font:800 1.7rem var(--disp);letter-spacing:-.02em;margin-bottom:14px}
-.items{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.item{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px;border:1px solid var(--line);border-radius:18px;background:var(--rice)}
-.item img{width:96px;height:96px;object-fit:cover;border-radius:12px;background:var(--line)}
-.item .ph{width:96px;height:96px;border-radius:12px;background:var(--jade);display:grid;place-items:center;color:var(--lotus);font:800 1.6rem var(--disp)}
-.item b{font-weight:700;display:block;line-height:1.25}
-.item p{color:var(--mut);font-size:.86rem;margin:3px 0 8px}
-.item .row{display:flex;justify-content:space-between;align-items:center}
-.pr{font-weight:700}
-.add{border:0;background:var(--jade);color:var(--rice);font:700 .85rem var(--body);padding:8px 14px;border-radius:999px;cursor:pointer}
-.add:hover{background:var(--jade2)}
-.add.pop{animation:pop .3s ease}@keyframes pop{50%{transform:scale(1.12)}}
-.badge{display:inline-block;font-size:.72rem;font-weight:700;background:var(--lotus);color:var(--jade);padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:2px}
-.veg{background:#DDEFE3;color:#1E6B45}
-
-.basket{position:sticky;top:136px;background:var(--jade);color:var(--rice);border-radius:24px;padding:24px}
-.basket h3{font:800 1.5rem var(--disp);margin-bottom:6px}
-.basket .sub{font-size:.88rem;opacity:.8;margin-bottom:14px}
-.when{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:14px}
-.when label{font-size:.8rem;font-weight:600;opacity:.85;grid-column:1/-1}
-.when select{grid-column:1/-1;font:600 .95rem var(--body);padding:11px 12px;border-radius:12px;border:0;background:var(--rice);color:var(--ink)}
+.cats a{flex:0 0 auto;text-decoration:none;font:700 .76rem var(--head);text-transform:uppercase;letter-spacing:.08em;padding:10px 16px;border-radius:4px;background:var(--off);border:1px solid var(--line)}
+.cats a:hover{border-color:var(--char)}
+.layout{display:grid;grid-template-columns:1fr 370px;gap:44px;align-items:start}
+.cat{padding-top:36px}
+.cat h3{font:900 1.35rem var(--head);text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.cat h3::after{content:"";flex:1;height:2px;background:var(--char)}
+.items{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.item{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--off)}
+.item img,.item .ph{width:96px;height:96px;object-fit:cover;border-radius:6px}
+.item .ph{background:var(--char);display:grid;place-items:center;color:#fff}
+.item .ph .mark{transform:scale(.62)}
+.item b{font:700 .95rem/1.25 var(--head);display:block}
+.item p{color:var(--mutd);font-size:.84rem;margin:4px 0 8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.item .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pr{font:800 .95rem var(--head)}
+.pr small{font:500 .72rem var(--body);color:var(--mutd);margin-right:3px}
+.add{border:0;background:var(--char);color:#fff;font:800 .72rem var(--head);text-transform:uppercase;letter-spacing:.08em;padding:9px 14px;border-radius:4px;cursor:pointer}
+.add:hover{background:var(--red)}
+.add.pop{animation:pop .3s ease}@keyframes pop{50%{transform:scale(1.1)}}
+.veg{display:inline-block;font:700 .66rem var(--head);background:#E3F2E6;color:#1E6B45;padding:2px 6px;border-radius:3px;margin-left:6px;vertical-align:2px;letter-spacing:.05em}
+.basket{position:sticky;top:140px;background:var(--char);color:#fff;border-radius:8px;padding:24px}
+.basket h3{font:900 1.2rem var(--head);text-transform:uppercase;letter-spacing:.05em}
+.basket .sub{font-size:.86rem;opacity:.75;margin:4px 0 14px}
+.when label{display:block;font:700 .72rem var(--head);text-transform:uppercase;letter-spacing:.08em;opacity:.8;margin-bottom:6px}
+.when select{width:100%;font:600 .95rem var(--body);padding:11px 12px;border-radius:4px;border:0;background:#fff;color:var(--ink);margin-bottom:14px}
 .lines{list-style:none;max-height:280px;overflow:auto}
-.lines li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid rgba(251,248,242,.14);font-size:.93rem}
+.lines li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.92rem}
 .qty{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto}
-.qty button{width:26px;height:26px;border-radius:50%;border:1px solid rgba(251,248,242,.4);background:none;color:var(--rice);cursor:pointer;font-weight:700}
-.empty{opacity:.75;font-size:.92rem}
-.tot{display:flex;justify-content:space-between;font-weight:700;font-size:1.15rem;margin:16px 0}
+.qty button{width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;cursor:pointer;font-weight:700}
+.empty{opacity:.7}
+.tot{display:flex;justify-content:space-between;font:800 1.1rem var(--head);margin:16px 0}
 .basket .btn{width:100%}
-.basket small{display:block;text-align:center;opacity:.65;font-size:.78rem;margin-top:10px}
+.basket small{display:block;text-align:center;opacity:.6;font-size:.76rem;margin-top:10px}
 .fab{display:none}
 
 /* social */
-.social{background:var(--jade);color:var(--rice)}
-.social .lead{color:rgba(251,248,242,.75)}
-.feed{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.post{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:var(--jade2);text-decoration:none;color:var(--rice)}
-.post img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.post span{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(15,61,51,.82);backdrop-filter:blur(6px);border-radius:12px;padding:10px 12px;font-size:.86rem;font-weight:600}
-.post em{font-style:normal;color:var(--lotus);display:block;font-size:.76rem;margin-top:2px}
-.handle{font:800 1.25rem var(--disp);color:var(--lotus);text-decoration:none}
+.social{background:var(--char);color:#fff}
+.social .lead{color:rgba(255,255,255,.72)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;margin-bottom:40px}
+.stats div{background:var(--char);padding:24px}
+.stats b{display:block;font:900 2.4rem/1 var(--head);color:#fff}
+.stats span{font-size:.86rem;color:rgba(255,255,255,.65)}
+.stats div:first-child b{color:var(--red)}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.vid{background:var(--ink);border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.vid .top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;font-size:.84rem;color:rgba(255,255,255,.75)}
+.vid .top b{font:900 1.1rem var(--head);color:#fff}
+.vid .top .hot{color:var(--red)}
+.vid blockquote{margin:0!important;min-width:0!important;max-width:100%!important}
+.vid .fallback{display:block;padding:18px 16px 20px;text-decoration:none;color:#fff}
+.vid .fallback p{font:400 1.1rem/1.35 var(--brush);color:#fff}
+.vid .fallback span{display:inline-block;margin-top:12px;font:700 .74rem var(--head);text-transform:uppercase;letter-spacing:.08em;color:var(--red)}
+.handles{display:flex;gap:22px;flex-wrap:wrap;font:700 .9rem var(--head)}
+.handles a{text-decoration:none;color:#fff;border-bottom:2px solid var(--red);padding-bottom:3px}
 
-/* reviews */
-.rv{display:grid;grid-template-columns:.8fr 2fr;gap:50px;align-items:start}
-.score{font:800 6rem/1 var(--disp);letter-spacing:-.04em;color:var(--jade)}
-.score small{font-size:1.4rem;color:var(--mut)}
+/* reviews + visit */
+.rv{display:grid;grid-template-columns:.75fr 2fr;gap:50px;align-items:start}
+.score{font:900 6rem/1 var(--head);color:var(--char)}
+.score small{font-size:1.3rem;color:var(--mutd)}
 .rv .q{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-blockquote{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
-blockquote p{font-size:1.08rem;font-weight:500}
-blockquote cite{display:block;margin-top:12px;font-style:normal;color:var(--mut);font-size:.85rem}
-
-/* visit */
-.visit{background:var(--card);border-top:1px solid var(--line)}
+blockquote.r{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px;border-top:4px solid var(--red)}
+blockquote.r p{font-size:1.06rem;font-weight:500}
+blockquote.r cite{display:block;margin-top:12px;font-style:normal;color:var(--mutd);font-size:.84rem}
+.visit{background:#fff;border-top:1px solid var(--line)}
 .visit .wrap{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:44px}
-.visit h3{font:800 1.3rem var(--disp);margin-bottom:12px}
-.visit p,.visit td{color:var(--mut)}
-.visit .big{font:800 1.8rem var(--disp);color:var(--jade);text-decoration:none;display:block;margin:6px 0}
+.visit h3{font:900 1rem var(--head);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.visit p,.visit td{color:var(--mutd)}
+.visit .big{font:900 1.8rem var(--head);color:var(--ink);text-decoration:none;display:block;margin:6px 0}
 .visit table{border-collapse:collapse;width:100%;font-size:.93rem}
 .visit td{padding:6px 0;border-bottom:1px solid var(--line);vertical-align:top}
 .visit td:last-child{text-align:right;color:var(--ink)}
-.visit tr.today td{color:var(--jade);font-weight:700}
-footer{background:var(--jade);color:rgba(251,248,242,.7);font-size:.86rem;padding:28px 0}
-footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-footer a{color:var(--lotus)}
+.visit tr.today td{color:var(--red);font-weight:700}
+footer{background:var(--ink);color:rgba(255,255,255,.6);font-size:.85rem;padding:30px 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .mark{color:#fff}
+footer a{color:#fff}
 
-/* checkout sheet */
-.ov{position:fixed;inset:0;background:rgba(10,20,17,.6);z-index:60;display:none;align-items:flex-end;justify-content:center}
+/* checkout */
+.ov{position:fixed;inset:0;background:rgba(15,14,14,.65);z-index:60;display:none;align-items:flex-end;justify-content:center}
 .ov.on{display:flex}
-.sheet{background:var(--rice);width:min(520px,100%);max-height:92vh;overflow:auto;border-radius:24px 24px 0 0;padding:26px}
-@media(min-width:700px){.ov{align-items:center}.sheet{border-radius:24px}}
-.sheet h3{font:800 1.7rem var(--disp);margin-bottom:6px}
-.sheet label{display:block;font-weight:600;font-size:.85rem;margin:14px 0 6px}
-.sheet input{width:100%;font:500 1rem var(--body);padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#fff}
+.sheet{background:var(--off);width:min(520px,100%);max-height:92vh;overflow:auto;border-radius:12px 12px 0 0;padding:26px}
+@media(min-width:700px){.ov{align-items:center}.sheet{border-radius:12px}}
+.sheet h3{font:900 1.4rem var(--head);text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
+.sheet label{display:block;font:700 .74rem var(--head);text-transform:uppercase;letter-spacing:.08em;margin:16px 0 6px}
+.sheet input{width:100%;font:500 1rem var(--body);padding:13px 14px;border-radius:4px;border:1px solid var(--line);background:#fff}
 .sheet .row{display:flex;gap:10px;margin-top:20px}.sheet .row .btn{flex:1}
-.sheet .btn-ghost{border-color:var(--line);color:var(--ink)}
+.sheet .btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
 .done{text-align:center;padding:16px 0}
-.done b{font:800 2.6rem var(--disp);color:var(--jade);display:block}
-.basket.sheetmode{position:static;border-radius:0;padding:0;background:none;color:var(--ink)}
+.done b{font:900 2.6rem var(--head);display:block}
+.done .brush{font:400 1.4rem var(--brush);color:var(--red)}
+.basket.sheetmode{position:static;padding:0;background:none;color:var(--ink)}
 .basket.sheetmode .qty button{border-color:var(--line);color:var(--ink)}
 .basket.sheetmode .lines li{border-color:var(--line)}
 
-@media(max-width:1000px){
+@media(max-width:1060px){
   .hd nav .nl{display:none}
-  .sig{grid-template-columns:1fr 1fr;grid-template-rows:340px 240px 240px}
-  .dish:first-child{grid-column:span 2;grid-row:auto}
+  .hero .wrap{grid-template-columns:1fr}
+  .sig{grid-template-columns:1fr 1fr}
   .layout{grid-template-columns:1fr}
   .basket{display:none}.basket.sheetmode{display:block}
-  .fab{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:50;justify-content:space-between;align-items:center;background:var(--jade);color:var(--rice);border:0;border-radius:999px;padding:16px 22px;font:700 1rem var(--body);box-shadow:0 14px 30px rgba(0,0,0,.3);cursor:pointer}
-  .feed{grid-template-columns:1fr 1fr}
-  .rv{grid-template-columns:1fr}
-  .visit .wrap{grid-template-columns:1fr}
+  .fab{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:50;justify-content:space-between;align-items:center;background:var(--red);color:#fff;border:0;border-radius:6px;padding:17px 22px;font:800 .9rem var(--head);text-transform:uppercase;letter-spacing:.06em;box-shadow:0 14px 30px rgba(0,0,0,.35);cursor:pointer}
+  .vids{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .rv,.visit .wrap{grid-template-columns:1fr}
 }
 @media(max-width:640px){
   .s{padding:72px 0}
   .hd .btn{display:none}
-  .items{grid-template-columns:1fr}
-  .sig{grid-template-columns:1fr;grid-template-rows:none}
-  .sig .dish{min-height:260px}.dish:first-child{grid-column:auto}
-  .rv .q{grid-template-columns:1fr}
-  .hero{min-height:78vh}
+  .items,.vids,.rv .q{grid-template-columns:1fr}
+  .sig{grid-template-columns:1fr}.dish.feature{grid-column:auto}
+  .stats b{font-size:1.9rem}
+  .proof{gap:20px}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#order">Skip to the menu</a>
-<div class="prev">Website preview for Nam Nam, made by Pictoflex Labs. Photos are placeholders until we add your own.</div>
+<div class="prev">Website preview for Nam Nam, made by Pictoflex Labs</div>
+
 <header class="hd"><div class="wrap">
-  <a class="logo" href="#top"><i aria-hidden="true"></i>Nam Nam</a>
-  <nav aria-label="Main"><a class="nl" href="#signature">Favourites</a><a class="nl" href="#order">Menu</a><a class="nl" href="#social">Instagram</a><a class="nl" href="#visit">Find us</a><span class="status" id="st"><i></i><span>Checking hours…</span></span><a class="btn btn-lotus" href="#order">Order for collection</a></nav>
+  <a class="mark" href="#top" aria-label="Nam Nam Streetfood, home"><b>NAM</b><b>N<span class="a">a</span>M</b><small>STREETFOOD</small></a>
+  <nav aria-label="Main"><a class="nl" href="#signature">Favourites</a><a class="nl" href="#order">Menu</a><a class="nl" href="#social">As seen on</a><a class="nl" href="#visit">Find us</a><span class="status" id="st"><i></i><span>Checking hours…</span></span><a class="btn btn-red" href="#order">Order now</a></nav>
 </div></header>
 
 <section class="hero" id="top">
-  <img class="bg" src="https://images.unsplash.com/photo-1641440615059-42c8ed3af8c8?auto=format&fit=crop&w=2000&q=75" alt="A table of Vietnamese street food dishes" fetchpriority="high">
   <div class="wrap">
-    <h1 class="word" aria-label="Nam Nam">Nam<span>Nam</span></h1>
-    <div class="hero-row">
-      <p>Vietnamese street food, cooked fast and loaded up, on Lower Road by Surrey Quays station. Order online and skip the queue.</p>
-      <div class="ctas"><a class="btn btn-lotus" href="#order">Order for collection</a><a class="btn btn-ghost" href="tel:+442072312847">Call 020 7231 2847</a></div>
+    <div>
+      <h1>Vietnamese streetfood<span class="twist">with a modern twist!</span></h1>
+      <p>Surf &amp; Turf, garlic noodles and loaded fries, cooked to order a minute from Surrey Quays station. Order online, skip the queue, and collect in around 15 minutes.</p>
+      <div class="ctas"><a class="btn btn-red" href="#order">Order for collection</a><a class="btn btn-line" href="tel:+442072312847">Call 020 7231 2847</a></div>
+      <div class="proof">
+        <div><b>730K</b>views on our top TikTok</div>
+        <div><b>4.5 ★</b>from 400 Google reviews</div>
+        <div><b>~15 min</b>collection</div>
+      </div>
+    </div>
+    <div class="photo">
+      <div class="frame"><img src="https://tb-static.uber.com/prod/image-proc/processed_images/cb686eaaf745117533e02bbd3546bd72/9c4d3adb393f25706b737484dc73677e.jpeg" alt="Nam Nam Surf and Turf: flank steak and salt and pepper king prawns with chilli, coriander and crispy shallots" fetchpriority="high"></div>
+      <a class="sticker" href="#social">As seen on<br>Secret London</a>
     </div>
   </div>
+  <div class="strip" aria-hidden="true"><div>
+    <span>Surf &amp; Turf</span>✦<span>House special garlic noodles</span>✦<span>Duck loaded fries</span>✦<span>Nam Nam fries</span>✦<span>Salt &amp; pepper special</span>✦<span>Banh mi</span>✦<span>Nuoc mam wings</span>✦
+    <span>Surf &amp; Turf</span>✦<span>House special garlic noodles</span>✦<span>Duck loaded fries</span>✦<span>Nam Nam fries</span>✦<span>Salt &amp; pepper special</span>✦<span>Banh mi</span>✦<span>Nuoc mam wings</span>✦
+  </div></div>
 </section>
-<div class="ticker" aria-hidden="true"><div>
-  <span>Surf &amp; turf rice box</span><b>✦</b><span>Garlic prawn noodles</span><b>✦</b><span>Duck loaded fries</span><b>✦</b><span>Lemongrass chicken</span><b>✦</b><span>Banh mi</span><b>✦</b><span>Salt &amp; pepper squid</span><b>✦</b><span>Vietnamese iced coffee</span><b>✦</b>
-  <span>Surf &amp; turf rice box</span><b>✦</b><span>Garlic prawn noodles</span><b>✦</b><span>Duck loaded fries</span><b>✦</b><span>Lemongrass chicken</span><b>✦</b><span>Banh mi</span><b>✦</b><span>Salt &amp; pepper squid</span><b>✦</b><span>Vietnamese iced coffee</span><b>✦</b>
-</div></div>
 
 <section class="s" id="signature"><div class="wrap">
-  <div class="head"><div><h2 class="h2">The ones everyone orders</h2><p class="lead">The dishes our regulars come back for, again and again.</p></div><a class="btn btn-jade" href="#order">See the full menu</a></div>
-  <div class="sig">
-    <a class="dish" href="#c0"><img loading="lazy" src="https://images.unsplash.com/photo-1562565652-a0d8f0c59eb4?auto=format&fit=crop&w=1200&q=75" alt="Noodles with vegetables and meat"><div><div><h3>Surf &amp; Turf</h3><p>Steak and prawns on rice, our best seller</p></div><span class="tag">Most ordered</span></div></a>
-    <a class="dish" href="#c1"><img loading="lazy" src="https://images.unsplash.com/photo-1631709497146-a239ef373cf1?auto=format&fit=crop&w=900&q=75" alt="A bowl of noodles with chopsticks"><div><div><h3>Garlic prawn noodles</h3><p>Regulars’ favourite</p></div></div></a>
-    <a class="dish" href="#c2"><img loading="lazy" src="https://images.unsplash.com/photo-1715925717150-2a6d181d8846?auto=format&fit=crop&w=900&q=75" alt="Banh mi sandwiches on a board"><div><div><h3>Banh mi</h3><p>Crisp baguette, loaded fillings</p></div></div></a>
-    <a class="dish" href="#c3"><img loading="lazy" src="https://images.unsplash.com/photo-1715925717159-92e29c32ad06?auto=format&fit=crop&w=900&q=75" alt="A sandwich with fries and a drink"><div><div><h3>Duck loaded fries</h3><p>Fries piled high</p></div></div></a>
-    <a class="dish" href="#c0"><img loading="lazy" src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=900&q=75" alt="A bowl with leafy greens"><div><div><h3>Lemongrass chicken</h3><p>Rice box classic</p></div></div></a>
-  </div>
+  <div class="head"><div><h2 class="h2">The Nam Nam specials</h2><span class="brush">the ones everyone films</span></div><a class="btn btn-dark" href="#order">Full menu</a></div>
+  <div class="sig" id="sig"></div>
 </div></section>
 
 <section class="menu" id="order"><div class="wrap">
-  <div class="head" style="padding-top:80px;margin-bottom:6px"><div><h2 class="h2">Order for collection</h2><p class="lead">Pick a time, pay online, and it’ll be bagged up and waiting at 138 Lower Road.</p></div></div>
+  <div class="head" style="padding-top:80px;margin-bottom:6px"><div><h2 class="h2">Order for collection</h2><p class="lead">Pick a time, pay online, and it’ll be boxed up and waiting at 138 Lower Road. No app, no delivery fees.</p></div></div>
   <nav class="cats" id="cats" aria-label="Menu sections"></nav>
   <div class="layout">
     <div id="menu"></div>
@@ -225,8 +251,8 @@ footer a{color:var(--lotus)}
       <div class="when"><label for="slot">Collection time</label><select id="slot"></select></div>
       <ul class="lines" id="lines"></ul>
       <div class="tot"><span>Total</span><span id="tot">£0.00</span></div>
-      <button class="btn btn-lotus" id="go" type="button">Checkout</button>
-      <small>Preview only: no real order is placed and prices are examples.</small>
+      <button class="btn btn-red" id="go" type="button">Checkout</button>
+      <small>Preview only: no real order is placed.</small>
     </aside>
   </div>
   <div style="height:90px"></div>
@@ -234,87 +260,102 @@ footer a{color:var(--lotus)}
 <button class="fab" id="fab" type="button"><span id="fabn">View order</span><span id="fabt">£0.00</span></button>
 
 <section class="s social" id="social"><div class="wrap">
-  <div class="head"><div><h2 class="h2">Seen it on your feed?</h2><p class="lead">The dishes that keep going viral. Follow us for new specials and drops.</p></div><a class="handle" href="https://www.instagram.com/namnamuk/" target="_blank" rel="noopener">@namnamuk</a></div>
-  <div class="feed">
-    <a class="post" href="https://www.instagram.com/namnamuk/" target="_blank" rel="noopener"><img loading="lazy" src="https://images.unsplash.com/photo-1763703396043-cc821fcc4bc2?auto=format&fit=crop&w=700&q=70" alt="Busy street food market at night"><span>The queue on a Friday night<em>Your top post goes here</em></span></a>
-    <a class="post" href="https://www.instagram.com/namnamuk/" target="_blank" rel="noopener"><img loading="lazy" src="https://images.unsplash.com/photo-1600454309261-3dc9b7597637?auto=format&fit=crop&w=700&q=70" alt="Banh mi with fresh herbs"><span>Banh mi, built to order<em>Your top post goes here</em></span></a>
-    <a class="post" href="https://www.instagram.com/namnamuk/" target="_blank" rel="noopener"><img loading="lazy" src="https://images.unsplash.com/photo-1761201147413-080c48e1660d?auto=format&fit=crop&w=700&q=70" alt="Street vendor cooking at night"><span>Straight off the wok<em>Your top post goes here</em></span></a>
-    <a class="post" href="https://www.instagram.com/namnamuk/" target="_blank" rel="noopener"><img loading="lazy" src="https://images.unsplash.com/photo-1597345637412-9fd611e758f3?auto=format&fit=crop&w=700&q=70" alt="Noodle soup with greens"><span>Comfort in a bowl<em>Your top post goes here</em></span></a>
+  <div class="head"><div><h2 class="h2">Seen it on your feed?</h2><span class="brush">London keeps filming us</span><p class="lead">From our own videos to Secret London’s street interview, here are the posts that put Nam Nam on the map.</p></div>
+    <div class="handles"><a href="https://www.tiktok.com/@namnam_uk" target="_blank" rel="noopener">TikTok @namnam_uk</a><a href="https://www.instagram.com/namnamuk/" target="_blank" rel="noopener">Instagram @namnamuk</a></div></div>
+  <div class="stats">
+    <div><b>730K</b><span>views on our most-watched TikTok</span></div>
+    <div><b>141K</b><span>likes across our TikTok</span></div>
+    <div><b>82.5K</b><span>views on our halal announcement</span></div>
+    <div><b>5K+</b><span>likes on Secret London’s video</span></div>
+  </div>
+  <div class="vids">
+    <div class="vid"><div class="top"><span>@namnam_uk</span><b class="hot">730K views</b></div>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@namnam_uk/video/7594188615576571158" data-video-id="7594188615576571158"><section><a class="fallback" target="_blank" rel="noopener" href="https://www.tiktok.com/@namnam_uk/video/7594188615576571158"><p>“Uncle would’ve made sure it was a no camera zone”</p><span>Watch on TikTok</span></a></section></blockquote></div>
+    <div class="vid"><div class="top"><span>@secret.london</span><b>5K likes · 2.3K saves</b></div>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@secret.london/video/7493869955792768258" data-video-id="7493869955792768258"><section><a class="fallback" target="_blank" rel="noopener" href="https://www.tiktok.com/@secret.london/video/7493869955792768258"><p>“You hyped up Nam Nam with some very big claims, so obviously we had to go check it out!”</p><span>Watch on TikTok</span></a></section></blockquote></div>
+    <div class="vid"><div class="top"><span>@namnam_uk</span><b>29.8K views</b></div>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@namnam_uk/video/7543587356209679638" data-video-id="7543587356209679638"><section><a class="fallback" target="_blank" rel="noopener" href="https://www.tiktok.com/@namnam_uk/video/7543587356209679638"><p>Straight from the Nam Nam kitchen</p><span>Watch on TikTok</span></a></section></blockquote></div>
   </div>
 </div></section>
 
 <section class="s" aria-labelledby="rvh"><div class="wrap rv">
-  <div><div class="score">4.5<small> / 5</small></div><p style="color:var(--mut);margin-top:10px" id="rvh">From 400 Google reviews</p></div>
+  <div><div class="score">4.5<small> / 5</small></div><p style="color:var(--mutd);margin-top:10px" id="rvh">From 400 Google reviews</p></div>
   <div class="q">
-    <blockquote><p>“I absolutely loved the prawn garlic noodles. The flavour was incredible, the prawns were delicious, and the overall quality was fantastic.”</p><cite>Regular customer, Google review</cite></blockquote>
-    <blockquote><p>“Love getting the Surf &amp; Turf from here, always great!”</p><cite>Google review</cite></blockquote>
+    <blockquote class="r"><p>“I absolutely loved the prawn garlic noodles. The flavour was incredible, the prawns were delicious, and the overall quality was fantastic.”</p><cite>Regular customer, Google review</cite></blockquote>
+    <blockquote class="r"><p>“Love getting the Surf &amp; Turf from here, always great!”</p><cite>Google review</cite></blockquote>
   </div>
 </div></section>
 
 <section class="s visit" id="visit"><div class="wrap">
-  <div><h3>Find us</h3><p>138 Lower Road, London SE16 2UG<br>A minute’s walk from Surrey Quays station</p><a class="big" href="tel:+442072312847">020 7231 2847</a><p>Takeaway only. There’s no seating inside, so order ahead and grab it on the way.</p><p style="margin-top:14px"><a href="https://maps.google.com/?q=Nam+Nam+Street+Food+138+Lower+Road+London+SE16+2UG" target="_blank" rel="noopener" style="color:var(--jade);font-weight:700">Get directions</a></p></div>
+  <div><h3>Surrey Quays</h3><p>138 Lower Road, London SE16 2UG<br>A minute’s walk from Surrey Quays station</p><a class="big" href="tel:+442072312847">020 7231 2847</a><p>Takeaway only, so order ahead and grab it on the way.</p><p style="margin-top:14px"><a href="https://maps.google.com/?q=Nam+Nam+Street+Food+138+Lower+Road+London+SE16+2UG" target="_blank" rel="noopener" style="color:var(--red);font-weight:700">Get directions</a></p></div>
   <div><h3>Opening hours</h3><table id="hours"></table></div>
-  <div><h3>Also in Shoreditch</h3><p>Our second home is at 21 Pitfield Street, N1, a short walk from Old Street, with a few seats to eat in.</p></div>
+  <div><h3>Also in Shoreditch</h3><p>Our halal Shoreditch branch is at 21 Pitfield Street, N1, a short walk from Old Street, with seats to eat in.</p></div>
 </div></section>
-<footer><div class="wrap"><span>© 2026 Nam Nam Street Food, 138 Lower Road, London SE16 2UG</span><span>Website by <a href="https://pictoflexlabs.co.uk">Pictoflex Labs</a></span></div></footer>
+
+<footer><div class="wrap"><a class="mark" href="#top" aria-label="Nam Nam, back to top"><b>NAM</b><b>N<span class="a">a</span>M</b><small>STREETFOOD</small></a><span>© 2026 Nam Nam Streetfood, 138 Lower Road, London SE16 2UG</span><span>Website by <a href="https://pictoflexlabs.co.uk">Pictoflex Labs</a></span></div></footer>
 
 <div class="ov" id="ov" role="dialog" aria-modal="true"><div class="sheet" id="sheet"></div></div>
 
 <script>
 (function(){
-  var U='https://images.unsplash.com/photo-',Q='?auto=format&fit=crop&w=240&h=240&q=70';
+  var UB='https://tb-static.uber.com/prod/image-proc/processed_images/',A='/70aa2a4db7f990373ca9c376323e3dea.jpeg',B='/bc9c318a9c96996e2d990faf2b0c65f6.jpeg';
+  var I={surf:'f52b199fd5f56bc4637cf95d7901d13f'+B,nnfries:'23b39b7b820a2fdf242cc66610b08f93'+A,duck:'4dd0308e9e4d81fe8c4a7215d35f564d'+B,steakf:'d0db62067cf655551643028e41c07882'+A,garlic:'89e0604333a5ca125dedef89c3ccd8e9'+A,rice:'7179f508561fb2e8e3137153ac2753c0'+B,spwings:'41914d24f87015e3c6c98056021f0445'+A,spspecial:'61aeda081b01249c84884f3b79bc4d27'+A,bun:'a62c0043a74404646907c2467aa023d4'+A,banhmi:'12540dbae71d1ecf2bb0cea26bc09772'+B,veggie:'15957be9623997332546cbc980c9642e'+B,roll:'26402f350099d9d41ef53d9fe481f34e'+A,burger:'117296e5dbdb51e27175e46eca50cc68'+B,squid:'efffffb1b8ccf3eca4e5219bf44afe19'+A,nmwings:'5e33c5d4c756c9ed55afc37450b31f5e'+A,prawnsl:'5143b36671ba983968cdac3d432097e8'+A,chickl:'6678fed3d66554d7bf5041920e162da3'+A};
+  /* name, price, from?, description, image key, veg */
   var MENU=[
-    ['Rice boxes',[
-      ['Surf & Turf Rice Box',12.50,'Steak and prawns over rice','1562565652-a0d8f0c59eb4','Best seller'],
-      ['Lemongrass Chicken Rice Box',10.50,'Lemongrass chicken over rice','1582878826629-29b7ad1cdc43',''],
-      ['Steak Rice Box',11.50,'Marinated steak over rice','',''],
-      ['Tofu Rice Box',9.50,'Crispy tofu over rice','','Vegan'],
-      ['Veggie Feast',10.50,'Salt and pepper tofu, aubergine and mushrooms','','Vegan']]],
-    ['Noodle boxes',[
-      ['Garlic Prawn Noodles',11.50,'Garlic noodles with prawns','1631709497146-a239ef373cf1','Regulars’ pick'],
-      ['Soft Shell Crab Noodles',12.50,'Crispy soft shell crab on noodles','',''],
-      ['Bun Bo Nuong',10.50,'Grilled beef with vermicelli noodles','1597345637412-9fd611e758f3','']]],
-    ['Banh mi',[
-      ['Lemongrass Chicken Banh Mi',8.00,'Classic Vietnamese baguette','1715925717150-2a6d181d8846',''],
-      ['Steak Banh Mi',9.00,'Classic Vietnamese baguette','1710532774170-9844f837ae54',''],
-      ['Tofu Banh Mi',7.50,'Classic Vietnamese baguette','1600454309261-3dc9b7597637','Vegan']]],
-    ['Loaded fries & sides',[
-      ['Duck Loaded Fries',9.50,'Crispy fries loaded with duck','1715925717159-92e29c32ad06','Popular'],
-      ['Nam Nam Fries',10.00,'Steak, chicken and crispy fries','',''],
-      ['Salt & Pepper Prawns',8.00,'','',''],
-      ['Salt & Pepper Squid',7.50,'','',''],
-      ['House Wings',7.00,'','',''],
-      ['Vegetable Spring Rolls',4.50,'','','Vegan'],
-      ['Sriracha Mayo',1.00,'','','']]],
-    ['Drinks',[
-      ['Vietnamese Iced Coffee',4.00,'Strong coffee with condensed milk','',''],
-      ['Ube Iced Coffee',4.50,'','','']]]
+    ['Nam Nam specials',[
+      ['Surf & Turf',14.50,1,'Salt and pepper king prawns and Vietnamese flank steak, topped with Vietnamese garnishes and sriracha mayo, served with fries or rice','surf'],
+      ['Nam Nam Fries',14.00,1,'Fries with Vietnamese flank steak and grilled lemongrass chicken, topped with Vietnamese garnishes and sriracha mayo','nnfries'],
+      ['Salt & Pepper Special',13.50,1,'Salt and pepper king prawns and squid, topped with Vietnamese garnishes and sriracha mayo, served with fries or rice','spspecial'],
+      ['Duck Loaded Fries',13.50,1,'Fries topped with crispy duck, Vietnamese garnishes and hoisin sauce','duck'],
+      ['Steak Loaded Fries',13.50,1,'Fries topped with Vietnamese flank steak, Vietnamese garnishes and sriracha mayo','steakf'],
+      ['Veggie Feast',11.50,1,'Salt and pepper tofu, aubergine and mushrooms with Vietnamese garnishes and Thai sweet chilli, served with fries or rice','veggie',1]]],
+    ['Mains',[
+      ['House Special Garlic Noodle',11.50,1,'Garlic butter noodles with your choice of protein, Vietnamese garnishes and your choice of sauce','garlic'],
+      ['Rice Box',10.50,1,'Your choice of protein on rice with crunchy Vietnamese salad and nuoc mam sauce','rice'],
+      ['Bun / Vermicelli Noodle',12.00,1,'Your choice of protein on vermicelli noodles with crunchy Vietnamese salad and nuoc mam sauce','bun']]],
+    ['Banh mi & burger',[
+      ['Banh Mi',9.00,1,'Vietnamese baguette with your choice of protein, crunchy Vietnamese salad and sriracha mayo','banhmi'],
+      ['Nam Nam Burger',7.50,1,'Grilled chicken in a burger bun with Vietnamese pickles, sriracha mayo and coriander','burger']]],
+    ['Small bites',[
+      ['Nuoc Mam Chicken Wings',8.00,0,'Chicken wings tossed in a tangy fish sauce and topped with sesame seeds','nmwings'],
+      ['Salt & Pepper Chicken Wings',8.00,1,'Hot wok’d Vietnamese style in salt and pepper','spwings'],
+      ['Salt & Pepper Squid',9.50,1,'Hot wok’d Vietnamese style in salt and pepper','squid'],
+      ['Salt & Pepper Prawns',9.00,1,'Hot wok’d Vietnamese style in salt and pepper',''],
+      ['Salt & Pepper Tofu',7.50,1,'','',1],
+      ['Veggie Cha Nem',6.50,0,'Vietnamese style veggie spring rolls with nuoc mam sauce','roll',1],
+      ['Seafood Cha Nem',7.50,0,'Vietnamese style prawn spring rolls with nuoc mam sauce','']]],
+    ['Off the menu',[
+      ['Prawns Loaded',14.00,1,'','prawnsl'],['Prawn & Chicken',14.00,1,'',''],['Chicken Loaded',12.00,1,'','chickl']]],
+    ['Extras & drinks',[
+      ['Plain Chips',2.50,0,'',''],['Salt & Pepper Chips',3.50,0,'',''],['Jasmine Rice',2.50,0,'',''],['Nuoc Cham Sauce Pot',1.00,0,'',''],
+      ['Coke',2.00,0,'',''],['Diet Coke',2.00,0,'',''],['Water',2.00,0,'','']]]
   ];
-  var H=[[[720,870],[1050,1335]],[[720,870],[1050,1335]],[[720,960],[1035,1335]],[[720,870],[1050,1335]],[[720,870],[1050,1335]],[[720,870],[1050,1335]],[[720,870],[1050,1335]]]; /* Sun..Sat, minutes */
+  var H=[[[720,870],[1050,1335]],[[720,870],[1050,1335]],[[720,960],[1035,1335]],[[720,870],[1050,1335]],[[720,870],[1050,1335]],[[720,870],[1050,1335]],[[720,870],[1050,1335]]];
   var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var MARK='<span class="mark" aria-hidden="true"><b>NAM</b><b>N<span class="a">a</span>M</b><small>STREETFOOD</small></span>';
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function gbp(v){return '£'+v.toFixed(2)}
   function t(m){var h=Math.floor(m/60),mi=m%60,ap=h<12?'am':'pm';h=h%12||12;return h+(mi?':'+String(mi).padStart(2,'0'):'')+ap}
-  /* menu render */
+  /* signature grid */
+  var SIG=[['Surf & Turf','Prawns and flank steak, our most famous box','surf',14.50,'Best seller'],['House Special Garlic Noodle','The one regulars rave about','garlic',11.50,''],['Duck Loaded Fries','Crispy duck, hoisin, garnishes','duck',13.50,''],['Nam Nam Fries','Steak and lemongrass chicken','nnfries',14.00,''],['Salt & Pepper Special','King prawns and squid','spspecial',13.50,'']];
+  document.getElementById('sig').innerHTML=SIG.map(function(s,i){return '<a class="dish'+(i===0?' feature':'')+'" href="#order"><div class="im"><img loading="lazy" src="'+UB+I[s[2]]+'" alt="'+esc(s[0])+'"></div><div class="t"><div>'+(s[4]?'<span class="flag">'+s[4]+'</span>':'')+'<h3>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div><span class="pr">'+gbp(s[3])+'</span></div></a>'}).join('');
+  /* menu */
   var ITEMS={},cats='',html='';
   MENU.forEach(function(c,i){cats+='<a href="#c'+i+'">'+esc(c[0])+'</a>';
     html+='<section class="cat" id="c'+i+'"><h3>'+esc(c[0])+'</h3><ul class="items">'+c[1].map(function(it,j){var id=i+'-'+j;ITEMS[id]=it;
-      var img=it[3]?'<img loading="lazy" src="'+U+it[3]+Q+'" alt="">':'<div class="ph" aria-hidden="true">'+esc(it[0].charAt(0))+'</div>';
-      var b=it[4]?'<span class="badge'+(it[4]==='Vegan'?' veg':'')+'">'+esc(it[4])+'</span>':'';
-      return '<li class="item">'+img+'<div><b>'+esc(it[0])+b+'</b>'+(it[2]?'<p>'+esc(it[2])+'</p>':'<p></p>')+'<div class="row"><span class="pr">'+gbp(it[1])+'</span><button class="add" data-id="'+id+'" type="button" aria-label="Add '+esc(it[0])+'">Add</button></div></div></li>'}).join('')+'</ul></section>'});
+      var img=it[4]?'<img loading="lazy" src="'+UB+I[it[4]]+'" alt="">':'<div class="ph">'+MARK+'</div>';
+      return '<li class="item">'+img+'<div><b>'+esc(it[0])+(it[5]?'<span class="veg">V</span>':'')+'</b><p>'+esc(it[3])+'</p><div class="row"><span class="pr">'+(it[2]?'<small>from</small>':'')+gbp(it[1])+'</span><button class="add" data-id="'+id+'" type="button" aria-label="Add '+esc(it[0])+'">Add</button></div></div></li>'}).join('')+'</ul></section>'});
   document.getElementById('cats').innerHTML=cats;document.getElementById('menu').innerHTML=html;
-  /* hours table + status + collection slots */
+  /* hours, status, slots */
   var now=new Date(),d=now.getDay(),m=now.getHours()*60+now.getMinutes();
   document.getElementById('hours').innerHTML=[1,2,3,4,5,6,0].map(function(x){return '<tr data-d="'+x+'"><td>'+DAYS[x]+'</td><td>'+H[x].map(function(r){return t(r[0])+' – '+t(r[1])}).join('<br>')+'</td></tr>'}).join('');
   var tr=document.querySelector('#hours tr[data-d="'+d+'"]');if(tr)tr.classList.add('today');
   var st=document.getElementById('st'),open=null;H[d].forEach(function(r){if(m>=r[0]&&m<r[1])open=r});
-  if(open){st.classList.add('open');st.lastChild.textContent='Open until '+t(open[1])}
-  else{var nx=null;H[d].forEach(function(r){if(!nx&&m<r[0])nx='Opens '+t(r[0])});st.lastChild.textContent=nx||('Opens tomorrow '+t(H[(d+1)%7][0][0]))}
+  if(open){st.classList.add('open');st.lastChild.textContent='Open until '+t(open[1])}else{var nx=null;H[d].forEach(function(r){if(!nx&&m<r[0])nx='Opens '+t(r[0])});st.lastChild.textContent=nx||('Opens tomorrow '+t(H[(d+1)%7][0][0]))}
   var slot=document.getElementById('slot'),opts=[];
-  function slots(day,from,label){H[day].forEach(function(r){for(var x=Math.max(r[0]+15,Math.ceil((from+20)/15)*15);x<=r[1]-15;x+=15)opts.push([label+' '+t(x),label+' '+t(x)])})}
-  if(open)opts.push(['ASAP (about 20 min)','ASAP']);
-  slots(d,m,'Today');if(opts.length<4)slots((d+1)%7,0,'Tomorrow');
-  slot.innerHTML=opts.slice(0,40).map(function(o){return '<option>'+esc(o[0])+'</option>'}).join('');
+  function slots(day,from,label){H[day].forEach(function(r){for(var x=Math.max(r[0]+15,Math.ceil((from+15)/15)*15);x<=r[1]-15;x+=15)opts.push(label+' '+t(x))})}
+  if(open)opts.push('ASAP (about 15 min)');slots(d,m,'Today');if(opts.length<4)slots((d+1)%7,0,'Tomorrow');
+  slot.innerHTML=opts.slice(0,40).map(function(o){return '<option>'+esc(o)+'</option>'}).join('');
   /* basket */
   var cart={},lines=document.getElementById('lines'),tot=document.getElementById('tot'),fabt=document.getElementById('fabt'),fabn=document.getElementById('fabn');
   function total(){var s=0;for(var k in cart)s+=ITEMS[k][1]*cart[k];return s}
@@ -331,12 +372,16 @@ footer a{color:var(--lotus)}
   document.getElementById('go').addEventListener('click',function(){
     if(!count()){lines.innerHTML='<li class="empty">Add a dish first, then check out.</li>';return}
     var when=slot.value;if(basket.classList.contains('sheetmode')){basket.classList.remove('sheetmode');home.appendChild(basket)}
-    sheet.innerHTML='<h3>Collection details</h3><p style="color:var(--mut)">'+esc(when)+' · 138 Lower Road</p><label for="cn">Name for the order</label><input id="cn" autocomplete="name"><label for="cp">Mobile (we’ll text when it’s ready)</label><input id="cp" type="tel" autocomplete="tel"><div class="tot" style="margin-top:20px"><span>To pay</span><span>'+gbp(total())+'</span></div><div class="row"><button class="btn btn-ghost" type="button" id="back">Back</button><button class="btn btn-jade" type="button" id="pay">Pay '+gbp(total())+'</button></div>';
+    sheet.innerHTML='<h3>Collection details</h3><p style="color:var(--mutd)">'+esc(when)+', 138 Lower Road</p><label for="cn">Name for the order</label><input id="cn" autocomplete="name"><label for="cp">Mobile (we’ll text when it’s ready)</label><input id="cp" type="tel" autocomplete="tel"><div class="tot" style="margin-top:20px"><span>To pay</span><span>'+gbp(total())+'</span></div><div class="row"><button class="btn btn-ghost" type="button" id="back">Back</button><button class="btn btn-red" type="button" id="pay">Pay '+gbp(total())+'</button></div>';
     ov.classList.add('on');document.getElementById('cn').focus();document.getElementById('back').onclick=close;
-    document.getElementById('pay').onclick=function(){var nm=document.getElementById('cn'),ph=document.getElementById('cp');var bad=!nm.value.trim()?nm:!ph.value.trim()?ph:null;if(bad){bad.style.borderColor='var(--chili)';bad.focus();return}
-      var no=Math.floor(100+Math.random()*900);sheet.innerHTML='<div class="done" role="status"><b>Order #'+no+'</b><p style="margin:10px 0 18px">Thanks '+esc(nm.value.trim().split(' ')[0])+'! Collection: '+esc(when)+'. In the live version this goes straight to the kitchen and texts you when it’s ready.</p><button class="btn btn-jade" type="button" id="ok">Done</button></div>';cart={};render();document.getElementById('ok').onclick=close}
+    document.getElementById('pay').onclick=function(){var nm=document.getElementById('cn'),ph=document.getElementById('cp');var bad=!nm.value.trim()?nm:!ph.value.trim()?ph:null;if(bad){bad.style.borderColor='var(--red)';bad.focus();return}
+      var no=Math.floor(100+Math.random()*900);sheet.innerHTML='<div class="done" role="status"><b>Order #'+no+'</b><p class="brush">Cảm ơn, '+esc(nm.value.trim().split(' ')[0])+'!</p><p style="margin:10px 0 18px">Collection: '+esc(when)+'. In the live version this goes straight to the kitchen and texts you when it’s ready.</p><button class="btn btn-dark" type="button" id="ok">Done</button></div>';cart={};render();document.getElementById('ok').onclick=close}
   });
   render();
+  /* load TikTok embeds only when the section is near, to keep the page fast */
+  var loaded=false,soc=document.getElementById('social');
+  function loadTT(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.tiktok.com/embed.js';document.body.appendChild(s)}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){loadTT();o.disconnect()}},{rootMargin:'600px'}).observe(soc)}else loadTT();
 })();
 </script>
 </body>
