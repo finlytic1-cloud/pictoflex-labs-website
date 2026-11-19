@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>URCASH | The Future of Lending</title>
+<meta name="description" content="URCASH connects lenders and borrowers directly through open banking, with AI matching and bank-grade security. Platform in development and beta.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#121722;--ink2:#1B2232;--porc:#F5F6F3;--white:#FFFFFF;--blue:#2747C8;--blue2:#3D5CE0;--sky:#DCE3FB;--gold:#B8924A;--mut:#5E6574;--mutl:#9AA1AE;--line:#DADDE2;--lined:rgba(255,255,255,.12);
+--serif:'Newsreader',Georgia,serif;--sans:'Geist',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--porc);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue2);outline-offset:3px}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.prev{background:#7c3aed;color:#fff;text-align:center;font:500 .78rem/1.4 var(--sans);padding:7px 12px}
+.beta{background:var(--ink);color:rgba(255,255,255,.75);font-size:.8rem;text-align:center;padding:9px 16px;border-bottom:1px solid var(--lined)}
+.beta b{color:#fff;font-weight:600}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:99}
+
+.hd{position:sticky;top:0;z-index:40;background:rgba(245,246,243,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{font:600 1.15rem var(--sans);letter-spacing:.14em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:22px;height:22px;border-radius:6px;background:var(--ink);position:relative;display:inline-block}
+.logo i::after{content:"";position:absolute;inset:6px;border-radius:2px;background:var(--blue2)}
+.nav{display:flex;gap:30px;font-size:.92rem;color:var(--mut);align-items:center}
+.nav a{text-decoration:none}.nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:500 .95rem/1 var(--sans);padding:14px 22px;border-radius:999px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:var(--blue)}
+.btn-out{border-color:var(--line);background:var(--white)}.btn-out:hover{border-color:var(--ink)}
+.btn-white{background:#fff;color:var(--ink)}.btn-white:hover{background:var(--sky)}
+.btn-ghost{border-color:var(--lined);color:#fff}.btn-ghost:hover{border-color:#fff}
+.nav .btn{padding:11px 18px;color:#fff}
+
+.hero{padding:96px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font:400 clamp(2.8rem,5.6vw,4.9rem)/1.02 var(--serif);letter-spacing:-.02em}
+.hero p.lede{font-size:1.15rem;color:var(--mut);max-width:46ch;margin:26px 0 34px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.claim{margin-top:46px;display:flex;align-items:baseline;gap:16px;padding-top:24px;border-top:1px solid var(--line)}
+.claim b{font:400 3rem/1 var(--serif);color:var(--blue)}
+.claim span{color:var(--mut);font-size:.94rem;max-width:30ch}
+.claim small{display:block;color:var(--mutl);font-size:.78rem;margin-top:4px}
+
+/* the hub: four markets on one rail */
+.hub{position:relative;aspect-ratio:1/1;max-width:520px;width:100%;justify-self:end}
+.hub svg{width:100%;height:100%;overflow:visible}
+.hub .ring{fill:none;stroke:var(--line);stroke-width:1}
+.hub .spoke{stroke:var(--line);stroke-width:1.2}
+.hub .pulse{stroke:var(--blue2);stroke-width:2;stroke-linecap:round;fill:none;stroke-dasharray:14 400}
+@media (prefers-reduced-motion:no-preference){.hub .pulse{animation:flow 3.2s linear infinite}.hub .p2{animation-delay:.8s}.hub .p3{animation-delay:1.6s}.hub .p4{animation-delay:2.4s}@keyframes flow{from{stroke-dashoffset:414}to{stroke-dashoffset:0}}}
+.hub .core{fill:var(--ink)}
+.hub .coretx{fill:#fff;font:600 13px var(--sans);letter-spacing:.18em}
+.hub .coresub{fill:var(--mutl);font:500 9px var(--sans);letter-spacing:.12em}
+.node{position:absolute;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:0 14px 30px -18px rgba(18,23,34,.35);min-width:150px}
+.node b{display:block;font-weight:600;font-size:.95rem}
+.node span{font-size:.78rem;color:var(--mut)}
+.n1{left:0;top:6%}.n2{right:0;top:6%}.n3{left:0;bottom:6%}.n4{right:0;bottom:6%}
+
+.rec{padding:34px 0 70px}
+.rec .wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+.rec h2{font:500 .85rem var(--sans);color:var(--mut);max-width:16ch}
+.rec ul{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+.rec li{font-size:.86rem;color:var(--mut);padding-left:14px;border-left:2px solid var(--gold)}
+.rec li b{display:block;color:var(--ink);font-weight:600;font-size:.92rem}
+
+.s{padding:110px 0}
+.h2{font:400 clamp(2.1rem,4vw,3.3rem)/1.05 var(--serif);letter-spacing:-.015em;max-width:18ch}
+.sub{color:var(--mut);max-width:54ch;margin-top:16px;font-size:1.05rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+
+/* audiences: tabbed, so each market reads on its own */
+.aud{background:var(--white);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.tabs button{background:none;border:0;font:500 1rem var(--sans);padding:22px 18px;text-align:left;color:var(--mut);cursor:pointer;border-right:1px solid var(--line);position:relative}
+.tabs button:last-child{border-right:0}
+.tabs button[aria-selected=true]{color:var(--ink);background:var(--porc)}
+.tabs button[aria-selected=true]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--blue)}
+.tabs small{display:block;font-size:.78rem;color:var(--mutl);margin-top:2px}
+.panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;padding:46px}
+.panel[hidden]{display:none}
+.panel h3{font:400 2rem/1.15 var(--serif)}
+.panel p{color:var(--mut);margin-top:14px}
+.prod{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+.prod li{display:grid;grid-template-columns:1fr auto;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.prod b{font-weight:600}
+.prod span{color:var(--mut);font-size:.92rem;display:block;margin-top:2px}
+.prod em{font-style:normal;font-size:.78rem;color:var(--blue);background:var(--sky);padding:4px 10px;border-radius:999px;align-self:start;white-space:nowrap}
+
+/* how it works: a real sequence, so numbered */
+.how{background:var(--ink);color:#fff}
+.how .sub{color:rgba(255,255,255,.65)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:1px solid var(--lined)}
+.steps li{counter-increment:s;padding:30px 28px 0 0}
+.steps li+li{padding-left:28px;border-left:1px solid var(--lined)}
+.steps li::before{content:counter(s,decimal-leading-zero);font:400 2.6rem/1 var(--serif);color:var(--blue2);display:block;margin-bottom:18px}
+.steps b{font-weight:600;font-size:1.05rem;display:block;margin-bottom:8px}
+.steps p{color:rgba(255,255,255,.65);font-size:.94rem}
+
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.why div{background:var(--white);padding:38px}
+.why h3{font:400 1.6rem/1.2 var(--serif);margin-bottom:10px}
+.why p{color:var(--mut)}
+.why div:first-child{background:var(--blue);color:#fff}
+.why div:first-child p{color:rgba(255,255,255,.8)}
+.why .big{font:400 4rem/1 var(--serif);display:block;margin-bottom:12px}
+
+.inst .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.tiers{display:grid;gap:14px}
+.tier{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px 26px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.tier b{font-weight:600;font-size:1.05rem}
+.tier span{color:var(--mut);font-size:.9rem;display:block;margin-top:2px}
+.tier .r{font:400 1.4rem var(--serif);white-space:nowrap;text-align:right}
+.tier .r small{display:block;font:500 .74rem var(--sans);color:var(--mutl)}
+
+.cta{padding:0 0 110px}
+.cta .box{background:var(--ink);color:#fff;border-radius:28px;padding:70px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.cta .box::before{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;border:1px solid var(--lined);box-shadow:0 0 0 60px rgba(255,255,255,.02),0 0 0 120px rgba(255,255,255,.015)}
+.cta h2{font:400 clamp(2rem,3.6vw,3rem)/1.08 var(--serif)}
+.cta p{color:rgba(255,255,255,.7);margin-top:14px}
+.cta .ctas{display:flex;flex-direction:column;gap:12px;position:relative}
+
+.legal{background:var(--white);border-top:1px solid var(--line);padding:56px 0}
+.legal .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.legal h4{font:600 .82rem var(--sans);margin-bottom:12px}
+.legal p,.legal li{color:var(--mut);font-size:.86rem}
+.legal ul{list-style:none;display:grid;gap:6px}
+.legal a{text-decoration:none}.legal a:hover{color:var(--ink)}
+.notice{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-size:.8rem;color:var(--mut);grid-column:1/-1}
+.notice b{color:var(--ink)}
+.burger{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
+
+@media(max-width:1020px){
+  .nav{display:none}.burger{display:block}
+  .nav.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:72px;left:0;right:0;background:var(--porc);padding:20px;border-bottom:1px solid var(--line)}
+  .hero .wrap,.split,.panel,.inst .wrap,.cta .box{grid-template-columns:1fr}
+  .hub{justify-self:center;max-width:460px}
+  .rec .wrap{grid-template-columns:1fr}.rec ul{grid-template-columns:1fr 1fr}
+  .tabs{grid-template-columns:1fr 1fr}.tabs button:nth-child(2){border-right:0}.tabs button:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .steps{grid-template-columns:1fr 1fr;gap:30px 0}.steps li:nth-child(3){padding-left:0;border-left:0}
+  .legal .wrap{grid-template-columns:1fr 1fr}
+  .s{padding:80px 0}
+}
+@media(max-width:600px){
+  .hero{padding-top:56px}
+  .node{min-width:0;padding:9px 12px}.node b{font-size:.85rem}.node span{display:none}
+  .panel{padding:26px 22px}
+  .why{grid-template-columns:1fr}.why div{padding:28px}
+  .steps{grid-template-columns:1fr}.steps li,.steps li+li{padding:24px 0 0;border-left:0}
+  .cta .box{padding:40px 26px}
+  .legal .wrap{grid-template-columns:1fr}
+  .rec ul{grid-template-columns:1fr}
+  .tier{flex-direction:column;align-items:flex-start}.tier .r{text-align:left}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="prev">Website redesign preview for URCASH, made by Pictoflex Labs</div>
+<div class="beta"><b>Development &amp; beta notice:</b> URCASH is not yet transactionally live and no real funds are processed. It is not authorised or regulated by the FCA or in any jurisdiction.</div>
+
+<header class="hd"><div class="wrap">
+  <a class="logo" href="#top"><i aria-hidden="true"></i>URCASH</a>
+  <nav class="nav" id="nav" aria-label="Main"><a href="#markets">Platform</a><a href="#how">How it works</a><a href="#institutions">Institutions</a><a href="#investors">Investors</a><a href="#top" class="lg">Log in</a><a class="btn btn-ink" href="#join">Join the waitlist</a></nav>
+  <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+</div></header>
+
+<main id="main">
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <h1>Lending, rebuilt on open banking.</h1>
+    <p class="lede">URCASH connects lenders and borrowers directly, using open banking data and AI matching to cut out the layers that make borrowing expensive.</p>
+    <div class="ctas"><a class="btn btn-ink" href="#join">Join the waitlist</a><a class="btn btn-out" href="#join">Book a meeting with the founder</a></div>
+    <div class="claim"><b>Up to 40%</b><span>lower interest rates than traditional banks, by matching borrowers and lenders directly.<small>Target outcome for the platform once live.</small></span></div>
+  </div>
+  <div class="hub" aria-label="URCASH connects consumers, businesses, financial institutions and governments">
+    <svg viewBox="0 0 400 400" aria-hidden="true">
+      <circle class="ring" cx="200" cy="200" r="150"/><circle class="ring" cx="200" cy="200" r="95"/>
+      <line class="spoke" x1="200" y1="200" x2="60" y2="60"/><line class="spoke" x1="200" y1="200" x2="340" y2="60"/><line class="spoke" x1="200" y1="200" x2="60" y2="340"/><line class="spoke" x1="200" y1="200" x2="340" y2="340"/>
+      <path class="pulse" d="M60 60L200 200L340 340"/><path class="pulse p2" d="M340 60L200 200L60 340"/><path class="pulse p3" d="M60 340L200 200L340 60"/><path class="pulse p4" d="M340 340L200 200L60 60"/>
+      <circle class="core" cx="200" cy="200" r="58"/>
+      <text class="coretx" x="200" y="200" text-anchor="middle">URCASH</text>
+      <text class="coresub" x="200" y="218" text-anchor="middle">OPEN BANKING</text>
+    </svg>
+    <div class="node n1"><b>Consumers</b><span>P2P lending, ID &amp; risk</span></div>
+    <div class="node n2"><b>Businesses</b><span>Start-ups, MSMEs</span></div>
+    <div class="node n3"><b>Institutions</b><span>FinAI, RepoEdge</span></div>
+    <div class="node n4"><b>Governments</b><span>Funds, MedCare</span></div>
+  </div>
+</div></section>
+
+<section class="rec" aria-labelledby="rech"><div class="wrap">
+  <h2 id="rech">Recognised across UK fintech</h2>
+  <ul>
+    <li><b>Finalist</b>Scottish Financial Technology Awards 2025, Best Start Up</li>
+    <li><b>Investee</b>Scotland’s Global Investment Summit 2025</li>
+    <li><b>Cohort</b>FinAccelerate 2025</li>
+    <li><b>Cohort</b>Digital Trust Centre of Excellence</li>
+    <li><b>Jones Day</b>Regulatory submissions</li>
+  </ul>
+</div></section>
+
+<section class="s" id="markets"><div class="wrap">
+  <div class="split"><h2 class="h2">One platform, four markets.</h2><p class="sub">The same open-banking rails serve people borrowing for life’s big moments, growing businesses, institutional capital and public programmes.</p></div>
+  <div class="aud">
+    <div class="tabs" role="tablist" aria-label="Who URCASH serves">
+      <button role="tab" aria-selected="true" aria-controls="p0" id="t0">Consumers<small>Borrow and lend</small></button>
+      <button role="tab" aria-selected="false" aria-controls="p1" id="t1" tabindex="-1">Businesses<small>Grow and protect</small></button>
+      <button role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">Financial institutions<small>Deploy capital</small></button>
+      <button role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1">Governments<small>Fund programmes</small></button>
+    </div>
+    <div class="panel" role="tabpanel" id="p0" aria-labelledby="t0">
+      <div><h3>Fairer borrowing for individuals</h3><p>Peer-to-peer lending matched on real open banking data, so your rate reflects you rather than a bank’s overheads.</p></div>
+      <ul class="prod"><li><div><b>URCASH P2P Lending</b><span>Borrowers and lenders connected directly</span></div><em>Core</em></li><li><div><b>UR-IRaA</b><span>Identity and risk authentication</span></div></li><li><div><b>UR-Forex Deposit Bond</b><span>Foreign exchange deposit product</span></div></li><li><div><b>UR-Gold Ornaments</b><span>Gold-linked product</span></div></li></ul>
+    </div>
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+      <div><h3>Capital and protection for growing companies</h3><p>From first funding to fraud prevention, products shaped around how smaller businesses actually operate.</p></div>
+      <ul class="prod"><li><div><b>UR-StartUps</b><span>Funding access for early-stage companies</span></div></li><li><div><b>UR-MSME</b><span>Credit for micro, small and medium enterprises</span></div></li><li><div><b>UR-FraudProtection</b><span>Protection built into every transaction</span></div></li></ul>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div><h3>Institutional-grade infrastructure</h3><p>AI-led lending tools, repo accounts and cross-currency credit swaps between banks, for institutions deploying at scale.</p></div>
+      <ul class="prod"><li><div><b>UR-FinAI Global</b><span>AI lending intelligence</span></div></li><li><div><b>UR-RepoEdge Account</b><span>Repo account infrastructure</span></div></li><li><div><b>UR-Global Institutional Investment</b><span>Cross-border institutional capital</span></div><em>From $2M</em></li></ul>
+    </div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <div><h3>Public programmes, delivered efficiently</h3><p>Rails for distributing and managing public funds, healthcare finance, housing and long-term wealth.</p></div>
+      <ul class="prod"><li><div><b>UR-Government Funds</b><span>Programme fund distribution</span></div></li><li><div><b>UR-MedCare</b><span>Healthcare finance</span></div></li><li><div><b>UR-Mortgage</b><span>Including mortgage tokenisation</span></div></li><li><div><b>UR-Wealth</b><span>Long-term wealth products</span></div></li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="s how" id="how"><div class="wrap">
+  <div class="split"><h2 class="h2">From sign-up to settled, in four steps.</h2><p class="sub">Open banking does the heavy lifting, so there are fewer forms and faster decisions.</p></div>
+  <ol class="steps">
+    <li><b>Create your account</b><p>Sign up and verify your identity securely.</p></li>
+    <li><b>Set your preferences</b><p>Choose amounts, terms and how you want to borrow or lend.</p></li>
+    <li><b>Get matched</b><p>AI matching pairs lenders and borrowers using open banking data.</p></li>
+    <li><b>Transact securely</b><p>Payments run on bank-grade security, with repayment reminders handled for you.</p></li>
+  </ol>
+</div></section>
+
+<section class="s"><div class="wrap">
+  <div class="split"><h2 class="h2">Why URCASH</h2><p class="sub">Built to make credit cheaper and more transparent, for every side of the transaction.</p></div>
+  <div class="why">
+    <div><span class="big">40%</span><h3>Lower interest rates</h3><p>Aiming for rates up to 40% below traditional banks by connecting borrowers and lenders directly.</p></div>
+    <div><h3>Secure open banking</h3><p>Built on OpenBanking with bank-grade security, so financial data is shared securely and with your consent.</p></div>
+    <div><h3>Smart matching</h3><p>AI pairs the right lender with the right borrower, for faster approvals and fairer pricing.</p></div>
+    <div><h3>Collections handled</h3><p>Automated repayment reminders keep loans on track without awkward conversations.</p></div>
+  </div>
+</div></section>
+
+<section class="s inst" id="institutions"><div class="wrap">
+  <div><h2 class="h2">For institutions and enterprise</h2><p class="sub">Choose how you run on URCASH, from a hosted platform to a full enterprise deployment.</p><p style="margin-top:26px"><a class="btn btn-ink" href="#join">Talk to the founder</a></p></div>
+  <div class="tiers">
+    <div class="tier"><div><b>Platform Edition</b><span>Hosted access to the URCASH platform</span></div><div class="r">On request</div></div>
+    <div class="tier"><div><b>SaaS Edition</b><span>Run URCASH services within your own products</span></div><div class="r">On request</div></div>
+    <div class="tier"><div><b>Financial institutions</b><span>Institutional investment and RepoEdge accounts</span></div><div class="r">$2M<small>minimum</small></div></div>
+    <div class="tier"><div><b>Enterprise Edition</b><span>For corporations with revenue above $3B</span></div><div class="r">Bespoke</div></div>
+  </div>
+</div></section>
+
+<section class="cta" id="join"><div class="wrap"><div class="box">
+  <div id="investors"><h2>Be first when URCASH goes live.</h2><p>Join the waitlist for launch updates, or book time with the founder to talk partnerships and investment.</p></div>
+  <div class="ctas"><a class="btn btn-white" href="#join">Join the waitlist</a><a class="btn btn-ghost" href="#join">Meet the founder</a></div>
+</div></div></section>
+</main>
+
+<footer class="legal"><div class="wrap">
+  <div><a class="logo" href="#top" style="margin-bottom:14px"><i aria-hidden="true"></i>URCASH</a><p style="margin-top:14px">URCASH Financial Platform Services UK Limited. Registered in England &amp; Wales, company number 16389705. 20 Wenlock Road, London N1 7GU.</p></div>
+  <div><h4>Platform</h4><ul><li><a href="#markets">Consumers</a></li><li><a href="#markets">Businesses</a></li><li><a href="#institutions">Institutions</a></li><li><a href="#markets">Governments</a></li></ul></div>
+  <div><h4>Company</h4><ul><li><a href="#investors">Investors</a></li><li><a href="#top">Partners</a></li><li><a href="#top">Roadmap</a></li><li><a href="#top">Countries</a></li></ul></div>
+  <div><h4>Contact</h4><ul><li><a href="tel:+448082710446">+44 (0)808 271 0446</a></li><li><a href="mailto:info@urcash.co.uk">info@urcash.co.uk</a></li><li><a href="#top">Privacy</a> · <a href="#top">Cookies</a></li></ul></div>
+  <p class="notice"><b>Development &amp; beta status.</b> URCASH is in development and is not transactionally live; no real funds are processed. URCASH is not licensed or regulated in any jurisdiction and is not authorised or regulated by the Financial Conduct Authority. Your capital is at risk. Nothing on this site is an offer of credit or investment.</p>
+</div></footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){var nx=tabs[(i+k+tabs.length)%tabs.length];sel(nx);nx.focus()}})});
+})();
+</script>
+</body>
+</html>
