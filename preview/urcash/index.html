@@ -156,6 +156,30 @@ a{color:inherit}
   .rec ul{grid-template-columns:1fr}
   .tier{flex-direction:column;align-items:flex-start}.tier .r{text-align:left}
 }
+
+.allp{scroll-margin-top:110px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.allp section{background:var(--white);padding:30px 26px}
+.allp h3{font:400 1.5rem/1.2 var(--serif)}
+.allp section>p{color:var(--mut);font-size:.9rem;margin:6px 0 18px}
+.allp ul{list-style:none;border-top:1px solid var(--line)}
+.allp li{padding:13px 0;border-bottom:1px solid var(--line)}
+.allp li b{display:block;font-weight:600;font-size:.95rem}
+.allp li span{display:block;color:var(--mut);font-size:.85rem}
+/* products mega menu */
+.pm{position:relative}
+.pm>button{background:none;border:0;font:inherit;color:inherit;cursor:pointer;display:flex;align-items:center;gap:6px}
+.pm>button::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.mega{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-36%);width:min(920px,92vw);background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 60px -30px rgba(18,23,34,.4);padding:26px;display:none;grid-template-columns:repeat(4,1fr);gap:22px;z-index:50}
+.pm.open .mega{display:grid}
+.mega b{display:block;font:600 .78rem var(--sans);color:var(--mutl);margin-bottom:10px}
+.mega a{display:block;color:var(--ink);text-decoration:none;font-size:.9rem;padding:5px 0}
+.mega a:hover{color:var(--blue)}
+.mega .all{grid-column:1/-1;border-top:1px solid var(--line);padding-top:14px;font-weight:600;color:var(--blue)}
+@media(max-width:1020px){.allp{grid-template-columns:1fr 1fr}.mega{position:static;transform:none;width:100%;box-shadow:none;grid-template-columns:1fr 1fr;padding:14px 0;border:0}}
+@media(max-width:600px){.allp{grid-template-columns:1fr}}
+/* accessibility: stronger muted contrast, visible focus everywhere */
+:root{--mut:#4F5664;--mutl:#6B7280}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue2);outline-offset:3px;border-radius:6px}
 </style>
 </head>
 <body>
@@ -165,7 +189,7 @@ a{color:inherit}
 
 <header class="hd"><div class="wrap">
   <a class="logo" href="#top"><i aria-hidden="true"></i>URCASH</a>
-  <nav class="nav" id="nav" aria-label="Main"><a href="#markets">Platform</a><a href="#how">How it works</a><a href="#institutions">Institutions</a><a href="#investors">Investors</a><a href="#top" class="lg">Log in</a><a class="btn btn-ink" href="#join">Join the waitlist</a></nav>
+  <nav class="nav" id="nav" aria-label="Main"><div class="pm" id="pm"><button type="button" aria-expanded="false" aria-controls="mega">Products</button><div class="mega" id="mega" role="region" aria-label="All products"><div><b>Consumers</b><a href="#products">URCASH P2P Lending</a><a href="#products">UR-IRaA</a><a href="#products">UR-Forex Deposit Bond</a><a href="#products">UR-Gold Ornaments</a></div><div><b>Businesses</b><a href="#products">UR-StartUps</a><a href="#products">UR-MSME</a><a href="#products">UR-FraudProtection</a></div><div><b>Institutions</b><a href="#products">UR-FinAI Global</a><a href="#products">UR-RepoEdge Account</a><a href="#products">UR-Global Institutional Investment</a><a href="#products">Cross-currency credit swaps</a></div><div><b>Governments</b><a href="#products">UR-Government Funds</a><a href="#products">UR-MedCare</a><a href="#products">UR-Mortgage</a><a href="#products">UR-Wealth</a></div><a class="all" href="#products">See all 15 products on one page</a></div></div><a href="#how">How it works</a><a href="#institutions">Institutions</a><a href="#investors">Investors</a><a href="#top" class="lg">Log in</a><a class="btn btn-ink" href="#join">Join the waitlist</a></nav>
   <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
 </div></header>
 
@@ -186,10 +210,10 @@ a{color:inherit}
       <text class="coretx" x="200" y="200" text-anchor="middle">URCASH</text>
       <text class="coresub" x="200" y="218" text-anchor="middle">OPEN BANKING</text>
     </svg>
-    <div class="node n1"><b>Consumers</b><span>P2P lending, ID &amp; risk</span></div>
-    <div class="node n2"><b>Businesses</b><span>Start-ups, MSMEs</span></div>
-    <div class="node n3"><b>Institutions</b><span>FinAI, RepoEdge</span></div>
-    <div class="node n4"><b>Governments</b><span>Funds, MedCare</span></div>
+    <div class="node n1"><b>Consumers</b><span>4 products</span></div>
+    <div class="node n2"><b>Businesses</b><span>3 products</span></div>
+    <div class="node n3"><b>Institutions</b><span>4 products</span></div>
+    <div class="node n4"><b>Governments</b><span>4 products</span></div>
   </div>
 </div></section>
 
@@ -205,30 +229,27 @@ a{color:inherit}
 </div></section>
 
 <section class="s" id="markets"><div class="wrap">
-  <div class="split"><h2 class="h2">One platform, four markets.</h2><p class="sub">The same open-banking rails serve people borrowing for life’s big moments, growing businesses, institutional capital and public programmes.</p></div>
-  <div class="aud">
-    <div class="tabs" role="tablist" aria-label="Who URCASH serves">
-      <button role="tab" aria-selected="true" aria-controls="p0" id="t0">Consumers<small>Borrow and lend</small></button>
-      <button role="tab" aria-selected="false" aria-controls="p1" id="t1" tabindex="-1">Businesses<small>Grow and protect</small></button>
-      <button role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">Financial institutions<small>Deploy capital</small></button>
-      <button role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1">Governments<small>Fund programmes</small></button>
-    </div>
-    <div class="panel" role="tabpanel" id="p0" aria-labelledby="t0">
-      <div><h3>Fairer borrowing for individuals</h3><p>Peer-to-peer lending matched on real open banking data, so your rate reflects you rather than a bank’s overheads.</p></div>
-      <ul class="prod"><li><div><b>URCASH P2P Lending</b><span>Borrowers and lenders connected directly</span></div><em>Core</em></li><li><div><b>UR-IRaA</b><span>Identity and risk authentication</span></div></li><li><div><b>UR-Forex Deposit Bond</b><span>Foreign exchange deposit product</span></div></li><li><div><b>UR-Gold Ornaments</b><span>Gold-linked product</span></div></li></ul>
-    </div>
-    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
-      <div><h3>Capital and protection for growing companies</h3><p>From first funding to fraud prevention, products shaped around how smaller businesses actually operate.</p></div>
-      <ul class="prod"><li><div><b>UR-StartUps</b><span>Funding access for early-stage companies</span></div></li><li><div><b>UR-MSME</b><span>Credit for micro, small and medium enterprises</span></div></li><li><div><b>UR-FraudProtection</b><span>Protection built into every transaction</span></div></li></ul>
-    </div>
-    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-      <div><h3>Institutional-grade infrastructure</h3><p>AI-led lending tools, repo accounts and cross-currency credit swaps between banks, for institutions deploying at scale.</p></div>
-      <ul class="prod"><li><div><b>UR-FinAI Global</b><span>AI lending intelligence</span></div></li><li><div><b>UR-RepoEdge Account</b><span>Repo account infrastructure</span></div></li><li><div><b>UR-Global Institutional Investment</b><span>Cross-border institutional capital</span></div><em>From $2M</em></li></ul>
-    </div>
-    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
-      <div><h3>Public programmes, delivered efficiently</h3><p>Rails for distributing and managing public funds, healthcare finance, housing and long-term wealth.</p></div>
-      <ul class="prod"><li><div><b>UR-Government Funds</b><span>Programme fund distribution</span></div></li><li><div><b>UR-MedCare</b><span>Healthcare finance</span></div></li><li><div><b>UR-Mortgage</b><span>Including mortgage tokenisation</span></div></li><li><div><b>UR-Wealth</b><span>Long-term wealth products</span></div></li></ul>
-    </div>
+  <div class="split"><h2 class="h2">Every product, on one page.</h2><p class="sub">15 products across four markets, all running on the same open-banking rails. Find yours at a glance.</p></div>
+  <div class="allp" id="products">
+    <section aria-labelledby="g1"><h3 id="g1">Consumers</h3><p>Fairer borrowing and lending for individuals.</p><ul>
+      <li><b>URCASH P2P Lending</b><span>Borrowers and lenders connected directly</span></li>
+      <li><b>UR-IRaA</b><span>Identity and risk authentication</span></li>
+      <li><b>UR-Forex Deposit Bond</b><span>Foreign exchange deposit product</span></li>
+      <li><b>UR-Gold Ornaments</b><span>Gold-linked product</span></li></ul></section>
+    <section aria-labelledby="g2"><h3 id="g2">Businesses</h3><p>Capital and protection for growing companies.</p><ul>
+      <li><b>UR-StartUps</b><span>Funding access for early-stage companies</span></li>
+      <li><b>UR-MSME</b><span>Credit for micro, small and medium enterprises</span></li>
+      <li><b>UR-FraudProtection</b><span>Protection built into every transaction</span></li></ul></section>
+    <section aria-labelledby="g3"><h3 id="g3">Financial institutions</h3><p>Institutional-grade lending infrastructure.</p><ul>
+      <li><b>UR-FinAI Global</b><span>AI lending intelligence</span></li>
+      <li><b>UR-RepoEdge Account</b><span>Repo account infrastructure</span></li>
+      <li><b>UR-Global Institutional Investment</b><span>Cross-border institutional capital, from $2M</span></li>
+      <li><b>Cross-currency credit swaps</b><span>Between banks</span></li></ul></section>
+    <section aria-labelledby="g4"><h3 id="g4">Governments</h3><p>Rails for public programmes.</p><ul>
+      <li><b>UR-Government Funds</b><span>Programme fund distribution</span></li>
+      <li><b>UR-MedCare</b><span>Healthcare finance</span></li>
+      <li><b>UR-Mortgage</b><span>Including mortgage tokenisation</span></li>
+      <li><b>UR-Wealth</b><span>Long-term wealth products</span></li></ul></section>
   </div>
 </div></section>
 
@@ -281,9 +302,11 @@ a{color:inherit}
   var b=document.querySelector('.burger'),n=document.getElementById('nav');
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
   n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded',false)}});
-  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
-  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on})}
-  tabs.forEach(function(t,i){t.addEventListener('click',function(){sel(t)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){var nx=tabs[(i+k+tabs.length)%tabs.length];sel(nx);nx.focus()}})});
+  var pm=document.getElementById('pm'),pb=pm.querySelector('button');
+  pb.addEventListener('click',function(e){e.stopPropagation();var o=pm.classList.toggle('open');pb.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',function(e){if(!pm.contains(e.target)){pm.classList.remove('open');pb.setAttribute('aria-expanded',false)}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&pm.classList.contains('open')){pm.classList.remove('open');pb.setAttribute('aria-expanded',false);pb.focus()}});
+  pm.querySelectorAll('.mega a').forEach(function(a){a.addEventListener('click',function(){pm.classList.remove('open');pb.setAttribute('aria-expanded',false)})});
 })();
 </script>
 </body>
